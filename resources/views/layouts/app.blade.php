@@ -19,7 +19,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen bg-slate-50 dark:bg-gray-900">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->

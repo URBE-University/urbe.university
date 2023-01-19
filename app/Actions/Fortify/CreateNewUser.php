@@ -33,6 +33,7 @@ class CreateNewUser implements CreatesNewUsers
         ]);
 
         if ($user->id == 1) {
+            $user->is_active = true;
             $user->permissions = [
                 'post:view',
                 'post:create',

@@ -13,14 +13,27 @@
             <div class="bg-white shadow rounded-lg">
 
                 @forelse ($users as $user)
-                    <a href="{{ (auth()->user()->id === $user->id) ? route('profile.show') : route('admin.user.edit', ['user' => $user]) }}" class="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50">
+                    <a href="{{ (auth()->user()->id === $user->id) ? route('profile.show') : route('admin.user.edit', ['user' => $user]) }}"
+                            @class([
+                                'flex items-center justify-between p-4 hover:bg-slate-100',
+                                'rounded-t-lg' => $loop->first,
+                                'rounded-b-lg' => $loop->last,
+                            ])>
                         <div class="flex items-center space-x-3">
-                            <img class="h-24 w-24 rounded-full object-cover" src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}" />
+                            <img class="h-20 w-20 rounded-full object-cover shadow" src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}" />
                             <div>
                                 <p class="text-slate-600 text-sm font-light">{{ $user->email }}</p>
                                 <h1 class="text-2xl font-bold">{{ $user->name }}</h1>
                                 @if ($user->isAdmin())
-                                    <p class="mt-2 inline-block text-sm bg-slate-700 px-2 py-0.5 text-white rounded">Admin</p>
+                                    <p class="mt-2 inline-block text-sm bg-indigo-500 px-2 py-0.5 text-white rounded">Admin</p>
+                                @else
+                                    <p class="mt-2 inline-block text-sm bg-slate-700 px-2 py-0.5 text-white rounded">User</p>
+                                @endif
+                                @if (!$user->is_active)
+                                    <p class="mt-2 inline-block text-sm bg-yellow-200 px-2 py-0.5 text-yellow-700 rounded">Pending activation</p>
+                                @endif
+                                @if ($user->is_suspended)
+                                    <p class="mt-2 inline-block text-sm bg-red-200 px-2 py-0.5 text-red-700 rounded">Account suspended</p>
                                 @endif
                             </div>
                         </div>
