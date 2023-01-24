@@ -8,7 +8,8 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=inter:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -17,22 +18,19 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
+        <div class="md:flex flex-col md:flex-row min-h-screen w-full">
+            @include('layouts.partials.nav')
+            {{-- App Content does Here --}}
+            <main class="w-full sm:overflow-y-auto sm:min-h-screen relative">
+                <x-jet-banner />
+                @if (isset($header))
+                    <header class="bg-white border-b border-b-slate-100">
+                        <div class="max-w-full mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
+                    </header>
+                @endif
                 {{ $slot }}
             </main>
         </div>

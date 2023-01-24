@@ -1,7 +1,7 @@
 <div>
-    <header class="bg-white dark:bg-gray-800 shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Users</h2>
+    <header class="bg-white border-b border-b-slate-100">
+        <div class="py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Users</h2>
             @can('user:create')
                 @livewire('admin.user.invite')
             @endcan
