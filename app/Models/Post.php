@@ -18,7 +18,11 @@ class Post extends Model
         'excerpt',
         'content',
         'featured_image',
-        'comments',
+        'featured_image_alt_text',
+        'keywords',
+        'keyphrases',
+        'enable_comments',
+        'published_at',
     ];
 
     public function user()

@@ -21,7 +21,11 @@ return new class extends Migration
             $table->longText('excerpt')->nullable();
             $table->longText('content');
             $table->text('featured_image')->nullable();
-            $table->boolean('comments')->default(false);
+            $table->text('featured_image_alt_text')->nullable();
+            $table->text('keywords')->nullable();
+            $table->longText('keyphrases')->nullable();
+            $table->boolean('enable_comments')->default(false);
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

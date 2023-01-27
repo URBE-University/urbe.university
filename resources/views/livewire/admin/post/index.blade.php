@@ -2,40 +2,65 @@
     <header class="bg-white border-b border-b-slate-100">
         <div class="py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Articles</h2>
-            @can('post:create')
-                <a href="{{ route('admin.post.create') }}" class="btn-link">Add new post</a>
-            @endcan
+            <div class="flex items-center space-x-4">
+                @can('post:create')
+                    <a href="{{ route('admin.post.create') }}" class="btn-link">Add new post</a>
+                @endcan
+            </div>
         </div>
     </header>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white shadow rounded-lg">
-
+            <button wire:click="$toggle('showTrashed')" class="text-sm hover:underline ">Trash ({{ \App\Models\Post::onlyTrashed()->count() }})</button>
+            <div class="mt-4 bg-white shadow rounded-lg">
                 @forelse ($posts as $post)
                     <div class="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50">
                         <div class="flex items-center space-x-3">
-                            <img src="https://picsum.photos/200" alt=""
-                                class="w-20 h-20 aspect-square rounded-lg shadow">
+                            @if ($post->featured_image)
+                                <img src="{{ asset($post->featured_image) }}" alt="{{ $post->featured_image_alt_text }}" class="w-20 h-20 aspect-square rounded-lg shadow">
+                            @endif
                             <div class="">
-                                <p class="text-slate-600 text-sm font-semibold">Author's name</p>
+                                <p class="text-slate-600 text-sm font-semibold">{{ $post->user->name }}</p>
                                 <a href="" target="_blank" title="Click to open article on a new tab.">
-                                    <h1 class="text-2xl font-bold">Article's title here</h1>
+                                    <h1 class="text-2xl font-bold">{{ $post->title }}</h1>
                                 </a>
-                                <time class="text-slate-600 text-sm font-light" datetime="">January 18, 2023</time>
+                                <span class="flex items-center space-x-1">
+                                    @if ($post->published_at)
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-green-500">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                        </svg>
+                                        <time class="text-slate-600 text-sm font-light" datetime="">
+                                            {{ Carbon\Carbon::parse($post->published_at)->format('M d, Y') }}
+                                        </time>
+                                    @else
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-slate-500">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z" clip-rule="evenodd" />
+                                        </svg>
+                                        <time class="text-slate-600 text-sm font-light" datetime="">
+                                            {{ Carbon\Carbon::parse($post->published_at)->format('M d, Y') }}
+                                        </time>
+                                    @endif
+                                </span>
                             </div>
                         </div>
                         <div class="flex items-center justify-end space-x-3">
-                            <a href="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-5 h-5">
-                                    <path
-                                        d="M5.433 13.917l1.262-3.155A4 4 0 017.58 9.42l6.92-6.918a2.121 2.121 0 013 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 01-.65-.65z" />
-                                    <path
-                                        d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0010 3H4.75A2.75 2.75 0 002 5.75v9.5A2.75 2.75 0 004.75 18h9.5A2.75 2.75 0 0017 15.25V10a.75.75 0 00-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5z" />
-                                </svg>
-                            </a>
-                            @livewire('admin.post.delete')
+                            @if ($post->deleted_at)
+                                <button wire:click="restore({{$post->id}})" class="text-sm">Restore</button>
+                                <button wire:click="delete({{$post->id}})" class="text-sm text-red-600">Permanently delete</button>
+                            @else
+                                @can('post:update')
+                                    <a href="{{ route('admin.post.edit', ['post' => $post->id]) }}" class="text-slate-600 hover:text-slate-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                            <path d="M5.433 13.917l1.262-3.155A4 4 0 017.58 9.42l6.92-6.918a2.121 2.121 0 013 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 01-.65-.65z" />
+                                            <path d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0010 3H4.75A2.75 2.75 0 002 5.75v9.5A2.75 2.75 0 004.75 18h9.5A2.75 2.75 0 0017 15.25V10a.75.75 0 00-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5z" />
+                                        </svg>
+                                    </a>
+                                @endcan
+                                @can('post:delete')
+                                    @livewire('admin.post.delete', ['post' => $post], key('del-'.$post->id))
+                                @endcan
+                            @endif
                         </div>
                     </div>
                 @empty
@@ -50,6 +75,10 @@
                         @endcan
                     </div>
                 @endforelse
+
+                <div class="mt-6">
+                    {{ $posts->links() }}
+                </div>
 
             </div>
         </div>
