@@ -24,7 +24,7 @@ class Delete extends Component
         if (!Gate::allows('event:delete')) {
             abort(403, 'You have no access to perform this action');
         }
-        $this->post->delete();
+        $this->event->delete();
         return redirect()->route('admin.events');
     }
 }

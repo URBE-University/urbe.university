@@ -15,7 +15,7 @@ class Index extends Component
     public function render()
     {
         return view('livewire.admin.event.index', [
-            'events' => (!$this->showTrashed) ? Event::paginate(10) : Event::onlyTrashed()->paginate(10)
+            'events' => (!$this->showTrashed) ? Event::orderBy('start_date', 'desc')->paginate(10) : Event::onlyTrashed()->orderBy('start_date', 'desc')->paginate(10)
         ]);
     }
 

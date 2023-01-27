@@ -10,10 +10,10 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white shadow rounded-lg">
-                <button wire:click="$toggle('showTrashed')" class="text-sm hover:underline ">Trash ({{ \App\Models\Event::onlyTrashed()->count() }})</button>
+            <button wire:click="$toggle('showTrashed')" class="text-sm hover:underline ">Trash ({{ \App\Models\Event::onlyTrashed()->count() }})</button>
+            <div class="mt-4 bg-white shadow rounded-lg">
                 @forelse ($events as $event)
-                    <div class="p-4 flex items-center justify-between rounded-lg">
+                    <div class="p-4 flex items-center justify-between rounded-lg hover:bg-slate-100">
                         <div class="flex items-center space-x-3">
                             <div class="w-20 h-20 aspect-square rounded-lg border flex items-center justify-center">
                                 <div class="">
@@ -59,7 +59,9 @@
                         @endcan
                     </div>
                 @endforelse
-
+            </div>
+            <div class="mt-6">
+                {{ $events->links() }}
             </div>
         </div>
     </div>

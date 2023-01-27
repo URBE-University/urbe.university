@@ -18,7 +18,7 @@
                     <div class="flex items-center justify-between p-4 rounded-lg">
                         <div class="flex items-center space-x-3">
                             @if ($post->featured_image)
-                                <img src="{{ asset($post->featured_image) }}" alt="{{ $post->featured_image_alt_text }}" class="w-20 h-20 aspect-square rounded-lg shadow">
+                                <img src="{{ asset($post->featured_image) }}" class="w-20 h-20 aspect-square rounded-lg shadow">
                             @endif
                             <div class="">
                                 <p class="text-slate-600 text-sm font-semibold">{{ $post->user->name }}</p>
@@ -77,11 +77,9 @@
                         @endcan
                     </div>
                 @endforelse
-
-                <div class="mt-6">
-                    {{ $posts->links() }}
-                </div>
-
+            </div>
+            <div class="mt-6">
+                {{ $posts->links() }}
             </div>
         </div>
     </div>
