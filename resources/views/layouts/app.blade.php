@@ -22,7 +22,7 @@
         <div class="md:flex flex-col md:flex-row min-h-screen w-full">
             @include('layouts.partials.nav')
             {{-- App Content does Here --}}
-            <main class="w-full sm:overflow-y-auto sm:min-h-screen relative">
+            <main class="w-full sm:overflow-y-auto sm:min-h-screen relative bg-slate-50">
                 <x-jet-banner />
                 @if (isset($header))
                     <header class="bg-white border-b border-b-slate-100">

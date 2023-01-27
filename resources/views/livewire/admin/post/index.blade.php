@@ -1,7 +1,7 @@
 <div>
     <header class="bg-white border-b border-b-slate-100">
         <div class="py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Articles</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Posts</h2>
             <div class="flex items-center space-x-4">
                 @can('post:create')
                     <a href="{{ route('admin.post.create') }}" class="btn-link">Add new post</a>
@@ -15,7 +15,7 @@
             <button wire:click="$toggle('showTrashed')" class="text-sm hover:underline ">Trash ({{ \App\Models\Post::onlyTrashed()->count() }})</button>
             <div class="mt-4 bg-white shadow rounded-lg">
                 @forelse ($posts as $post)
-                    <div class="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50">
+                    <div class="flex items-center justify-between p-4 rounded-lg">
                         <div class="flex items-center space-x-3">
                             @if ($post->featured_image)
                                 <img src="{{ asset($post->featured_image) }}" alt="{{ $post->featured_image_alt_text }}" class="w-20 h-20 aspect-square rounded-lg shadow">

@@ -3,20 +3,20 @@
         <div class="py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Editing Article</h2>
 
-            <div class="flex items-center space-x-4">
-                @livewire('admin.post.options', ['post' => $post])
-                <select wire:model="status" @class([
-                    'border-0 rounded-lg text-sm py-1.5',
-                    'bg-green-100 text-green-800' => $status == 'published',
-                    'bg-yellow-100 text-yellow-800' => $status == 'draft',
-                    ])>
-                    <option value="draft">Draft</option>
-                    <option value="published">Published</option>
-                </select>
-                @can('post:update')
+            @can('post:update')
+                <div class="flex items-center space-x-4">
+                    @livewire('admin.post.options', ['post' => $post])
+                    <select wire:model="status" @class([
+                        'border-0 rounded-lg text-sm py-1.5',
+                        'bg-green-100 text-green-800' => $status == 'published',
+                        'bg-yellow-100 text-yellow-800' => $status == 'draft',
+                        ])>
+                        <option value="draft">Draft</option>
+                        <option value="published">Published</option>
+                    </select>
                     <x-jet-button wire:click="save">Save changes</x-jet-button>
-                @endcan
-            </div>
+                </div>
+            @endcan
         </div>
     </header>
 

@@ -1,4 +1,4 @@
-<div @click.away="open = false" class="flex flex-col w-full md:w-64 text-slate-400 bg-slate-50 flex-shrink-0"
+<div @click.away="open = false" class="flex flex-col w-full md:w-64 text-slate-400 bg-white flex-shrink-0"
     x-data="{ open: false }">
     <div class="flex-shrink-0 px-4 py-6 flex flex-row items-center justify-between">
         <a href="{{ route('dashboard') }}">

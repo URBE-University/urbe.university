@@ -19,7 +19,7 @@ class Edit extends Component
         $this->post = $post;
         $this->title = $post->title;
         $this->content = $post->content;
-        $this->status = (is_null($post->published_at)) ? 'draft' : 'published';;
+        $this->status = (is_null($post->published_at)) ? 'draft' : 'published';
     }
 
     public function updateBody($value)

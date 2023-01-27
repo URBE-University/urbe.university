@@ -15,8 +15,8 @@
         @endif
             <label for="file-upload" class="block mt-6 cursor-pointer p-2 text-center border border-gray-300 border-dashed rounded-md bg-white font-medium text-blue-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 hover:text-blue-500">
                 <span>{{ __("Select featured image") }}</span>
-                <span class="mt-2 block text-xs text-gray-600">{{ __("JPEG, PNG, WEBP, GIF up to 2MB") }}</span>
-                <input wire:model="image" id="file-upload" name="file-upload" type="file" accept=".jpeg,.jpg,.png,.webp,.gif" class="sr-only">
+                <span class="mt-2 block text-xs text-gray-600">{{ __("WEBP up to 2MB") }}</span>
+                <input wire:model="image" id="file-upload" name="file-upload" type="file" accept=".webp" class="sr-only">
             </label>
         @if ($image)
             <button type="button" wire:click="setFeaturedImage" class="mt-4 w-full text-center p-2 rounded-lg bg-black text-white">{{ __("Upload Now") }}</button>
