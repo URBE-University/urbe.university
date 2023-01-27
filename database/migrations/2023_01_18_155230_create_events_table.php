@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

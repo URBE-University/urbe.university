@@ -15,18 +15,17 @@ class Delete extends Component
         $this->post = $post;
     }
 
+    public function render()
+    {
+        return view('livewire.admin.post.delete');
+    }
+
     public function delete()
     {
         if (!Gate::allows('post:delete')) {
             abort(403, 'You have no access to perform this action');
         }
-
         $this->post->delete();
         return redirect()->route('admin.posts');
-    }
-
-    public function render()
-    {
-        return view('livewire.admin.post.delete');
     }
 }

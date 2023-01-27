@@ -46,8 +46,10 @@
                         </div>
                         <div class="flex items-center justify-end space-x-3">
                             @if ($post->deleted_at)
-                                <button wire:click="restore({{$post->id}})" class="text-sm">Restore</button>
-                                <button wire:click="delete({{$post->id}})" class="text-sm text-red-600">Permanently delete</button>
+                                @can('post:delete')
+                                    <button wire:click="restore({{$post->id}})" class="text-sm">Restore</button>
+                                    <button wire:click="delete({{$post->id}})" class="text-sm text-red-600">Permanently delete</button>
+                                @endcan
                             @else
                                 @can('post:update')
                                     <a href="{{ route('admin.post.edit', ['post' => $post->id]) }}" class="text-slate-600 hover:text-slate-700">
