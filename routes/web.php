@@ -17,8 +17,8 @@ use App\Http\Livewire\Admin\User\Index as Users;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('website.home');
+})->name('home');
 
 Route::middleware([
     'auth:sanctum',
