@@ -54,6 +54,20 @@ class AuthServiceProvider extends ServiceProvider
             return auth()->user()->is_active && in_array('event:delete', auth()->user()->permissions);
         });
 
+        // Page authorizations
+        Gate::define('page:view', function() {
+            return auth()->user()->is_active && in_array('page:view', auth()->user()->permissions);
+        });
+        Gate::define('page:create', function() {
+            return auth()->user()->is_active && in_array('page:create', auth()->user()->permissions);
+        });
+        Gate::define('page:update', function() {
+            return auth()->user()->is_active && in_array('page:update', auth()->user()->permissions);
+        });
+        Gate::define('page:delete', function() {
+            return auth()->user()->is_active && in_array('page:delete', auth()->user()->permissions);
+        });
+
         // User management authorizations
         Gate::define('user:view', function() {
             return auth()->user()->is_active && in_array('user:view', auth()->user()->permissions);

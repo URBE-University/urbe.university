@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Post\Index as Posts;
 use App\Http\Livewire\Admin\Event\Index as Events;
+use App\Http\Livewire\Admin\Page\Index as Pages;
 use App\Http\Livewire\Admin\User\Index as Users;
 
 /*
@@ -16,16 +18,12 @@ use App\Http\Livewire\Admin\User\Index as Users;
 |
 */
 
-Route::get('/', function () {
-    return view('website.home');
-})->name('home');
+Route::get('/', [WebsiteController::class, 'home'])->name('home');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-    'is_active'
-])->prefix('admin')->group(function () {
+Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified', 'is_active'])
+    ->prefix('admin')
+    ->group(function ()
+{
     Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
 
     // Article routes
@@ -37,6 +35,9 @@ Route::middleware([
     Route::middleware('can:event:view')->get('/events', Events::class)->name('admin.events');
     Route::middleware('can:event:create')->get('/events/new', App\Http\Livewire\Admin\Event\Create::class)->name('admin.event.create');
     Route::middleware('can:event:update')->get('/events/{event}/edit', App\Http\Livewire\Admin\Event\Edit::class)->name('admin.event.edit');
+
+    // Page routes
+    Route::middleware('can:page:view')->get('/pages', Pages::class)->name('admin.pages');
 
     // User routes
     Route::middleware('can:user:view')->get('/users', Users::class)->name('admin.users');
