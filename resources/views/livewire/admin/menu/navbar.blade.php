@@ -2,6 +2,7 @@
     <div class="border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
         @forelse ($items as $item)
             <div @class([
+                'max-w-7xl w-full bg-white',
                 'border-b' => !$loop->last,
                 'rounded-t-lg' => $loop->first,
                 'rounded-b-lg' => $loop->last

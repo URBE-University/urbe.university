@@ -18,7 +18,7 @@ class Children extends Component
     public function render()
     {
         return view('livewire.admin.menu.children', [
-            'items' => Menu::where('location', 'navbar')
+            'items' => Menu::where('location', $this->selector)
                 ->where('parent', $this->parent)
                 ->orderBy('order', 'ASC')
                 ->get(),

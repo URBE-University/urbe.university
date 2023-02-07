@@ -11,17 +11,33 @@
                 <x-jet-input id="label" type="text" wire:model="label" class="mt-1 w-full" />
                 <x-jet-input-error for="label" />
             </div>
-            <div class="mt-4">
-                <x-jet-label for="type" value="Type"/>
-                <select wire:model="type" id="type"
-                    class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 w-full"
-                >
-                    <option value="">Select an option</option>
-                    <option value="link">Link</option>
-                    <option value="dropdown">Dropdown</option>
-                </select>
-                <x-jet-input-error for="type" />
-            </div>
+            @if ($selector == 'footer')
+                <div class="mt-4">
+                    <x-jet-label for="column" value="Select footer column"/>
+                    <select wire:model="column" id="column"
+                        class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 w-full"
+                    >
+                        <option value="">Select an option</option>
+                        <option value="1">Column 1</option>
+                        <option value="2">Column 2</option>
+                        <option value="3">Column 3</option>
+                    </select>
+                    <x-jet-input-error for="column" />
+                </div>
+            @else
+                <div class="mt-4">
+                    <x-jet-label for="type" value="Type"/>
+                    <select wire:model="type" id="type"
+                        class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 w-full"
+                    >
+                        <option value="">Select an option</option>
+                        <option value="link">Link</option>
+                        <option value="dropdown">Dropdown</option>
+                    </select>
+                    <x-jet-input-error for="type" />
+                </div>
+            @endif
+
 
             @if ($type == 'link')
                 <div class="mt-4">

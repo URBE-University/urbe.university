@@ -7,11 +7,15 @@ use Livewire\Component;
 
 class Create extends Component
 {
-    public $modal, $selector, $parent, $label, $type, $url, $opens_in_new_tab;
+    public $modal, $selector, $parent, $label, $type, $url, $opens_in_new_tab, $column;
 
     public function mount($selector)
     {
         $this->selector = $selector;
+        if($this->selector == 'footer')
+        {
+            $this->type = 'link';
+        }
     }
 
     public function render()
@@ -29,6 +33,11 @@ class Create extends Component
         if($this->type == 'link')
         {
             $this->validate(['url' => 'required']);
+        }
+
+        if($this->selector == 'footer')
+        {
+            $this->validate(['column' => 'required']);
         }
 
         // Get the order number from DB
