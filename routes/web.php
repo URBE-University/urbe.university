@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Post\Index as Posts;
 use App\Http\Livewire\Admin\Event\Index as Events;
 use App\Http\Livewire\Admin\Page\Index as Pages;
+use App\Http\Livewire\Admin\Menu\Index as Menus;
 use App\Http\Livewire\Admin\User\Index as Users;
 
 /*
@@ -38,6 +39,10 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
 
     // Page routes
     Route::middleware('can:page:view')->get('/pages', Pages::class)->name('admin.pages');
+    Route::get('/pages/new', App\Http\Livewire\Admin\Page\Create::class)->name('admin.page.create');
+
+    // Menu routes
+    Route::middleware('can:menu:view')->get('/menus/{selector}', Menus::class)->name('admin.menus');
 
     // User routes
     Route::middleware('can:user:view')->get('/users', Users::class)->name('admin.users');

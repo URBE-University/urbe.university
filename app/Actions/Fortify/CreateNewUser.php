@@ -34,20 +34,7 @@ class CreateNewUser implements CreatesNewUsers
 
         if ($user->id == 1) {
             $user->is_active = true;
-            $user->permissions = [
-                'post:view',
-                'post:create',
-                'post:update',
-                'post:delete',
-                'event:view',
-                'event:create',
-                'event:update',
-                'event:delete',
-                'user:view',
-                'user:create',
-                'user:update',
-                'user:delete',
-            ];
+            $user->permissions = config('app.permissions');
             $user->save();
         }
         return $user;

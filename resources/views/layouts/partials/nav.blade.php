@@ -34,7 +34,7 @@
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.posts'),
             ])>
-                {{ __('Articles') }}
+                {{ __('Posts') }}
             </a>
         @endcan
 
@@ -47,19 +47,23 @@
             </a>
         @endcan
 
-        {{-- <a href="{{ route('admin.events') }}" @class([
-            'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
-            'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.events'),
-        ])>
-            {{ __('Pages') }}
-        </a>
+        @can('page:view')
+            <a href="{{ route('admin.pages') }}" @class([
+                'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
+                'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.pages'),
+            ])>
+                {{ __('Pages') }}
+            </a>
+        @endcan
 
-        <a href="{{ route('admin.events') }}" @class([
-            'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
-            'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.events'),
-        ])>
-            {{ __('Menus') }}
-        </a> --}}
+        @can('menu:view')
+            <a href="{{ route('admin.menus', ['selector' => 'navbar']) }}" @class([
+                'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
+                'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.menus'),
+            ])>
+                {{ __('Menu') }}
+            </a>
+        @endcan
 
         <div class="my-6 md:mt-48"></div>
 

@@ -3,7 +3,7 @@
         <div class="grid grid-cols-4 gap-8">
             <div class="col-span-4 md:col-span-2 lg:col-span-1">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('images/urbe-logo-white.svg') }}" alt="URBE University logo" class="block w-1/2 md:w-2/3 h-auto">
+                    <img src="{{ asset('images/urbe-logo-white.svg') }}" alt="URBE University logo" class="block w-1/3 md:w-2/3 h-auto">
                 </a>
                 <p class="mt-4">URBE University is an educational institution organized under the laws of the Independent Education Commision of Florida, with annual license <a href="https://web02.fldoe.org/CIE/SearchSchools/SchoolSearchDetail.aspx?schoolID=5594" target="_blank" class="underline font-medium">5594</a>.</p>
                 <div class="mt-4 flex items-center justify-center space-x-3 bg-white p-2">
