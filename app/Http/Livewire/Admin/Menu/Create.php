@@ -47,6 +47,7 @@ class Create extends Component
             'location' => $this->selector,
             'type' => $this->type,
             'parent' => $this->parent,
+            'column' => $this->column,
             'order' => $order,
             'label' => $this->label,
             'url' => $this->url,

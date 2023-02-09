@@ -82,6 +82,20 @@ class AuthServiceProvider extends ServiceProvider
             return auth()->user()->is_active && in_array('menu:delete', auth()->user()->permissions);
         });
 
+        // SEO authorizations
+        Gate::define('seo:view', function() {
+            return auth()->user()->is_active && in_array('seo:view', auth()->user()->permissions);
+        });
+        Gate::define('seo:create', function() {
+            return auth()->user()->is_active && in_array('seo:create', auth()->user()->permissions);
+        });
+        Gate::define('seo:update', function() {
+            return auth()->user()->is_active && in_array('seo:update', auth()->user()->permissions);
+        });
+        Gate::define('seo:delete', function() {
+            return auth()->user()->is_active && in_array('seo:delete', auth()->user()->permissions);
+        });
+
         // User management authorizations
         Gate::define('user:view', function() {
             return auth()->user()->is_active && in_array('user:view', auth()->user()->permissions);

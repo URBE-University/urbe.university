@@ -20,8 +20,12 @@
                     </div>
 
                     <div class="flex items-center">
-                        @livewire('admin.menu.edit', ['selector' => 'navbar', 'menu' => $item], key('edit-{{$item->id}}'))
-                        @livewire('admin.menu.delete', ['menu' => $item], key('delete-{{$item->id}}'))
+                        @can('menu:update')
+                            @livewire('admin.menu.edit', ['selector' => 'navbar', 'menu' => $item], key('edit-{{$item->id}}'))
+                        @endcan
+                        @can('menu:delete')
+                            @livewire('admin.menu.delete', ['menu' => $item], key('delete-{{$item->id}}'))
+                        @endcan
                         @if ($item->type == 'dropdown')
                             <div class="text-2xl font-light ml-3"
                             @click="open_{{$item->id}} = !open_{{$item->id}}"
@@ -44,7 +48,9 @@
                             'mt-2 py-2 bg-slate-50',
                             'rounded-b-lg' => $loop->last
                         ])>
-                            @livewire('admin.menu.create', ['selector' => 'navbar', 'parent' => $item->id])
+                            @can('menu:create')
+                                @livewire('admin.menu.create', ['selector' => 'navbar', 'parent' => $item->id])
+                            @endcan
                         </div>
                     </div>
                 @endif
@@ -59,5 +65,7 @@
     </div>
 
     <div class="my-12"></div>
-    @livewire('admin.menu.create', ['selector' => 'navbar'])
+    @can('menu:create')
+        @livewire('admin.menu.create', ['selector' => 'navbar'])
+    @endcan
 </div>

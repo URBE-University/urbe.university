@@ -7,6 +7,11 @@ use App\Http\Livewire\Admin\Event\Index as Events;
 use App\Http\Livewire\Admin\Page\Index as Pages;
 use App\Http\Livewire\Admin\Menu\Index as Menus;
 use App\Http\Livewire\Admin\User\Index as Users;
+use App\Http\Livewire\Admin\Seo\Tools\MetaTags;
+use App\Http\Livewire\Admin\Seo\Tools\Monitor404;
+use App\Http\Livewire\Admin\Seo\Tools\SiteSettings;
+use App\Http\Livewire\Admin\Seo\Tools\SocialMedia;
+use App\Http\Livewire\Admin\Seo\Tools\WebmasterTools;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +48,15 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
 
     // Menu routes
     Route::middleware('can:menu:view')->get('/menus/{selector}', Menus::class)->name('admin.menus');
+
+    // SEO management routes
+    Route::middleware('can:seo:view')->get('/seo', SiteSettings::class)->name('admin.seo.home');
+    // SEO tools routes
+    Route::middleware('can:seo:view')->get('/seo/meta-tags', MetaTags::class)->name('admin.seo.metatags');
+    Route::middleware('can:seo:view')->get('/seo/monitor-404', Monitor404::class)->name('admin.seo.monitor404');
+    Route::middleware('can:seo:view')->get('/seo/site-settings', SiteSettings::class)->name('admin.seo.site.settings');
+    Route::middleware('can:seo:view')->get('/seo/socialmedia', SocialMedia::class)->name('admin.seo.socialmedia');
+    Route::middleware('can:seo:view')->get('/seo/webmaster-tools', WebmasterTools::class)->name('admin.seo.webmaster.tools');
 
     // User routes
     Route::middleware('can:user:view')->get('/users', Users::class)->name('admin.users');

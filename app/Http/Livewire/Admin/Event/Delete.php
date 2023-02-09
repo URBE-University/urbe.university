@@ -14,6 +14,7 @@ class Delete extends Component
     {
         $this->event = $event;
     }
+
     public function render()
     {
         return view('livewire.admin.event.delete');

@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Menu;
 
 use App\Models\Menu;
 use Livewire\Component;
+use Illuminate\Support\Facades\Gate;
 
 class Delete extends Component
 {
@@ -21,6 +22,10 @@ class Delete extends Component
 
     public function delete()
     {
+        if (Gate::denies('menu:delete')) {
+            abort(403, 'You have no access to perform this action');
+        }
+
         $children = Menu::where('parent', $this->menu->id)->get();
 
         if($children->count() > 0)
