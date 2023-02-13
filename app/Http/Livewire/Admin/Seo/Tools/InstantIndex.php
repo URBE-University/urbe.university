@@ -4,10 +4,10 @@ namespace App\Http\Livewire\Admin\Seo\Tools;
 
 use Livewire\Component;
 
-class MetaTags extends Component
+class InstantIndex extends Component
 {
     public function render()
     {
-        return view('livewire.admin.seo.tools.meta-tags');
+        return view('livewire.admin.seo.tools.instant-index');
     }
 }

@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -33,9 +34,17 @@ return new class extends Migration
             $table->string('bing_webmaster_id')->nullable();
             $table->string('yandex_webmaster_id')->nullable();
             // Instant indexing
-            $table->string('instant_index_key');
+            $table->string('instant_index_key')->nullable();
             $table->timestamps();
         });
+
+        // Create site
+        DB::table('site_settings')->insert(
+            array(
+                'title' => config('app.name'),
+                'canonical_url' => config('app.url'),
+            )
+        );
     }
 
     /**
@@ -45,6 +54,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('seos');
+        Schema::dropIfExists('site_settings');
     }
 };
