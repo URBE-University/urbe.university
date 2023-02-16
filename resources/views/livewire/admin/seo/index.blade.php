@@ -80,7 +80,7 @@
                         <p class="mt-2 text-sm text-slate-600">Notify search engines using the IndexNow API when pages are added, updated and removed, or submit URLs manually.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="" class="secondary-btn">Manage</a>
+                        <a href="{{ route('admin.seo.instant.index') }}" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@
                         <p class="mt-2 text-sm text-slate-600">Redirect non-existent content easily with 301 and 302 status code. This can help improve site ranking.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="" class="secondary-btn">Manage</a>
+                        <a href="{{ route('admin.seo.redirects') }}" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 

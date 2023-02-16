@@ -52,7 +52,7 @@
                         <p class="block font-medium text-sm text-gray-700">Favicon</p>
                         <div class="mt-2 flex items-center space-x-6">
                             <div class="shrink-0">
-                                <img class="h-16 w-16 object-cover rounded-full bg-blue-50 flex items-center text-xs justify-center uppercase text-blue-500 font-bold" src="{{ $favicon ? asset($favicon->temporaryUrl()) : asset($settings?->favicon) }}" alt="Favicon" />
+                                <img class="h-16 w-16 object-cover rounded bg-blue-50 flex items-center text-xs justify-center uppercase text-blue-500 font-bold" src="{{ $favicon ? asset($favicon->temporaryUrl()) : asset($settings?->favicon) }}" alt="Favicon" />
                             </div>
                             <label class="block">
                                 <span class="sr-only">Choose favicon</span>

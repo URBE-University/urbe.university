@@ -47,13 +47,17 @@ class SiteSettings extends Component
         $favIcon = $this->settings->favicon;
         $cardImage = $this->settings->card_image;
 
-        if ($this->favicon && $this->settings->favicon) {
-            Storage::delete($this->settings->favicon);
+        if ($this->favicon) {
+            if ($this->settings->favicon) {
+                Storage::delete($this->settings->favicon);
+            }
             $favIcon = $this->favicon->store('images');
         }
 
-        if ($this->card_image && $this->settings->card_image) {
-            Storage::delete($this->settings->card_image);
+        if ($this->card_image) {
+            if ($this->settings->card_image) {
+                Storage::delete($this->settings->card_image);
+            }
             $favIcon = $this->card_image->store('images');
         }
 

@@ -1,8 +1,8 @@
 <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-slate-400 bg-white flex-shrink-0"
     x-data="{ open: false }">
-    <div class="flex-shrink-0 px-4 py-6 flex flex-row items-center justify-between">
+    <div class="flex-shrink-0 p-4 flex flex-row items-center justify-between">
         <a href="{{ route('dashboard') }}">
-            <x-jet-application-mark class="block h-10 w-auto" />
+            <img src="{{ asset('static_assets/urbe-logo.svg') }}" alt="URBE University logo" class="block h-10 w-auto">
         </a>
         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">

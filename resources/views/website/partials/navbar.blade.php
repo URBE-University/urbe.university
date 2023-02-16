@@ -1,7 +1,7 @@
 <nav class="bg-white border-gray-200 py-4">
     <div class="flex flex-wrap items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" x-data="{ megamenu: false }" x-cloak>
         <a href="{{ route('home') }}" class="flex items-center">
-            <img src="{{ asset('images/urbe-logo.svg') }}" alt="URBE Logo" class="h-12">
+            <img src="{{ asset('static_assets/urbe-logo.svg') }}" alt="URBE Logo" class="h-12">
         </a>
 
         <div class="flex items-center md:order-2">

@@ -50,7 +50,7 @@
                     </div>
                 @empty
                     <div class="text-center p-12">
-                        <img src="{{ asset('images/undraw_adventure_map_hnin.svg') }}" alt="no events found image" class="w-48 aspect-auto mx-auto">
+                        <img src="{{ asset('static_assets/undraw_adventure_map_hnin.svg') }}" alt="no events found image" class="w-48 aspect-auto mx-auto">
                         <h1 class="mt-12 text-2xl font-semibold">No events found</h1>
                         @can('event:create')
                             <div class="mt-12">
