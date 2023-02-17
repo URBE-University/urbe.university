@@ -110,7 +110,7 @@
                         <p class="mt-2 text-sm text-slate-600">Enable the sitemap feature, which helps search engines intelligently crawl your website's content. It also supports hreflang tag.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="" class="secondary-btn">Manage</a>
+                        @livewire('admin.seo.tools.generate-sitemap')
                     </div>
                 </div>
 

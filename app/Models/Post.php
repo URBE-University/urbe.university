@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 
-class Post extends Model
+class Post extends Model implements Sitemapable
 {
     use HasFactory;
     use SoftDeletes;
@@ -24,6 +26,11 @@ class Post extends Model
         'enable_comments',
         'published_at',
     ];
+
+    public function toSitemapTag(): Url | string | array
+    {
+        return route('blog.post.show', $this->slug);
+    }
 
     public function user()
     {

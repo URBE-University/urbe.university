@@ -23,9 +23,11 @@ class Create extends Component
             $urls = explode(PHP_EOL, $this->urls);
 
             foreach ($urls as $url) {
-                SiteIndex::updateOrCreate([
-                    'url' => $url,
-                ]);
+                if ($url !== "") {
+                    SiteIndex::updateOrCreate([
+                        'url' => $url,
+                    ]);
+                }
             }
             // Dispatch job to submit pages async.
             dispatch( new RunUrlIndexer());

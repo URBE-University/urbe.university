@@ -23,7 +23,7 @@
             </div>
             <div class="mt-6">
                 <x-jet-label value="API Key Location"/>
-                <p class="w-full text-sm bg-slate-900 rounded px-2 py-2 font-medium text-green-400 font-mono">{{ $apiKeyLocation }}</p>
+                <p class="w-full text-sm bg-slate-900 rounded-md px-2 py-2 font-medium text-green-400 font-mono">{{ $apiKeyLocation }}</p>
                 <p class="mt-1 text-xs font-medium text-slate-600">{{ __("Use the Check Key button to verify that the key is accessible for search engines. Clicking on it should open the key file in your browser and show the API key.") }}</p>
             </div>
         </x-slot>

@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Livewire\Admin\Menu\Index as Menus;
 use App\Http\Livewire\Admin\Page\Index as Pages;
@@ -14,22 +14,20 @@ use App\Http\Livewire\Admin\Seo\Tools\InstantIndex\Index as InstantIndex;
 use App\Http\Livewire\Admin\Seo\Tools\SiteSettings;
 use App\Http\Livewire\Admin\Seo\Tools\WebmasterTools;
 use App\Http\Livewire\Admin\Seo\Tools\Redirects\Index as RedirectsIndex;
-use Illuminate\Support\Facades\Request;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+/**
+ * Public routes
+ */
 Route::middleware('web')->group(function () {
     Route::get('/', [WebsiteController::class, 'home'])->name('home');
-    Route::get('/contact', [WebsiteController::class, 'home'])->name('home2');
+
+    // Blog Routes
+    Route::get('/blog', [PostController::class, 'index'])->name('blog.post.index');
+    Route::get('/blog/{post}', [PostController::class, 'post'])->name('blog.post.show');
+    Route::get('/blog/{category}', [PostController::class, 'category'])->name('blog.category.show');
+    Route::get('/blog/{author}', [PostController::class, 'author'])->name('blog.author.show');
+
+
     Route::get('{uri}', [WebsiteController::class, 'redirect'])->name('redirects');
 });
 
