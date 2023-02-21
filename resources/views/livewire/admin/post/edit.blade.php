@@ -30,6 +30,9 @@
                 @livewire('markdown-x', ['content' => $content])
                 <x-jet-input-error for="body" />
             </div>
+
+            @include('layouts.partials.shortcodes')
+
         </div>
     </div>
 

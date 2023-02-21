@@ -28,8 +28,8 @@
         </div>
         <div class="py-8"></div>
         <div class="grid grid-cols-3 gap-8">
-            <div class="md:h-96 col-span-3 md:col-span-1 bg-slate-50 rounded-xl bg-center bg-cover" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
-                <div class="h-full w-full bg-white/90 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-xl">
+            <div class="md:h-96 w-full col-span-3 md:col-span-1 rounded-xl" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
+                <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
                     <div class="flex justify-end">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-sky-500">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
@@ -162,62 +162,11 @@
         </div>
     </section>
 
-    <div class="py-12"></div>
-
     {{-- Blog --}}
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl text-urbe font-serif font-bold capitalize">{{ __("Latest News") }}</h2>
-        <span class="text-slate-600 text-xs">From our blog</span>
-
-        <div class="mt-6 grid grid-cols-3 gap-8 text-left">
-            <a href="#" class="col-span-3 md:col-span-1">
-                <img src="https://urbe.university/wp-content/uploads/2019/02/Mass-Communications-Student.jpg" alt="" class="w-full aspect-video md:aspect-square rounded-lg object-cover object-center">
-                <p class="mt-2 font-medium text-lg text-urbe flex items-center justify-between">Lorem ipsum dolor asit met.</p>
-                <p class="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit[...]</p>
-            </a>
-            <a href="#" class="col-span-3 md:col-span-1">
-                <img src="https://urbe.university/wp-content/uploads/2019/02/Mass-Communications-Student.jpg" alt="" class="w-full aspect-video md:aspect-square rounded-lg object-cover object-center">
-                <p class="mt-2 font-medium text-lg text-urbe flex items-center justify-between">Lorem ipsum dolor asit met.</p>
-                <p class="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit[...]</p>
-            </a>
-            <a href="#" class="col-span-3 md:col-span-1">
-                <img src="https://urbe.university/wp-content/uploads/2019/02/Mass-Communications-Student.jpg" alt="" class="w-full aspect-video md:aspect-square rounded-lg object-cover object-center">
-                <p class="mt-2 font-medium text-lg text-urbe flex items-center justify-between">Lorem ipsum dolor asit met.</p>
-                <p class="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit[...]</p>
-            </a>
-        </div>
-        <div class="mt-12">
-            <a href="#" class="px-5 py-2 border rounded-lg text-sm text-slate-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all">Read more articles...</a>
-        </div>
-    </section>
-
-    <div class="py-12"></div>
+    @include('website.partials.posts-teaser')
 
     {{-- Events --}}
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl text-urbe font-serif font-bold capitalize">{{ __("Upcoming Events") }}</h2>
-
-        <div class="mt-6">
-            <a href="" class="block mt-6">
-                <div class="w-full border-2 border-slate-200 py-6 px-4 sm:px-6 lg:px-8 rounded-lg hover:border-sky-500 transition-all">
-                    <div class="md:flex items-center md:space-x-4">
-                        <div class="flex-none pr-4 md:border-r h-full text-left text-slate-800">
-                            <p class="text-sm">Feb 24</p>
-                            <p class="font-medium">10:00 AM</p>
-                        </div>
-                        <div class="text-left border-t md:border-t-0">
-                            <p class="font-medium text-lg text-urbe flex items-center justify-between">The event title goes here.</p>
-                            <p class="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sed itaque vel dolore sequi? Quasi commodi laboriosam suscipit tempora, doloribus sit delectus perspiciatis ex. Illo, aliquid! Nam perspiciatis numquam consequatur.</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="mt-12">
-            <a href="#" class="px-5 py-2 border rounded-lg text-sm text-slate-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all">View all events...</a>
-        </div>
-    </section>
+    @include('website.partials.events-teaser')
 
     <div class="py-12"></div>
 
@@ -242,5 +191,4 @@
     @include('website.partials.cta')
 
     <div class="py-12"></div>
-
 @endsection

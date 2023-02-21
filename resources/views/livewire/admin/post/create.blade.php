@@ -18,6 +18,9 @@
                 <livewire:markdown-x />
                 <x-jet-input-error for="body" />
             </div>
+
+            @include('layouts.partials.shortcodes')
+
         </div>
     </div>
 

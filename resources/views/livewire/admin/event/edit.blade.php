@@ -96,6 +96,9 @@
                 </div>
                 <x-jet-input-error for="image" />
             </div>
+
+            @include('layouts.partials.shortcodes')
+
         </div>
     </div>
 </div>

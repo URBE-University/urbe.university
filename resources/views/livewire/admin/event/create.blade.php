@@ -93,6 +93,9 @@
                     </div>
                 </div>
             </div>
+
+            @include('layouts.partials.shortcodes')
+
         </div>
     </div>
 </div>

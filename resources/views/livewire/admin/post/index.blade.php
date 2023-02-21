@@ -15,8 +15,11 @@
             <button wire:click="$toggle('showTrashed')" class="text-sm hover:underline ">Trash ({{ \App\Models\Post::onlyTrashed()->count() }})</button>
             <div class="mt-4 bg-white shadow rounded-lg">
                 @forelse ($posts as $post)
-                    <div class="flex items-center justify-between p-4 rounded-lg">
-                        <div class="flex items-center space-x-3">
+                    <div @class([
+                        'flex items-center justify-between px-6 py-4 rounded-lg hover:bg-slate-50',
+                        'border-t rounded-t-none' => !$loop->first
+                    ])>
+                        <div class="flex items-center space-x-6">
                             @if ($post->featured_image)
                                 <img src="{{ asset($post->featured_image) }}" class="w-20 h-20 aspect-square rounded-lg shadow">
                             @endif

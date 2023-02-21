@@ -8,6 +8,8 @@ use Livewire\Component;
 
 class CodeEditor extends Component
 {
+    public $code;
+
     public function render()
     {
         return view('livewire.code-editor');

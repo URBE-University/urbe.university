@@ -18,12 +18,12 @@ use App\Http\Livewire\Admin\Seo\Tools\Redirects\Index as RedirectsIndex;
 /**
  * Public routes
  */
-Route::middleware('web')->group(function () {
+Route::middleware(['web', 'parse_shortcodes'])->group(function () {
     Route::get('/', [WebsiteController::class, 'home'])->name('home');
 
     // Blog Routes
     Route::get('/blog', [PostController::class, 'index'])->name('blog.post.index');
-    Route::get('/blog/{post}', [PostController::class, 'post'])->name('blog.post.show');
+    Route::get('/blog/{slug}', [PostController::class, 'post'])->name('blog.post.show');
     Route::get('/blog/{category}', [PostController::class, 'category'])->name('blog.category.show');
     Route::get('/blog/{author}', [PostController::class, 'author'])->name('blog.author.show');
 

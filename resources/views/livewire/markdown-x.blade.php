@@ -65,7 +65,7 @@
             <div class="relative z-30 overflow-hidden @if(isset($style['height'])){{ $style['height'] }}@endif">
 
                 <div wire:ignore x-ref="placeholder" @click="$refs.editor.focus()" id="placeholder-{{ $key }}" x-show="placeholder" class="absolute z-20 text-gray-400 transition-opacity duration-200 ease-out" x-cloak>Type '/' for commands </div>
-                <textarea x-ref="editor" id="editor-{{ $key }}" data-key="{{ $key }}" class="editors @if(isset($style['textarea'])){{ $style['textarea'] }}@else{{ 'w-full mx-auto min-h-96 h-[500px] px-5 md:px-1 pt-5 font-mono leading-loose tracking-tighter border-0 outline-none focus:outline-none sm:x-0 text-gray-600' }}@endif" placeholder="" data-loaded="false" name="{{ $name }}" x-on:dragenter="$event.preventDefault(); dropFiles=true" wire:model.lazy="content" x-on:blur="@this.call('update', { content: $event.target.value });" x-on:focus="editorEvent($event)" x-on:keypress="editorEvent($event)" x-on:keydown="getCursorXY(); editorEvent($event)" x-on:keyup="getCursorXY(); editorEvent($event)" x-on:click="editorEvent($event)" x-cloak>
+                <textarea x-ref="editor" id="editor-{{ $key }}" data-key="{{ $key }}" class="editors @if(isset($style['textarea'])){{ $style['textarea'] }}@else{{ 'w-full mx-auto min-h-96 h-[700px] px-5 md:px-1 pt-5 font-mono leading-loose tracking-tighter border-0 outline-none focus:outline-none sm:x-0 text-gray-600' }}@endif" placeholder="" data-loaded="false" name="{{ $name }}" x-on:dragenter="$event.preventDefault(); dropFiles=true" wire:model.lazy="content" x-on:blur="@this.call('update', { content: $event.target.value });" x-on:focus="editorEvent($event)" x-on:keypress="editorEvent($event)" x-on:keydown="getCursorXY(); editorEvent($event)" x-on:keyup="getCursorXY(); editorEvent($event)" x-on:click="editorEvent($event)" x-cloak>
                     </textarea>
                 <div x-ref="drop" x-show="dropFiles" x-on:dragleave="$event.preventDefault(); dropFiles=false" x-on:dragover="$event.preventDefault();" x-on:drop="$event.preventDefault(); droppingFile($event)" class="absolute inset-0 flex items-center justify-center w-full h-full bg-blue-100 bg-opacity-20" x-cloak>
                     <div class="flex flex-col items-center justify-center w-40 h-32 text-xs text-gray-400 bg-white border-0 border-gray-200 border-dashed rounded-lg">
@@ -77,7 +77,7 @@
         </div>
 
         {{-- MarkdownX Preview Section --}}
-        <div x-show="section == 'preview'" wire:target="updateContentPreview" class="@if(isset($style['preview'])){{ $style['preview'] }}@else{{ 'bg-white min-h-96 h-[500px] relative z-30 px-5 pt-5 prose max-w-none' }}@endif" x-cloak>
+        <div x-show="section == 'preview'" wire:target="updateContentPreview" class="@if(isset($style['preview'])){{ $style['preview'] }}@else{{ 'bg-white min-h-96 h-[700px] relative z-30 px-5 pt-5 prose max-w-none' }}@endif" x-cloak>
             {!! $contentPreview !!}
         </div>
         {{-- End: MarkdownX Preview Section --}}
