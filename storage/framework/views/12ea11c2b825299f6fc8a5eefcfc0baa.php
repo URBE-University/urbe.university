@@ -1,7 +1,7 @@
 <div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js" integrity="sha512-NSbvq6xPdfFIa2wwSh8vtsPL7AyYAYRAUWRDCqFH34kYIjQ4M7H2POiULf3CH11TRcq3Ww6FZDdLZ8msYhMxjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ext-language_tools.min.js" integrity="sha512-jwHjfXzlZZWm/JrYIjGauBO9fNDoxtrl5uVEh8SVu5nZGO38FCFiHx7N5NfLQWsi+cjT4vQcZl9UNLc3oCm+TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/theme-one_dark.min.js" integrity="sha512-fkBNFFo3vuNzwUVCyDJh2aNl7nViFet/XHeWQRjALcuO7a7AdOfGI9iKBhoBt/nV1HsJvzLssyRTuotxAx+YBA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/theme-one_dark.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <header class="bg-white border-b border-b-slate-100">
         <div class="py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Editing page</h2>
@@ -55,7 +55,7 @@
                 <div wire:ignore id="editor" class="absolute top-0 right-0 bottom-0 left-0 text-base leading-6"></div>
                 <input type="text" id="content" wire:model="code" class="sr-only">
                 <div x-data="{
-                    content: '',
+                    content: (window.localStorage.getItem('code')) ? window.localStorage.getItem('code') : '',
                     init() {
                         let contentInput = document.getElementById('content');
                         let editor = ace.edit('editor');
@@ -72,6 +72,7 @@
                             this.content = editor.getValue();
                             contentInput.value = this.content;
                             window.livewire.emit('codeUpdated', this.content);
+                            window.localStorage.setItem('code', this.content);
                         });
                     }
                 }"></div>
@@ -80,12 +81,5 @@
             <?php echo $__env->make('layouts.partials.shortcodes', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </div>
     </div>
-
-    <script>
-        let content = document.getElementById('content');
-        window.addEventListener('storage', () => {
-            console.log(JSON.parse(window.localStorage.getItem('content')));
-        });
-    </script>
 </div>
 <?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/livewire/admin/page/create.blade.php ENDPATH**/ ?>
