@@ -2,11 +2,19 @@
 
 namespace App\Http\Livewire\Admin\Page;
 
+use App\Models\Page;
 use Livewire\Component;
 
 class Create extends Component
 {
-    public $title, $slug, $code = '', $status = 'draft';
+    public $code = '', $status = 'draft';
+    public $title;
+    public $slug;
+    public $featured_image;
+    public $content;
+    public $keywords;
+    public $page_id;
+    protected $published_at;
 
     protected $listeners = [
         'codeUpdated'
@@ -14,7 +22,7 @@ class Create extends Component
 
     public function codeUpdated($code)
     {
-        $this->code = $code;
+        $this->content = $code;
     }
 
     public function render()
@@ -24,6 +32,24 @@ class Create extends Component
 
     public function save()
     {
-        dd($this->code);
+        $this->validate([
+            'title' => 'required|unique:pages,title',
+            'content' => 'required',
+        ]);
+
+        try {
+            Page::create([
+                'title' => $this->title,
+                'slug' => str($this->title)->slug(),
+                'content' => $this->content,
+            ]);
+            session()->flash('flash.banner', 'Page successfully created!');
+            session()->flash('flash.bannerStyle', 'success');
+        } catch (\Throwable $th) {
+            session()->flash('flash.banner', 'Page successfully created!');
+            session()->flash('flash.bannerStyle', 'danger');
+        }
+        session()->forget('code');
+        return redirect()->route('admin.pages');
     }
 }

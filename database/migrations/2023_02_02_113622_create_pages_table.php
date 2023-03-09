@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('featured_image')->nullable();
+            $table->longText('content')->nullable();
+            $table->string('keywords')->nullable();
+            $table->foreignId('page_id')->nullable();
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }

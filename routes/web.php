@@ -53,6 +53,8 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
     // Page routes
     Route::middleware('can:page:view')->get('/pages', Pages::class)->name('admin.pages');
     Route::get('/pages/new', App\Http\Livewire\Admin\Page\Create::class)->name('admin.page.create');
+    Route::middleware('can:page:update')->get('/pages/{page}/edit', App\Http\Livewire\Admin\Page\Edit::class)->name('admin.page.edit');
+
 
     // Menu routes
     Route::middleware('can:menu:view')->get('/menus/{selector}', Menus::class)->name('admin.menus');
