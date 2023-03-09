@@ -36,4 +36,9 @@ class Post extends Model implements Sitemapable
     {
         return $this->belongsTo(User::class);
     }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }

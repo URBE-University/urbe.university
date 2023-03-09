@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin\Post;
 
+use App\Models\Category;
 use App\Models\Post;
 use Livewire\Component;
 
@@ -30,7 +31,6 @@ class Options extends Component
     {
         $this->post->update([
             'keywords' => $this->keywords,
-            'keyphrases' => $this->keyphrases,
         ]);
         session()->flash('flash.banner', 'Changes saved!');
         session()->flash('flash.bannerStyle', 'success');

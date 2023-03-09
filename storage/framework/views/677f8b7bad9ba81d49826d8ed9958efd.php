@@ -40,12 +40,32 @@
             </a>
         <?php endif; ?>
 
+        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('post:view')): ?>
+            <a href="<?php echo e(route('admin.categories')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
+                'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
+                'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.categories'),
+            ]) ?>">
+                <?php echo e(__('Categories')); ?>
+
+            </a>
+        <?php endif; ?>
+
         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('event:view')): ?>
             <a href="<?php echo e(route('admin.events')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.events'),
             ]) ?>">
                 <?php echo e(__('Events')); ?>
+
+            </a>
+        <?php endif; ?>
+
+        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('media:view')): ?>
+            <a href="<?php echo e(route('admin.media')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
+                'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
+                'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.media'),
+            ]) ?>">
+                <?php echo e(__('Media')); ?>
 
             </a>
         <?php endif; ?>

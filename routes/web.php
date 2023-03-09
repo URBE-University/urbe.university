@@ -6,9 +6,11 @@ use App\Http\Controllers\WebsiteController;
 use App\Http\Livewire\Admin\Menu\Index as Menus;
 use App\Http\Livewire\Admin\Page\Index as Pages;
 use App\Http\Livewire\Admin\Post\Index as Posts;
+use App\Http\Livewire\Admin\Category\Index as Categories;
 use App\Http\Livewire\Admin\User\Index as Users;
 use App\Http\Livewire\Admin\Seo\Index as SeoHome;
 use App\Http\Livewire\Admin\Event\Index as Events;
+use App\Http\Livewire\Admin\Media\Index as Media;
 use App\Http\Livewire\Admin\Seo\Tools\SocialMedia;
 use App\Http\Livewire\Admin\Seo\Tools\InstantIndex\Index as InstantIndex;
 use App\Http\Livewire\Admin\Seo\Tools\SiteSettings;
@@ -44,6 +46,8 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
     Route::middleware('can:post:view')->get('/posts', Posts::class)->name('admin.posts');
     Route::middleware('can:post:create')->get('/posts/new', App\Http\Livewire\Admin\Post\Create::class)->name('admin.post.create');
     Route::middleware('can:post:update')->get('/posts/{post}/edit', App\Http\Livewire\Admin\Post\Edit::class)->name('admin.post.edit');
+    Route::middleware('can:post:view')->get('/categories', Categories::class)->name('admin.categories');
+
 
     // Event routes
     Route::middleware('can:event:view')->get('/events', Events::class)->name('admin.events');
@@ -68,7 +72,8 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
     Route::middleware('can:seo:view')->get('/seo/webmaster-tools', WebmasterTools::class)->name('admin.seo.webmaster.tools');
     Route::middleware('can:seo:view')->get('/seo/redirects', RedirectsIndex::class)->name('admin.seo.redirects');
 
-    // Route::middleware('can:seo:view')->get('/seo/monitor-404', Monitor404::class)->name('admin.seo.monitor404');
+    // Media routes
+    Route::middleware('can:media:view')->get('/media', Media::class)->name('admin.media');
 
     // User routes
     Route::middleware('can:user:view')->get('/users', Users::class)->name('admin.users');

@@ -40,14 +40,8 @@
                                         <x-jet-button wire:click="saveKeys">Save</x-jet-button>
                                     </div>
 
-                                    {{-- Keyphrases --}}
-                                    <p class="mt-8 text-sm font-medium text-slate-600">{{ __("Keyphrases") }}</p>
-                                    <textarea id="keyphrases" cols="30" rows="6" wire:model.defer="keyphrases" placeholder="Enter each keyphrase in a new line."
-                                        class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-lg shadow-sm mt-1 block w-full"
-                                    ></textarea>
-                                    <div class="mt-2 flex justify-end">
-                                        <x-jet-button wire:click="saveKeys">Save</x-jet-button>
-                                    </div>
+                                    {{-- Categories --}}
+                                    @livewire('admin.post.manage-categories', ['post' => $post])
 
                                     {{-- Enable/Disable Comments --}}
                                     <p class="mt-8 text-sm font-medium text-slate-600">{{ __("Comments") }}</p>
@@ -60,6 +54,8 @@
                                         >
                                         <span>{{ __("Enable comments") }}</span>
                                     </label>
+
+                                    <div class="mt-8"></div>
 
                                 </div>
                                 <!-- /End replace -->
