@@ -6,13 +6,13 @@
         </svg>
     </button>
 
-    <x-jet-dialog-modal wire:model="modal">
+    <x-dialog-modal wire:model="modal">
         <x-slot name="title">Instant Indexing Options</x-slot>
         <x-slot name="content">
             <div class="">
-                <x-jet-label for="api_key" value="API Key" />
+                <x-label for="api_key" value="API Key" />
                 <div class="mt-1 flex items-center space-x-4">
-                    <x-jet-input type="text" wire:model="apiKey" disabled class="w-full"/>
+                    <x-input type="text" wire:model="apiKey" disabled class="w-full"/>
                     <button wire:click="genKey" class="inline-flex items-center p-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:text-gray-800 active:bg-gray-50 disabled:opacity-25 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                             <path fill-rule="evenodd" d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z" clip-rule="evenodd" />
@@ -22,15 +22,15 @@
                 <p class="mt-1 text-xs font-medium text-slate-600">{{ __("The IndexNow API key proves the ownership of the site. It is generated automatically. You can change the key if it becomes known to third parties.") }}</p>
             </div>
             <div class="mt-6">
-                <x-jet-label value="API Key Location"/>
+                <x-label value="API Key Location"/>
                 <p class="w-full text-sm bg-slate-900 rounded-md px-2 py-2 font-medium text-green-400 font-mono">{{ $apiKeyLocation }}</p>
                 <p class="mt-1 text-xs font-medium text-slate-600">{{ __("Use the Check Key button to verify that the key is accessible for search engines. Clicking on it should open the key file in your browser and show the API key.") }}</p>
             </div>
         </x-slot>
         <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$toggle('modal')">Close</x-jet-secondary-button>
+            <x-secondary-button wire:click="$toggle('modal')">Close</x-secondary-button>
             <a class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition ml-4"
             href="{{ $apiKeyLocation }}" target="_blank">Check Key</a>
         </x-slot>
-    </x-jet-dialog-modal>
+    </x-dialog-modal>
 </div>

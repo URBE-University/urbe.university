@@ -17,7 +17,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex items-center justify-between">
-                <x-jet-input type="search" wire:model="query" class="py-1" placeholder="Search..."/>
+                <x-input type="search" wire:model="query" class="py-1" placeholder="Search..."/>
                 @livewire('admin.seo.tools.redirects.create')
             </div>
             <div class="mt-6 relative overflow-x-auto shadow-md sm:rounded-lg">

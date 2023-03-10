@@ -21,12 +21,12 @@
         @if ($image)
             <button type="button" wire:click="setFeaturedImage" class="mt-4 w-full text-center p-2 rounded-lg bg-black text-white">{{ __("Upload Now") }}</button>
         @endif
-        <x-jet-input-error for="image"/>
+        <x-input-error for="image"/>
 
         <p class="mt-8 text-sm font-medium text-slate-600">{{ __("Image alternative text") }}</p>
-        <x-jet-input type="text" id="image_alt" wire:model="image_alt" placeholder="featured image alt text" class="mt-1 w-full"/>
+        <x-input type="text" id="image_alt" wire:model="image_alt" placeholder="featured image alt text" class="mt-1 w-full"/>
         <div class="mt-2 flex justify-end">
-            <x-jet-button wire:click="saveAltText">Save</x-jet-button>
+            <x-button wire:click="saveAltText">Save</x-button>
         </div>
     </div>
 </div>

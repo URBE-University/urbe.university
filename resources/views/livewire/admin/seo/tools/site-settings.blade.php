@@ -21,27 +21,27 @@
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="name">Site name</x-jet-label>
-                        <x-jet-input id="name" type="text" wire:model="name" class="mt-1 w-2/3"/>
-                        <x-jet-input-error for="name" class="mt-1"/>
+                        <x-label for="name">Site name</x-label>
+                        <x-input id="name" type="text" wire:model="name" class="mt-1 w-2/3"/>
+                        <x-input-error for="name" class="mt-1"/>
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="description">Site description</x-jet-label>
+                        <x-label for="description">Site description</x-label>
                         <textarea id="description" cols="30" rows="3" wire:model="description"
                             class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 w-full"
                         ></textarea>
-                        <x-jet-input-error for="description" class="mt-1"/>
+                        <x-input-error for="description" class="mt-1"/>
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="canonical_url">Site canonical URL</x-jet-label>
-                        <x-jet-input id="canonical_url" type="url" wire:model="canonicalUrl" class="mt-1 w-2/3" placeholder="https://yourawesomewebsite.com"/>
+                        <x-label for="canonical_url">Site canonical URL</x-label>
+                        <x-input id="canonical_url" type="url" wire:model="canonicalUrl" class="mt-1 w-2/3" placeholder="https://yourawesomewebsite.com"/>
                         <p class="mt-1 text-xs font-medium text-slate-600">If you change this url, make sure you also change the site url in the environment file.</p>
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="keywords">Keywords</x-jet-label>
+                        <x-label for="keywords">Keywords</x-label>
                         <textarea id="keywords" cols="30" rows="3" wire:model="keywords"
                             class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 w-full"
                         ></textarea>
@@ -66,7 +66,7 @@
                               </label>
                         </div>
                         <p class="mt-1 text-xs font-medium text-slate-600">Upload only .svg or .png, 16x16 pixels.</p>
-                        <x-jet-input-error for="favicon" class="mt-1"/>
+                        <x-input-error for="favicon" class="mt-1"/>
                     </div>
 
                     <div class="mt-6">
@@ -87,7 +87,7 @@
                                 "/>
                               </label>
                         </div>
-                        <x-jet-input-error for="card_image" class="mt-1"/>
+                        <x-input-error for="card_image" class="mt-1"/>
 
                     </div>
 

@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="mt-6 flex items-center justify-end space-x-4 bg-slate-100 py-4 px-4 sm:px-6 lg:px-8 rounded-b-lg">
-                <x-jet-secondary-button wire:click="$toggle('modal')">Update permissions</x-jet-secondary-button>
+                <x-secondary-button wire:click="$toggle('modal')">Update permissions</x-secondary-button>
                 @can('user:update')
                     @if ($user->permissions)
                         @livewire('admin.user.suspend', ['user' => $user])
@@ -34,23 +34,23 @@
     </div>
 
     {{-- Update permissions modal --}}
-    <x-jet-dialog-modal wire:model="modal">
+    <x-dialog-modal wire:model="modal">
         <x-slot name="title">Update permissions</x-slot>
         <x-slot name="content">
             <div class="mt-1 grid grid-cols-4 gap-4">
                 @forelse (config('app.permissions') as $permission)
                     <label for="{{ $permission }}" class="flex items-center space-x-3">
-                        <x-jet-input id="{{ $permission }}" type="checkbox" wire:model="permissions" value="{{ $permission }}"/>
+                        <x-input id="{{ $permission }}" type="checkbox" wire:model="permissions" value="{{ $permission }}"/>
                         <span class="text-sm">{{ $permission }}</span>
                     </label>
                 @empty
                 @endforelse
             </div>
-            <x-jet-input-error class="mt-4" for="permissions"/>
+            <x-input-error class="mt-4" for="permissions"/>
         </x-slot>
         <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$toggle('modal')">Cancel</x-jet-secondary-button>
-            <x-jet-button wire:click="save" class="ml-3">Update permissions</x-jet-button>
+            <x-secondary-button wire:click="$toggle('modal')">Cancel</x-secondary-button>
+            <x-button wire:click="save" class="ml-3">Update permissions</x-button>
         </x-slot>
-    </x-jet-dialog-modal>
+    </x-dialog-modal>
 </div>

@@ -37,7 +37,7 @@
                                         class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-lg shadow-sm mt-1 block w-full"
                                     ></textarea>
                                     <div class="mt-2 flex justify-end">
-                                        <x-jet-button wire:click="saveKeys">Save</x-jet-button>
+                                        <x-button wire:click="saveKeys">Save</x-button>
                                     </div>
 
                                     {{-- Keyphrases --}}
@@ -46,7 +46,7 @@
                                         class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-lg shadow-sm mt-1 block w-full"
                                     ></textarea>
                                     <div class="mt-2 flex justify-end">
-                                        <x-jet-button wire:click="saveKeys">Save</x-jet-button>
+                                        <x-button wire:click="saveKeys">Save</x-button>
                                     </div>
 
                                     {{-- Enable/Disable Comments --}}

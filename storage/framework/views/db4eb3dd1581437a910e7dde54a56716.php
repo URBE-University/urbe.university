@@ -2,4 +2,4 @@
     <?php echo e($slot); ?>
 
 </button>
-<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/vendor/laravel/jetstream/src/../resources/views/components/secondary-button.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/components/secondary-button.blade.php ENDPATH**/ ?>

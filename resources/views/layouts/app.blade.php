@@ -24,7 +24,7 @@
             @include('layouts.partials.nav')
             {{-- App Content does Here --}}
             <main class="w-full sm:overflow-y-auto sm:min-h-screen relative bg-slate-50">
-                <x-jet-banner />
+                <x-banner />
                 @if (isset($header))
                     <header class="bg-white border-b border-b-slate-100">
                         <div class="max-w-full mx-auto py-6 px-4 sm:px-6 lg:px-8">

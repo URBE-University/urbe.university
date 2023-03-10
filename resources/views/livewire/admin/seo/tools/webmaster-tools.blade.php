@@ -21,34 +21,34 @@
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="google_search_id">Google Search Console</x-jet-label>
+                        <x-label for="google_search_id">Google Search Console</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="google_search_id" type="url" wire:model="google_search_id" class="w-full"/>
+                                <x-input id="google_search_id" type="url" wire:model="google_search_id" class="w-full"/>
                                 <p class="mt-1 text-xs font-medium tracking-wide text-slate-600">{{__("Enter your Google Search Console verification ID.")}}</p>
-                                <x-jet-input-error for="google_search_id"/>
+                                <x-input-error for="google_search_id"/>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="bing_webmaster_id">Bing Webmaster Tools</x-jet-label>
+                        <x-label for="bing_webmaster_id">Bing Webmaster Tools</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="bing_webmaster_id" type="url" wire:model="bing_webmaster_id" class="w-full"/>
+                                <x-input id="bing_webmaster_id" type="url" wire:model="bing_webmaster_id" class="w-full"/>
                                 <p class="mt-1 text-xs font-medium tracking-wide text-slate-600">{{__("Enter your Bing Webmaster Tools verification ID.")}}</p>
-                                <x-jet-input-error for="bing_webmaster_id"/>
+                                <x-input-error for="bing_webmaster_id"/>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="yandex_webmaster_id">Yandex Webmaster Tools</x-jet-label>
+                        <x-label for="yandex_webmaster_id">Yandex Webmaster Tools</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="yandex_webmaster_id" type="url" wire:model="yandex_webmaster_id" class="w-full"/>
+                                <x-input id="yandex_webmaster_id" type="url" wire:model="yandex_webmaster_id" class="w-full"/>
                                 <p class="mt-1 text-xs font-medium tracking-wide text-slate-600">{{__("Enter your Yandex verification ID.")}}</p>
-                                <x-jet-input-error for="yandex_webmaster_id"/>
+                                <x-input-error for="yandex_webmaster_id"/>
                             </div>
                         </div>
                     </div>

@@ -16,4 +16,4 @@
     <?php echo e($value ?? $slot); ?>
 
 </label>
-<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/vendor/laravel/jetstream/src/../resources/views/components/label.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/components/label.blade.php ENDPATH**/ ?>

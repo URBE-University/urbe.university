@@ -9,7 +9,7 @@
         <div class="py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Editing page</h2>
             @can('page:create')
-                <x-jet-button wire:click="save">Save changes</x-jet-button>
+                <x-button wire:click="save">Save changes</x-button>
             @endcan
         </div>
     </header>

@@ -11,7 +11,7 @@
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Editing page</h2>
             @can('page:update')
                 <div class="flex items-center space-x-4">
-                    <x-jet-secondary-button>Preview</x-jet-secondary-button>
+                    <x-secondary-button>Preview</x-secondary-button>
                     @livewire('admin.page.options', ['page' => $page])
                     <select wire:model="status" @class([
                         'border py-2 rounded-md text-xs focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 shadow-sm uppercase font-semibold',
@@ -21,7 +21,7 @@
                         <option value="draft">Draft</option>
                         <option value="published">Published</option>
                     </select>
-                    <x-jet-button wire:click="save">Save changes</x-jet-button>
+                    <x-button wire:click="save">Save changes</x-button>
                 </div>
             @endcan
         </div>

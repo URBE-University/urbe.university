@@ -13,4 +13,4 @@
 <?php unset($__defined_vars); ?>
 
 <input <?php echo e($disabled ? 'disabled' : ''); ?> <?php echo $attributes->merge(['class' => 'border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm']); ?>>
-<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/vendor/laravel/jetstream/src/../resources/views/components/input.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/components/input.blade.php ENDPATH**/ ?>

@@ -21,11 +21,11 @@
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="facebook_url">Facebook</x-jet-label>
+                        <x-label for="facebook_url">Facebook</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="facebook_url" type="url" wire:model="facebook_url" class="w-full"/>
-                                <x-jet-input-error for="facebook_url"/>
+                                <x-input id="facebook_url" type="url" wire:model="facebook_url" class="w-full"/>
+                                <x-input-error for="facebook_url"/>
                             </div>
                             @if ($facebook_url)
                                 <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
@@ -38,11 +38,11 @@
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="facebook_url">Instagram</x-jet-label>
+                        <x-label for="facebook_url">Instagram</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="instagram_url" type="url" wire:model="instagram_url" class="w-full"/>
-                                <x-jet-input-error for="instagram_url"/>
+                                <x-input id="instagram_url" type="url" wire:model="instagram_url" class="w-full"/>
+                                <x-input-error for="instagram_url"/>
                             </div>
                             @if ($instagram_url)
                                 <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
@@ -55,11 +55,11 @@
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="twitter_url">Twitter</x-jet-label>
+                        <x-label for="twitter_url">Twitter</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="twitter_url" type="url" wire:model="twitter_url" class="w-full"/>
-                                <x-jet-input-error for="twitter_url"/>
+                                <x-input id="twitter_url" type="url" wire:model="twitter_url" class="w-full"/>
+                                <x-input-error for="twitter_url"/>
                             </div>
                             @if ($twitter_url)
                                 <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
@@ -72,11 +72,11 @@
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="linkedin_url">Linkedin</x-jet-label>
+                        <x-label for="linkedin_url">Linkedin</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="linkedin_url" type="url" wire:model="linkedin_url" class="w-full"/>
-                                <x-jet-input-error for="linkedin_url"/>
+                                <x-input id="linkedin_url" type="url" wire:model="linkedin_url" class="w-full"/>
+                                <x-input-error for="linkedin_url"/>
                             </div>
                             @if ($linkedin_url)
                                 <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
@@ -89,11 +89,11 @@
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="tiktok_url">Tiktok</x-jet-label>
+                        <x-label for="tiktok_url">Tiktok</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="tiktok_url" type="url" wire:model="tiktok_url" class="w-full"/>
-                                <x-jet-input-error for="tiktok_url"/>
+                                <x-input id="tiktok_url" type="url" wire:model="tiktok_url" class="w-full"/>
+                                <x-input-error for="tiktok_url"/>
                             </div>
                             @if ($tiktok_url)
                                 <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
@@ -106,11 +106,11 @@
                     </div>
 
                     <div class="mt-6">
-                        <x-jet-label for="youtube_url">Youtube</x-jet-label>
+                        <x-label for="youtube_url">Youtube</x-label>
                         <div class="mt-1 flex items-center space-x-6">
                             <div class="w-full sm:w-2/3">
-                                <x-jet-input id="youtube_url" type="url" wire:model="youtube_url" class="w-full"/>
-                                <x-jet-input-error for="youtube_url"/>
+                                <x-input id="youtube_url" type="url" wire:model="youtube_url" class="w-full"/>
+                                <x-input-error for="youtube_url"/>
                             </div>
                             @if ($youtube_url)
                                 <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">

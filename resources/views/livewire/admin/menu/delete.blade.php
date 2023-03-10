@@ -5,14 +5,14 @@
         </svg>
     </button>
 
-    <x-jet-confirmation-modal wire:model="modal">
+    <x-confirmation-modal wire:model="modal">
         <x-slot name="title">Deleting menu item</x-slot>
         <x-slot name="content">
             Are you sure you want to delete this item? This action is unrecoverable. If the menu item has children items, they will also be removed.
         </x-slot>
         <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$toggle('modal')">Cancel</x-jet-secondary-button>
-            <x-jet-danger-button wire:click="delete" class="ml-3">Delete menu item</x-jet-danger-button>
+            <x-secondary-button wire:click="$toggle('modal')">Cancel</x-secondary-button>
+            <x-danger-button wire:click="delete" class="ml-3">Delete menu item</x-danger-button>
         </x-slot>
-    </x-jet-confirmation-modal>
+    </x-confirmation-modal>
 </div>

@@ -5,12 +5,12 @@
         </svg>
     </button>
 
-    <x-jet-confirmation-modal wire:model="modal">
+    <x-confirmation-modal wire:model="modal">
         <x-slot name="title">{{ __("Deleting event") }}</x-slot>
         <x-slot name="content">{{ __("This event will be trashed, and you will have 30 days to recover it.") }}</x-slot>
         <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$toggle('modal')">{{ __("Cancel") }}</x-jet-secondary-button>
-            <x-jet-danger-button wire:click="delete" class="ml-4">{{ __("Delete event") }}</x-jet-danger-button>
+            <x-secondary-button wire:click="$toggle('modal')">{{ __("Cancel") }}</x-secondary-button>
+            <x-danger-button wire:click="delete" class="ml-4">{{ __("Delete event") }}</x-danger-button>
         </x-slot>
-    </x-jet-confirmation-modal>
+    </x-confirmation-modal>
 </div>

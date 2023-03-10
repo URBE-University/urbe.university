@@ -14,7 +14,7 @@
                         <option value="draft">Draft</option>
                         <option value="published">Published</option>
                     </select>
-                    <x-jet-button wire:click="save">Save changes</x-jet-button>
+                    <x-button wire:click="save">Save changes</x-button>
                 </div>
             @endcan
         </div>
@@ -25,10 +25,10 @@
             <input type="text" wire:model.defer="title"
                 class="bg-transparent border-0 w-full text-2xl text-gray-900 font-extrabold outline-none border-transparent focus:border-transparent focus:ring-0"
                 placeholder="{{ __('Title') }}">
-            <x-jet-input-error for="title" />
+            <x-input-error for="title" />
             <div class="mt-6">
                 @livewire('markdown-x', ['content' => $content])
-                <x-jet-input-error for="body" />
+                <x-input-error for="body" />
             </div>
 
             @include('layouts.partials.shortcodes')

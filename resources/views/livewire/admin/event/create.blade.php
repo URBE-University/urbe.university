@@ -12,7 +12,7 @@
                         <option value="draft">Draft</option>
                         <option value="published">Published</option>
                     </select>
-                    <x-jet-button wire:click="save">Save changes</x-jet-button>
+                    <x-button wire:click="save">Save changes</x-button>
                 </div>
             @endcan
         </div>
@@ -23,47 +23,47 @@
             <input type="text" wire:model="name"
                 class="bg-transparent border-0 w-full text-2xl text-gray-900 font-extrabold outline-none border-transparent focus:border-transparent focus:ring-0 px-0"
                 placeholder="{{ __('Event name') }}">
-            <x-jet-input-error for="name" />
+            <x-input-error for="name" />
 
             <div class="mt-6">
-                <x-jet-label for="description" value="Description"/>
+                <x-label for="description" value="Description"/>
                 <textarea id="description" wire:model="description" cols="30" rows="10"
                     class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 w-full"
                 ></textarea>
-                <x-jet-input-error for="description" />
+                <x-input-error for="description" />
             </div>
 
             <div class="mt-6">
                 <div class="grid grid-cols-2 gap-8">
                     <div class="col-span-2 md:col-span-1">
-                        <x-jet-label for="start_date" value="Start date & time"/>
-                        <x-jet-input id="start_Date" type="datetime-local" wire:model="start_date" class="mt-1"/>
-                        <x-jet-input-error for="start_date"/>
+                        <x-label for="start_date" value="Start date & time"/>
+                        <x-input id="start_Date" type="datetime-local" wire:model="start_date" class="mt-1"/>
+                        <x-input-error for="start_date"/>
                     </div>
                     <div class="col-span-2 md:col-span-1">
-                        <x-jet-label for="end_date" value="End date & time (optional)"/>
-                        <x-jet-input id="end_date" type="datetime-local" wire:model="end_date" class="block mt-1"/>
+                        <x-label for="end_date" value="End date & time (optional)"/>
+                        <x-input id="end_date" type="datetime-local" wire:model="end_date" class="block mt-1"/>
                         <small class="text-slate-600">{{ __("For multi-day events only.") }}</small>
-                        <x-jet-input-error for="end_date"/>
+                        <x-input-error for="end_date"/>
                     </div>
                 </div>
             </div>
 
             <div class="mt-6">
-                <x-jet-label for="address" value="Postal address (optional)"/>
-                <x-jet-input type="text" id="address" wire:model="address" class="mt-1 w-full" placeholder="11430 NW 20th Street, Sweetwater Fl 33172"/>
-                <x-jet-input-error for="address" />
+                <x-label for="address" value="Postal address (optional)"/>
+                <x-input type="text" id="address" wire:model="address" class="mt-1 w-full" placeholder="11430 NW 20th Street, Sweetwater Fl 33172"/>
+                <x-input-error for="address" />
             </div>
 
             <div class="mt-6">
-                <x-jet-label for="address" value="Reservation url (optional)"/>
-                <x-jet-input type="text" id="address" wire:model="address" class="mt-1 w-full" />
+                <x-label for="address" value="Reservation url (optional)"/>
+                <x-input type="text" id="address" wire:model="address" class="mt-1 w-full" />
                 <small class="text-slate-600">{{ __("If you have a link to a reservation page, add it here. When someone views this event, they will be shown the option to RSVP through your link.") }}</small>
-                <x-jet-input-error for="address" />
+                <x-input-error for="address" />
             </div>
 
             <div class="mt-6">
-                <x-jet-label value="Featured image"/>
+                <x-label value="Featured image"/>
                 <div class="mt-1 grid grid-cols-6 gap-8 items-center">
                     <div class="col-span-6 md:col-span-2">
                         @if ($featured_image)
