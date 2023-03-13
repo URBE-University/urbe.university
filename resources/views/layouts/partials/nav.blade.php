@@ -4,6 +4,7 @@
         <a href="{{ route('dashboard') }}">
             <img src="{{ asset('static_assets/urbe-logo.svg') }}" alt="URBE University logo" class="block h-10 w-auto">
         </a>
+
         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                 <path x-show="!open" fill-rule="evenodd"
@@ -16,6 +17,7 @@
                 </path>
             </svg>
         </button>
+
     </div>
 
     <nav :class="{'block': open, 'hidden': !open}"

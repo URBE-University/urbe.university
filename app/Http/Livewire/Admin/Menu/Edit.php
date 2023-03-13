@@ -52,7 +52,6 @@ class Edit extends Component
         $this->menu->update([
             'location' => $this->selector,
             'type' => $this->type,
-            'parent' => $this->parent,
             'column' => $this->column,
             'label' => $this->label,
             'url' => $this->url,

@@ -1,6 +1,6 @@
 <section class="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-4xl text-urbe font-serif font-bold capitalize"><?php echo e(__("Latest News")); ?></h2>
-    <span class="text-slate-600 text-xs">From our blog</span>
+    <p class="mt-4 text-slate-500">From our blog</p>
 
     <div class="mt-6 grid grid-cols-3 gap-8 text-left">
         <?php $__empty_1 = true; $__currentLoopData = \App\Models\Post::whereNotNull('published_at')->orderBy('published_at', 'DESC')->take(3)->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
@@ -17,7 +17,7 @@
         <?php endif; ?>
     </div>
     <div class="mt-12">
-        <a href="#" class="px-5 py-2 border rounded-lg text-sm text-slate-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all">Read more articles...</a>
+        <a href="#" class="px-5 py-2.5 border rounded-lg text-base text-slate-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all">Read more articles</a>
     </div>
 </section>
 <?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/website/partials/posts-teaser.blade.php ENDPATH**/ ?>
