@@ -21,7 +21,7 @@
                     ]) ?>">
                         <div class="flex items-center space-x-6">
                             <?php if($post->featured_image): ?>
-                                <img src="<?php echo e(asset($post->featured_image)); ?>" class="w-20 h-20 aspect-square rounded-lg shadow">
+                                <img src="<?php echo e(asset($post->featured_image)); ?>" class="w-20 h-20 aspect-square rounded-full object-center object-cover shadow">
                             <?php endif; ?>
                             <div class="">
                                 <p class="text-slate-600 text-sm font-semibold"><?php echo e($post->user->name); ?></p>

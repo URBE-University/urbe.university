@@ -1,0 +1,60 @@
+@extends('layouts.website', ['settings' => $settings])
+@section('content')
+
+<div class="w-full h-56 bg-black">
+    <div class="h-full flex items-center justify-center">
+        <h1 class="text-5xl font-extrabold text-white">| URBE Blogs</h1>
+    </div>
+</div>
+
+
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mt-6 w-full mx-auto text-center">
+        @forelse ($categories as $category)
+            <a href=""
+                class="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-sm text-black transition-all"
+            >{{ $category->slug }}</a>
+        @empty
+
+        @endforelse
+    </div>
+    <div class="py-6"></div>
+    <div class="grid grid-cols-3 gap-8">
+        @forelse ($posts as $post)
+            <div class="col-span-3 md:col-span-1">
+                <div class="w-full">
+                    <a href="{{ route('blog.post.show', ['slug' => $post->slug]) }}" aria-label="Link to post">
+                        <img src="{{ asset($post->featured_image) }}" alt="{{ $post->featured_image_alt_text }}" class="w-full aspect-auto rounded-lg shadow">
+                    </a>
+                    <div class="mt-2">
+                        <a href="{{ route('blog.post.show', ['slug' => $post->slug]) }}">
+                            <h2 class="font-bold text-xl underline">{{ $post->title }}</h2>
+                        </a>
+                        <p class="mt-2 text-base">{{ str($post->content)->limit(96) }}</p>
+                        <div class="mt-4 flex items-center space-x-3">
+                            <img src="{{ asset($post->user->profile_photo_url) }}" alt="{{ $post->user->name }}"
+                                class="flex-none w-10 h-10 object-cover object-center rounded-full">
+                            <div class="text-sm font-mono">
+                                <p class="text-sky-500 font-medium">{{ __("Written by") }} <a class="underline" href="{{ route('blog.author.show', ['author' => str($post->user->name)->slug()]) }}">{{ $post->user->name }}</a></p>
+                                <p>{{ Carbon\Carbon::parse($post->published_at)->format('F d, Y') }} &middot; <a class="underline" href="{{ route('blog.post.show', ['slug' => $post->slug]) }}">{{ __("Read article") }}</a></p>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            @forelse ($post->categories as $postCategory)
+                                <a href="{{ route('blog.category.show', ['category' => $postCategory->slug]) }}" class="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-sm text-black transition-all">{{ $postCategory->slug }}</a>
+                            @empty
+
+                            @endforelse
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @empty
+            <div class="text-xl">Abel, write something here...</div>
+        @endforelse
+    </div>
+</div>
+
+<div class="py-6"></div>
+@endsection

@@ -41,6 +41,7 @@ class Create extends Component
             Page::create([
                 'title' => $this->title,
                 'slug' => str($this->title)->slug(),
+                'url' => str($this->title)->slug(),
                 'content' => $this->content,
             ]);
             session()->flash('flash.banner', 'Page successfully created!');

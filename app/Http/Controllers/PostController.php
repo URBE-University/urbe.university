@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
@@ -21,7 +22,9 @@ class PostController extends Controller
     public function index()
     {
         return view('website.blog.index', [
-            'posts' => Post::whereNotNull('published_at')->orderBy('published_at', 'DESC')->get()
+            'settings' => $this->settings,
+            'posts' => Post::whereNotNull('published_at')->orderBy('published_at', 'DESC')->paginate(9),
+            'categories' => Category::take(12)->get(),
         ]);
     }
 
@@ -37,12 +40,3 @@ class PostController extends Controller
         ]);
     }
 }
-
-// str_replace([
-//     '[cta]',
-//     '[posts_teaser]'
-// ], [
-//     $cta->render(),
-//     $postTeaser->render()
-// ],
-// $post->content),

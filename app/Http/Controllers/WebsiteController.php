@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -29,7 +28,7 @@ class WebsiteController extends Controller
      */
     public function redirect(Request $request)
     {
-        $dbUrl = DB::table('redirects')->where('source_url', $request->getRequestUri())->first();
+        $dbUrl = DB::table('redirects')->where('source_url', '/' . $request['uri'])->first();
         if ($dbUrl) {
             return redirect()->away($dbUrl->destination_url, $dbUrl->code);
         } else {

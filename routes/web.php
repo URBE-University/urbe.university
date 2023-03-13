@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\WebsiteController;
@@ -25,12 +26,18 @@ Route::middleware(['web', 'parse_shortcodes'])->group(function () {
 
     // Blog Routes
     Route::get('/blog', [PostController::class, 'index'])->name('blog.post.index');
-    Route::get('/blog/{slug}', [PostController::class, 'post'])->name('blog.post.show');
+    Route::get('/blog/{slug}', [PostController::class, 'show'])->name('blog.post.show');
     Route::get('/blog/{category}', [PostController::class, 'category'])->name('blog.category.show');
-    Route::get('/blog/{author}', [PostController::class, 'author'])->name('blog.author.show');
+    Route::get('/author/{author}', [PostController::class, 'author'])->name('blog.author.show');
 
+    // Event Routes
+    Route::get('/events', [EventController::class, 'index'])->name('events.index');
+    Route::get('/events/{slug}', [EventController::class, 'show'])->name('events.show');
 
-    Route::get('{uri}', [WebsiteController::class, 'redirect'])->name('redirects');
+    // Static Pages Routes
+
+    // Redirects route
+    Route::get('/go-to/{uri}', [WebsiteController::class, 'redirect'])->name('redirects');
 });
 
 /**
