@@ -26,7 +26,7 @@
                         <a href="{{ route('blog.post.show', ['slug' => $post->slug]) }}">
                             <h2 class="font-medium text-urbe text-xl underline">{{ $post->title }}</h2>
                         </a>
-                        <p class="mt-2 text-base">{{ str($post->content)->limit(96) }}</p>
+                        <p class="mt-2 text-base">{{ strip_tags(str($post->content)->markdown()->limit(92)) }}</p>
                         <div class="mt-4 flex items-center space-x-3">
                             <img src="{{ asset($post->user->profile_photo_url) }}" alt="{{ $post->user->name }}"
                                 class="flex-none w-10 h-10 object-cover object-center rounded-full">

@@ -9,15 +9,15 @@
             <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('website.breadcrumbs')->html();
-} elseif ($_instance->childHasBeenRendered('QiyGtzL')) {
-    $componentId = $_instance->getRenderedChildComponentId('QiyGtzL');
-    $componentTag = $_instance->getRenderedChildComponentTagName('QiyGtzL');
+} elseif ($_instance->childHasBeenRendered('1p4ANNr')) {
+    $componentId = $_instance->getRenderedChildComponentId('1p4ANNr');
+    $componentTag = $_instance->getRenderedChildComponentTagName('1p4ANNr');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('QiyGtzL');
+    $_instance->preserveRenderedChild('1p4ANNr');
 } else {
     $response = \Livewire\Livewire::mount('website.breadcrumbs');
     $html = $response->html();
-    $_instance->logRenderedChild('QiyGtzL', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('1p4ANNr', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -48,7 +48,7 @@ echo $html;
                         <a href="<?php echo e(route('blog.post.show', ['slug' => $post->slug])); ?>">
                             <h2 class="font-medium text-urbe text-xl underline"><?php echo e($post->title); ?></h2>
                         </a>
-                        <p class="mt-2 text-base"><?php echo e(str($post->content)->limit(96)); ?></p>
+                        <p class="mt-2 text-base"><?php echo e(strip_tags(str($post->content)->markdown()->limit(92))); ?></p>
                         <div class="mt-4 flex items-center space-x-3">
                             <img src="<?php echo e(asset($post->user->profile_photo_url)); ?>" alt="<?php echo e($post->user->name); ?>"
                                 class="flex-none w-10 h-10 object-cover object-center rounded-full">

@@ -16,7 +16,7 @@
             <img src="<?php echo e(asset($post->featured_image)); ?>" alt="<?php echo e($post->featured_image_alt_text); ?>" class="mt-12 w-full aspect-video object-cover object-center rounded-xl shadow">
         </div>
 
-        <div class="mt-12 prose prose-lg prose-sky prose-headings:font-serif prose-img:rounded-xl prose-img:shadow max-w-full">
+        <div class="mt-12 prose prose-sky prose-headings:font-sans prose-img:rounded-xl prose-img:shadow max-w-full">
             <?php echo str($post->content)->markdown(); ?>
 
         </div>
