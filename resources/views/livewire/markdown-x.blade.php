@@ -77,7 +77,7 @@
         </div>
 
         {{-- MarkdownX Preview Section --}}
-        <div x-show="section == 'preview'" wire:target="updateContentPreview" class="@if(isset($style['preview'])){{ $style['preview'] }}@else{{ 'bg-white min-h-96 h-[700px] relative z-30 px-5 pt-5 prose max-w-none' }}@endif" x-cloak>
+        <div x-show="section == 'preview'" wire:target="updateContentPreview" class="@if(isset($style['preview'])){{ $style['preview'] }}@else{{ 'bg-white min-h-[700px] relative z-30 px-5 pt-5 prose max-w-none' }}@endif" x-cloak>
             {!! $contentPreview !!}
         </div>
         {{-- End: MarkdownX Preview Section --}}

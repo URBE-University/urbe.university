@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Post;
+use App\Models\User;
+use App\Models\Category;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
@@ -28,14 +29,38 @@ class PostController extends Controller
         ]);
     }
 
-    public function post($post)
+    public function show($post)
     {
         $post = Post::where('slug', $post)->whereNotNull('published_at')->firstorfail();
-        // $cta = View::make('website.partials.cta');
-        // $postTeaser = View::make('website.partials.posts-teaser');
+        $categories = $post->categories->modelKeys();
+        $relatedPosts = Post::whereHas('categories', function ($q) use ($categories) {
+            $q->whereIn('categories.id', $categories);
+        })->where('id', '<>', $post->id)->take(4)->get();
 
         return view('website.blog.show', [
-            'content' => $post->content,
+            'post' => $post,
+            'categories' => $post->categories,
+            'relatedPosts' => $relatedPosts,
+            'settings' => $this->settings,
+        ]);
+    }
+
+    public function author($author)
+    {
+        $author = User::where('name', 'like', '%' . ucwords( str_replace('-', ' ', $author) ) . '%' )->firstorfail();
+
+        return view('website.blog.author', [
+            'author' => $author,
+            'settings' => $this->settings,
+        ]);
+    }
+
+    public function category($category)
+    {
+        $category = Category::where('slug', $category)->firstorfail();
+
+        return view('website.blog.category', [
+            'category' => $category,
             'settings' => $this->settings,
         ]);
     }

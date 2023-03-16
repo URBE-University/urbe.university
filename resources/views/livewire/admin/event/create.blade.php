@@ -37,7 +37,7 @@
                 <div class="grid grid-cols-2 gap-8">
                     <div class="col-span-2 md:col-span-1">
                         <x-label for="start_date" value="Start date & time"/>
-                        <x-input id="start_Date" type="datetime-local" wire:model="start_date" class="mt-1"/>
+                        <x-input id="start_date" type="datetime-local" wire:model="start_date" class="mt-1"/>
                         <x-input-error for="start_date"/>
                     </div>
                     <div class="col-span-2 md:col-span-1">
@@ -56,10 +56,10 @@
             </div>
 
             <div class="mt-6">
-                <x-label for="address" value="Reservation url (optional)"/>
-                <x-input type="text" id="address" wire:model="address" class="mt-1 w-full" />
+                <x-label for="rsvp_url" value="Reservation url (optional)"/>
+                <x-input type="text" id="rsvp_url" wire:model="rsvp_url" class="mt-1 w-full" />
                 <small class="text-slate-600">{{ __("If you have a link to a reservation page, add it here. When someone views this event, they will be shown the option to RSVP through your link.") }}</small>
-                <x-input-error for="address" />
+                <x-input-error for="rsvp_url" />
             </div>
 
             <div class="mt-6">

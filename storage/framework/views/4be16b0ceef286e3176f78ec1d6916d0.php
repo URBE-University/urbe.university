@@ -77,7 +77,7 @@
         </div>
 
         
-        <div x-show="section == 'preview'" wire:target="updateContentPreview" class="<?php if(isset($style['preview'])): ?><?php echo e($style['preview']); ?><?php else: ?><?php echo e('bg-white min-h-96 h-[700px] relative z-30 px-5 pt-5 prose max-w-none'); ?><?php endif; ?>" x-cloak>
+        <div x-show="section == 'preview'" wire:target="updateContentPreview" class="<?php if(isset($style['preview'])): ?><?php echo e($style['preview']); ?><?php else: ?><?php echo e('bg-white min-h-[700px] relative z-30 px-5 pt-5 prose max-w-none'); ?><?php endif; ?>" x-cloak>
             <?php echo $contentPreview; ?>
 
         </div>

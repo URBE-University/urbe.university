@@ -67,4 +67,9 @@ class User extends Authenticatable
     {
         return $this->permissions === config('app.permissions');
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

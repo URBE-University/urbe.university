@@ -27,14 +27,12 @@ Route::middleware(['web', 'parse_shortcodes'])->group(function () {
     // Blog Routes
     Route::get('/blog', [PostController::class, 'index'])->name('blog.post.index');
     Route::get('/blog/{slug}', [PostController::class, 'show'])->name('blog.post.show');
-    Route::get('/blog/{category}', [PostController::class, 'category'])->name('blog.category.show');
-    Route::get('/author/{author}', [PostController::class, 'author'])->name('blog.author.show');
+    Route::get('/blog/categories/{category}', [PostController::class, 'category'])->name('blog.category.show');
+    Route::get('/blog/authors/{author}', [PostController::class, 'author'])->name('blog.author.show');
 
     // Event Routes
     Route::get('/events', [EventController::class, 'index'])->name('events.index');
     Route::get('/events/{slug}', [EventController::class, 'show'])->name('events.show');
-
-    // Static Pages Routes
 
     // Redirects route
     Route::get('/go-to/{uri}', [WebsiteController::class, 'redirect'])->name('redirects');
@@ -85,4 +83,9 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
     // User routes
     Route::middleware('can:user:view')->get('/users', Users::class)->name('admin.users');
     Route::middleware('can:user:update')->get('/user/{user}/edit', App\Http\Livewire\Admin\User\Edit::class)->name('admin.user.edit');
+});
+
+// Custom web pages
+Route::middleware(['web', 'parse_shortcodes'])->group( function () {
+    Route::get('/{uri}', [WebsiteController::class, 'page'])->name('web.page');
 });

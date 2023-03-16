@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +20,20 @@ class WebsiteController extends Controller
     public function home ()
     {
         return view('website.home', [
+            'settings' => $this->settings,
+        ]);
+    }
+
+    /**
+     * Handle and return dynamic pages that are
+     * created through the dashboard.
+     */
+    public function page($url)
+    {
+        $page = Page::where('url', $url)->firstorfail();
+
+        return view('website.page', [
+            'page' => $page,
             'settings' => $this->settings,
         ]);
     }

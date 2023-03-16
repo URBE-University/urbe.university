@@ -1,18 +1,22 @@
-@extends('layouts.website', ['settings' => $settings])
+@extends('layouts.website', ['settings' => $settings, 'title' => 'The blog'])
 @section('content')
 
-<div class="w-full h-56 bg-black">
+<div class="w-full h-56" style="background-image: url({{ asset('static_assets/page-header-bg.webp') }})">
     <div class="h-full flex items-center justify-center">
         <h1 class="text-5xl font-extrabold text-white">| URBE Blogs</h1>
     </div>
+    <div class="bg-slate-100">
+        <div class="max-w-7xl mx-auto">
+            @livewire('website.breadcrumbs')
+        </div>
+    </div>
 </div>
 
-
-
+<div class="py-6"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mt-6 w-full mx-auto text-center">
         @forelse ($categories as $category)
-            <a href=""
+            <a href="{{ route('blog.category.show', ['category' => $category->slug]) }}"
                 class="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-sm text-black transition-all"
             >{{ $category->slug }}</a>
         @empty
@@ -29,7 +33,7 @@
                     </a>
                     <div class="mt-2">
                         <a href="{{ route('blog.post.show', ['slug' => $post->slug]) }}">
-                            <h2 class="font-bold text-xl underline">{{ $post->title }}</h2>
+                            <h2 class="font-medium text-urbe text-xl underline">{{ $post->title }}</h2>
                         </a>
                         <p class="mt-2 text-base">{{ str($post->content)->limit(96) }}</p>
                         <div class="mt-4 flex items-center space-x-3">
@@ -53,6 +57,10 @@
         @empty
             <div class="text-xl">Abel, write something here...</div>
         @endforelse
+    </div>
+
+    <div class="mt-6">
+        {{ $posts->links() }}
     </div>
 </div>
 

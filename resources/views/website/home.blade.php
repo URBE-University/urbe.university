@@ -1,4 +1,4 @@
-@extends('layouts.website', ['settings' => $settings])
+@extends('layouts.website', ['settings' => $settings, 'title' => 'Welcome'])
 
 @section('content')
     {{-- Header --}}

@@ -27,7 +27,12 @@
                                     </p>
                                 </div>
                             </div>
-                            <h1 class="text-2xl font-bold"><?php echo e($event->name); ?></h1>
+                            <div class="">
+                                <h1 class="text-2xl font-bold"><?php echo e($event->name); ?></h1>
+                                <?php if($event->published_at): ?>
+                                    <p class="inline-block px-3 py-1 text-sm rounded-full bg-green-100 text-green-800">Published</p>
+                                <?php endif; ?>
+                            </div>
                         </div>
                         <div class="flex items-center justify-end space-x-3">
                             <?php if($event->deleted_at): ?>
