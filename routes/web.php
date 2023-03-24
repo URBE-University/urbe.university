@@ -87,5 +87,5 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
 
 // Custom web pages
 Route::middleware(['web', 'parse_shortcodes'])->group( function () {
-    Route::get('/{uri}', [WebsiteController::class, 'page'])->name('web.page');
+    Route::get('/{uri}', [WebsiteController::class, 'page'])->where('uri', '(.*)')->name('web.page');
 });

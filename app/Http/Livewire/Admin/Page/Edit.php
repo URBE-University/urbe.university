@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin\Page;
 
 use App\Models\Page;
+use Illuminate\Support\Facades\Artisan;
 use Livewire\Component;
 
 class Edit extends Component
@@ -30,6 +31,7 @@ class Edit extends Component
     {
         $this->title = $this->page->title;
         $this->content = $this->page->content;
+        $this->status = ($this->page->published_at < now()) ? 'published' : 'draft';
         session()->put('code', $this->content);
     }
 
@@ -50,14 +52,19 @@ class Edit extends Component
                 'title' => $this->title,
                 'slug' => str($this->title)->slug(),
                 'content' => $this->content,
+                'published_at' => ($this->status == 'published') ? now() : null,
             ]);
-            session()->flash('flash.banner', 'Page successfully created!');
+
+            // Rebuild assets
+            Artisan::call('assets:build');
+
+            session()->flash('flash.banner', 'This page was successfully updated, and all assets were rebuilt!');
             session()->flash('flash.bannerStyle', 'success');
         } catch (\Throwable $th) {
-            session()->flash('flash.banner', 'Page successfully created!');
+            session()->flash('flash.banner', $th->getMessage());
             session()->flash('flash.bannerStyle', 'danger');
         }
         session()->forget('code');
-        return redirect()->route('admin.pages');
+        return redirect()->route('admin.page.edit', ['page' => $this->page->id]);
     }
 }

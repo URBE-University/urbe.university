@@ -4,11 +4,9 @@
     {{-- Header --}}
     <header class="relative flex items-center justify-center h-96 md:h-[calc(100vh-74px)] mb-12 overflow-hidden">
         <div class="z-10 relative p-5 text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl">Welcome to my site!</div>
-        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-full object-cover">
         <source src="{{ asset('videos/urbe-intro-video.webm') }}" type="video/webm"/>Your browser does not support the video tag.</video>
     </header>
-
-    <div class="py-12"></div>
 
     {{-- Why learn with URBE --}}
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
