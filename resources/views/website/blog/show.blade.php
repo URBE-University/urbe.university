@@ -1,4 +1,4 @@
-@extends('layouts.website', ['settings' => $settings, 'title' => $post->title])
+@extends('layouts.website', ['settings' => $settings, 'page' => $post])
 
 @section('content')
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

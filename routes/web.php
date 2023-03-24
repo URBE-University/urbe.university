@@ -64,12 +64,12 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
     Route::get('/pages/new', App\Http\Livewire\Admin\Page\Create::class)->name('admin.page.create');
     Route::middleware('can:page:update')->get('/pages/{page}/edit', App\Http\Livewire\Admin\Page\Edit::class)->name('admin.page.edit');
 
-
     // Menu routes
     Route::middleware('can:menu:view')->get('/menus/{selector}', Menus::class)->name('admin.menus');
 
     // SEO management routes
     Route::middleware('can:seo:view')->get('/seo', SeoHome::class)->name('admin.seo.home');
+
     // SEO tools routes
     Route::middleware('can:seo:view')->get('/seo/site-settings', SiteSettings::class)->name('admin.seo.site.settings');
     Route::middleware('can:seo:view')->get('/seo/socialmedia', SocialMedia::class)->name('admin.seo.socialmedia');

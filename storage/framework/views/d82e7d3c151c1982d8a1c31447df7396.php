@@ -4,8 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+        <link rel="icon" type="image/svg" href="<?php echo e(asset('static_assets/u-logo.svg')); ?>">
+        <title><?php echo e($page->title ?? $title . ' | ' . config('app.name', 'URBE University')); ?></title>
 
-        <title><?php echo e($page->title . ' | ' . config('app.name', 'URBE University')); ?></title>
+        <?php if(request()->routeIs('blog.post.show')): ?>
+            <meta property="og:url"         content="<?php echo e(request()->url()); ?>" />
+            <meta property="og:type"        content="article" />
+            <meta property="og:title"       content="<?php echo e($page->title ?? $title); ?>" />
+            <meta property="og:description" content="<?php echo e(Str::of($page->content)->limit(120)); ?>" />
+            <meta property="og:image"       content="<?php echo e(asset($page->featured_image) ?? ''); ?>" />
+        <?php endif; ?>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

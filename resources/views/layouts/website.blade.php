@@ -4,8 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="icon" type="image/svg" href="{{ asset('static_assets/u-logo.svg') }}">
+        <title>{{ $page->title ?? $title . ' | ' . config('app.name', 'URBE University') }}</title>
 
-        <title>{{ $page->title . ' | ' . config('app.name', 'URBE University') }}</title>
+        @if (request()->routeIs('blog.post.show'))
+            <meta property="og:url"         content="{{ request()->url() }}" />
+            <meta property="og:type"        content="article" />
+            <meta property="og:title"       content="{{ $page->title ?? $title }}" />
+            <meta property="og:description" content="{{ Str::of($page->content)->limit(120) }}" />
+            <meta property="og:image"       content="{{ asset($page->featured_image) ?? '' }}" />
+        @endif
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
