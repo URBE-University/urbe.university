@@ -4,8 +4,6 @@ namespace App\Console\Commands;
 
 use App\Models\Page;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 
 class BuildAssets extends Command
@@ -37,8 +35,8 @@ class BuildAssets extends Command
             }
             Storage::put('custom_stubs/' . $page->url . '.html', $page->content);
         }
-        $result = shell_exec('cd ../ && npm run build');
-
-        dump($result);
+        var_dump(
+            shell_exec('cd ./../ && npm run build 2>&1')
+        );
     }
 }
