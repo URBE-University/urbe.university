@@ -37,7 +37,7 @@ class BuildAssets extends Command
         }
 
         dump(
-            shell_exec('cd ./../ && npm run build 2>&1')
+            shell_exec("cd ./../ && php -r exec('npm run build');")
         );
     }
 }
