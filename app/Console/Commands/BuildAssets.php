@@ -39,6 +39,6 @@ class BuildAssets extends Command
         }
         $result = shell_exec('cd ../ && npm run build');
 
-        Log::info($result);
+        dump($result);
     }
 }
