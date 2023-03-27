@@ -42,7 +42,7 @@ class BuildAssets extends Command
 
         // dump($result->errorOutput());
 
-        $result = shell_exec("cd ./../ && sudo -u www-data npm run build");
+        $result = shell_exec("cd ./../ && npm run build");
 
         dd($result);
     }
