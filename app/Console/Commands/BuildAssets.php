@@ -37,6 +37,8 @@ class BuildAssets extends Command
             }
             Storage::put('custom_stubs/' . $page->url . '.html', $page->content);
         }
-        shell_exec('cd ../ && npm run build');
+        $log = shell_exec('cd ../ && npm run build');
+
+        Log::info($log);
     }
 }
