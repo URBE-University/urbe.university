@@ -1,0 +1,152 @@
+<script src="//unpkg.com/alpinejs" defer></script>
+<div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  <div class="py-12">
+    <div class="grid grid-cols-2 items-center gap-8">
+      <div class="col-span-2 md:col-span-1">
+        <h1 class="text-4xl font-bold text-[#073260]">Master of Science in Business Administration</h1>
+        <p class="mt-6 text-base leading-5 text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consequatur quas, ab debitis doloribus et voluptate minima quibusdam quo hic velit at omnis eligendi, sed eius nam quae tenetur quasi.</p>
+
+        <a href="#" class="mt-6 inline-block rounded bg-sky-500 px-5 py-2 text-white transition-all hover:bg-sky-600"> Request Information </a>
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-1 flex aspect-square items-center justify-center rounded-full bg-sky-100 text-[#073260]">
+            <div class="text-center">
+              <div class="text-4xl font-black">120</div>
+              <p class="text-sm">Concentrations</p>
+            </div>
+          </div>
+          <div class="col-span-1 flex aspect-square items-center justify-center rounded-full bg-sky-100 text-[#073260]">
+            <div class="text-center">
+              <div class="text-4xl font-black">120</div>
+              <p class="text-sm">Credits</p>
+            </div>
+          </div>
+          <div class="col-span-1 flex aspect-square items-center justify-center rounded-full bg-sky-100 text-[#073260]">
+            <div class="text-center">
+              <div class="text-4xl font-black">120</div>
+              <p class="text-sm">Alumni</p>
+            </div>
+          </div>
+          <div class="col-span-1 flex aspect-square items-center justify-center rounded-full bg-sky-100 text-[#073260]">
+            <div class="text-center">
+              <div class="text-4xl font-black">120</div>
+              <p class="text-sm">years</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About the program -->
+  <div class="py-12">
+    <div class="grid grid-cols-2 items-center gap-8">
+      <div class="col-span-2 md:col-span-1">
+        <img src="https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="aspect-square w-full rounded-lg object-cover object-center shadow-lg" />
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <h2 class="text-3xl font-semibold text-[#073260]">About the program</h2>
+        <p class="mt-6 text-base leading-5 text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consequatur quas, ab debitis doloribus et voluptate minima quibusdam quo hic velit at omnis eligendi, sed eius nam quae tenetur quasi.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-12">
+    <h2 class="text-3xl font-semibold text-[#073260]">Program objectives</h2>
+    <div class="w-full max-w-full">
+      <ul class="mt-6">
+        <li class="mt-2 list-item list-disc">URBE University’s MBA Program develops strategic business leaders by offering superior, ample education in several business disciplines.</li>
+        <li class="mt-2 list-item list-disc">The MBA Program assimilates theory and practice by choosing faculty members who are leaders in their community and professionals in their field with professional experience and academic achievement.</li>
+        <li class="mt-2 list-item list-disc">The MBA program embraces students from diversified academic backgrounds and by offering flexible schedule and course delivery methods.</li>
+        <li class="mt-2 list-item list-disc">The MBA course offerings are expanded to the following specializations, Accounting, Finance, Healthcare Administration, Human Resource Management, Information Security Management, Management, and Supply Chain Management. By doing so, graduates are more marketable and prepared to compete in the current job markets.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="py-12" x-data="{courses: true, concentrations: false, careers: false}">
+
+    <button class="bg-slate-200 hover:bg-sky-500 text-slate-700 hover:text-white px-5 py-2 rounded transition-all" x-on:click="courses = !courses">Courses</button>
+    <button class="bg-slate-200 hover:bg-sky-500 text-slate-700 hover:text-white px-5 py-2 rounded transition-all" x-on:click="concentrations = !concentrations">Concentrations</button>
+    <button class="bg-slate-200 hover:bg-sky-500 text-slate-700 hover:text-white px-5 py-2 rounded transition-all" x-on:click="careers = !careers">Careers &amp; Outcomes</button>
+
+    <!-- Courses List -->
+    <div x-show="courses" x-cloak class="mt-6">
+
+      <h3 class="text-2xl font-bold">What you’ll learn</h3>
+      <p class="mt-2">URBE University’s MBA Program develops strategic business leaders by offering superior, ample education in several business disciplines. Additionally, the MBA Program assimilates theory and practice by choosing faculty members who are leaders in their community and professionals in their field with professional experience and academic achievement.</p>
+
+      <div class="mt-6 relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                      <th scope="col" class="px-6 py-3">
+                          Course name
+                      </th>
+                      <th scope="col" class="px-6 py-3 text-right">
+                          Credits
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                          Apple Watch 5
+                      </th>
+                      <td class="px-6 py-4 text-right">
+                          3
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+    </div>
+
+    <!-- Concentrations List -->
+    <div x-show="concentrations" x-cloak class="mt-6">
+
+      <h3 class="text-2xl font-bold">Specialize your MBA</h3>
+      <p class="mt-2">The MBA program embraces students from diversified academic background and by offering flexible schedule and course delivery methods. This program integrates rich, interactive media such as videos, infographics, and e-learning activities as well as traditional didactic components such as written study guides (program notes). There are also opportunities for collaborative learning through discussion forums.</p>
+
+      <div class="mt-6 relative overflow-x-auto shadow sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500">
+              <caption class="px-5 py-2 text-lg font-semibold text-left text-white bg-[#073260]">
+                  Concentration Name
+              </caption>
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                  <tr>
+                      <th scope="col" class="px-6 py-3">
+                          Course name
+                      </th>
+                      <th scope="col" class="px-6 py-3 text-right">
+                          Credits
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="bg-white border-b">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                          Course name goes here
+                      </th>
+                      <td class="px-6 py-4 text-right">
+                          3
+                      </td>
+                  </tr>
+
+                  <!-- Last item: remove border-b -->
+                  <tr class="bg-white">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                          Course name goes here
+                      </th>
+                      <td class="px-6 py-4 text-right">
+                          3
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+    </div>
+
+  </div>
+</div>
