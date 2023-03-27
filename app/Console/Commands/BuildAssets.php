@@ -38,10 +38,12 @@ class BuildAssets extends Command
             Storage::put('custom_stubs/' . $page->url . '.html', $page->content);
         }
 
-        $result = Process::run('cd ../ && bash compile_assets.sh');
+        // $result = Process::run('cd ../ && bash compile_assets.sh');
 
-        dump($result->errorOutput());
+        // dump($result->errorOutput());
 
-        // $result = shell_exec("cd ./../ && npm run build");
+        $result = shell_exec("cd ./../ && npm run build");
+
+        dd($result);
     }
 }
