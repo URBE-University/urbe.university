@@ -38,7 +38,7 @@ class BuildAssets extends Command
             Storage::put('custom_stubs/' . $page->url . '.html', $page->content);
         }
 
-        $result = Process::path('../')->run('bash compile_assets.sh');
+        $result = Process::run('cd ../ && bash compile_assets.sh');
 
         dump($result->errorOutput());
 
