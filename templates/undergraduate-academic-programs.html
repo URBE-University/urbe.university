@@ -66,10 +66,9 @@
   <div class="w-16 border-t border-t-sky-300"></div>
 
   <!-- Courses, Concentrations & Career opportunities -->
-  <div class="py-12" x-data="{courses: true, concentrations: false, careers: false}">
-    <button class="rounded px-5 py-2 transition-all hover:bg-sky-500 hover:text-white" x-on:click="courses = true, concentrations = false, careers = false" :class="courses ? 'bg-sky-500 text-white' : 'bg-slate-200 text-slate-700'">Courses</button>
-    <button class="rounded px-5 py-2 transition-all hover:bg-sky-500 hover:text-white" x-on:click="courses = false, concentrations = true, careers = false" :class="concentrations ? 'bg-sky-500 text-white' : 'bg-slate-200 text-slate-700'">Concentrations</button>
-    <button class="rounded px-5 py-2 transition-all hover:bg-sky-500 hover:text-white" x-on:click="courses = false, concentrations = false, careers = true" :class="careers ? 'bg-sky-500 text-white' : 'bg-slate-200 text-slate-700'">Careers &amp; Outcomes</button>
+  <div class="py-12" x-data="{courses: true, careers: false}">
+    <button class="rounded px-5 py-2 transition-all hover:bg-sky-500 hover:text-white" x-on:click="courses = true, careers = false" :class="courses ? 'bg-sky-500 text-white' : 'bg-slate-200 text-slate-700'">Courses</button>
+    <button class="rounded px-5 py-2 transition-all hover:bg-sky-500 hover:text-white" x-on:click="courses = false, careers = true" :class="careers ? 'bg-sky-500 text-white' : 'bg-slate-200 text-slate-700'">Careers &amp; Outcomes</button>
 
     <!-- Courses List -->
     <div x-show="courses" x-cloak class="mt-6">
@@ -94,39 +93,6 @@
       </div>
     </div>
     <!-- End | Courses list -->
-
-    <!-- Concentrations List -->
-    <div x-show="concentrations" x-cloak class="mt-6">
-      <h3 class="text-2xl font-bold text-[#073260]">Specialize your MBA</h3>
-      <p class="mt-2">The MBA program embraces students from diversified academic background and by offering flexible schedule and course delivery methods. This program integrates rich, interactive media such as videos, infographics, and e-learning activities as well as traditional didactic components such as written study guides (program notes). There are also opportunities for collaborative learning through discussion forums.</p>
-
-      <div class="relative mt-6 overflow-x-auto shadow sm:rounded-lg">
-        <table class="w-full text-left text-sm text-gray-500">
-          <caption class="bg-[#073260] px-5 py-2 text-left text-lg font-semibold text-white">
-            Concentration Name
-          </caption>
-          <thead class="bg-gray-50 text-xs uppercase text-gray-700">
-            <tr>
-              <th scope="col" class="px-6 py-3">Course name</th>
-              <th scope="col" class="px-6 py-3 text-right">Credits</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b bg-white">
-              <th scope="row" class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white">Course name goes here</th>
-              <td class="px-6 py-4 text-right">3</td>
-            </tr>
-
-            <!-- Last item: remove border-b -->
-            <tr class="bg-white">
-              <th scope="row" class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white">Course name goes here</th>
-              <td class="px-6 py-4 text-right">3</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <!-- End | Concentrations list -->
 
     <!-- Career & Outcomes -->
     <div x-show="careers" x-cloak class="mt-6">

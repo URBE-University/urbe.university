@@ -1,9 +1,26 @@
 <?php $__env->startSection('content'); ?>
     
     <header class="relative flex items-center justify-center h-96 md:h-[calc(100vh-74px)] mb-12 overflow-hidden">
-        <div class="z-10 relative p-5 text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl">Welcome to my site!</div>
-        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-full object-cover">
-        <source src="<?php echo e(asset('videos/urbe-intro-video.webm')); ?>" type="video/webm"/>Your browser does not support the video tag.</video>
+        
+        <div class="z-20 relative h-full w-full p-5 text-white bg-urbe bg-opacity-80 flex items-center justify-center">
+            <div class="max-w-5xl">
+                <h1 class="text-5xl lg:text-7xl font-black">Welcome to URBE University</h1>
+                <p class="mt-6 text-lg md:text-xl">Explore our undergraduate and graduate programs in business, communications, education and more.</p>
+                <div class="mt-6 flex items-center space-x-4">
+                    <a href="" class="inline-block text-slate-700 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                    ><?php echo e(__("Learn more about our programs")); ?></a>
+                    <a href="https://admissions.urbe.university" target="_blank" dofollow
+                        class="inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                    ><?php echo e(__("Apply now")); ?></a>
+                </div>
+            </div>
+        </div>
+        
+        <video autoplay loop muted playsinline class="absolute z-10 w-auto min-w-full min-h-full max-w-full object-cover">
+            <source src="<?php echo e(asset('videos/urbe-intro-video.webm')); ?>" type="video/webm"/>
+            <source src="<?php echo e(asset('videos/urbe-intro-video.mp4')); ?>" type="video/mp4"/>
+            <img src="<?php echo e(asset('static_assets/page-header-bg.webp')); ?>" title="Your browser does not support the <video> tag">
+        </video>
     </header>
 
     
