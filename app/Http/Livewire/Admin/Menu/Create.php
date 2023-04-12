@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Menu;
 
 use App\Models\Menu;
 use Livewire\Component;
+use Illuminate\Support\Str;
 
 class Create extends Component
 {
@@ -42,11 +43,15 @@ class Create extends Component
 
         // Get the order number from DB
         $order = Menu::where('location', $this->selector)->count() + 1;
+        // Get the parent's uuid
+        $parent_uuid = ($this->parent) ? Menu::findOrFail($this->parent)->uuid : null;
 
         Menu::create([
+            'uuid' => Str::uuid(),
             'location' => $this->selector,
             'type' => $this->type,
             'parent' => $this->parent,
+            'parent_uuid' => $parent_uuid,
             'column' => $this->column,
             'order' => $order,
             'label' => $this->label,

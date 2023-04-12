@@ -1,57 +1,121 @@
-<nav class="bg-white shadow-sm py-4">
-    <div class="flex flex-wrap items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" x-data="{ megamenu: false }" x-cloak>
-        <a href="{{ route('home') }}" class="flex items-center">
-            <img src="{{ asset('static_assets/urbe-logo.svg') }}" alt="URBE Logo" class="h-12">
-        </a>
+<nav x-data="{
+        active_menu: '',
+        mobile_menu: false,
+        active_mobile_menu: '',
+    }"
+    x-on:click.outside="active_menu=''"
+    x-on:mouseleave="active_menu=''"
+    class="bg-white border-b relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
+        <div class="h-full flex items-center justify-between">
+            <a href="{{ route('home') }}" class="flex items-center">
+                <img src="{{ asset('static_assets/urbe-logo.svg') }}" alt="URBE Logo" class="h-12 w-auto">
+            </a>
 
-        <div class="flex items-center md:order-2">
-
-            <a href="https://admissions.urbe.university"
-                class="text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
-            >{{ __("Apply Now") }}</a>
-
-            <button @click="megamenu = !megamenu" data-collapse-toggle="mega-menu" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mega-menu" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-            </button>
-        </div>
-
-        <div id="mega-menu" class="z-40 items-center justify-between  w-full text-base md:flex md:w-auto md:order-1" :class="megamenu ? '' : 'hidden'">
-            <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+            <ul class="hidden md:flex md:h-full items-center text-base font-medium text-slate-700">
                 @forelse (\App\Models\Menu::whereNull('parent')->where('location', 'navbar')->orderBy('order', 'asc')->get() as $item)
-                    @if ($item->type == 'dropdown')
-                        <li x-data="{open: false}" x-cloak>
-                            <button @click="open = !open" id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-sky-500 md:p-0">
-                                {{ $item->label }}
-                                <svg aria-hidden="true" class="w-5 h-5 ml-1 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                </svg>
+                    <li class="block h-full">
+                        @if ($item->type == 'dropdown' || $item->type == 'megamenu')
+                            <button
+                                x-on:click="active_menu = (active_menu == `{{ $item->uuid }}`) ? '' : `{{ $item->uuid }}`"
+                                :class="active_menu == `{{ $item->uuid }}` ? 'text-sky-500' : ''"
+                                class="h-full px-3 flex items-center hover:text-sky-500 transition-all"
+                            >{{ $item->label }}
                             </button>
-                            <div @click.outside="open = false" x-show="open" id="mega-menu-dropdown" class="md:mt-4 absolute z-50 md:w-auto text-base bg-white border border-gray-100 rounded-lg shadow-md">
-                                <ul class="p-4 grid grid-cols-3 gap-4 md:gap-8" aria-labelledby="mega-menu-dropdown-button">
-                                    @forelse (\App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $item->id)->orderBy('order', 'ASC')->get() as $child)
-                                        <li class="col-span-1">
-                                            <a href="{{ $child->url }}" @if($child->opens_in_new_tab) target="_blank" @endif class="text-gray-500 hover:text-sky-500">{{ $child->label }}</a>
-                                        </li>
-                                    @empty
-                                        <li class="col-span-1 text-gray-500">
-                                            {{ __("No items here.") }}
-                                        </li>
-                                    @endforelse
-                                </ul>
-                            </div>
-                        </li>
-                    @else
-                        <li>
-                            <a href="{{ $item->url }}" @if($item->opens_in_new_tab) target="_blank" @endif
-                                 class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-sky-500 md:p-0">
-                                {{ $item->label }}
-                            </a>
-                        </li>
-                    @endif
-                    @empty
+                        @else
+
+                        @endif
+                    </li>
+                @empty
                 @endforelse
             </ul>
+
+            <div class="flex items-center space-x-4" x-on:mouseover="active_menu = ''">
+                <a href="https://admissions.urbe.university"
+                    class="text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                >{{ __('Apply Now') }}</a>
+
+                {{-- Mobile Menu --}}
+                <div class="flex items-center md:hidden">
+                    <button x-on:click="mobile_menu = !mobile_menu" class="p-2 bg-slate-100 rounded-md">
+                        <svg x-show="!mobile_menu" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg x-show="mobile_menu" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Desktop Menu Items --}}
+    @forelse (\App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get() as $submenu)
+        <div x-show="active_menu == `{{$submenu->uuid}}`" x-cloak
+            class="bg-white w-full absolute z-50 border-t border-t-slate-100 shadow-md ease-in delay-300"
+        >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="py-4 grid grid-cols-4 gap-1">
+                    @forelse (\App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get() as $child)
+                        <div class="col-span-4 md:col-span-2 lg:col-span-1">
+                            <a href="{{ $child->url }}" @if ($child->opens_in_new_tab) target="_blank" @endif
+                                class="block w-full py-4 rounded-md hover:bg-slate-100 text-center text-base transition-all"
+                            >{{$child->label}}</a>
+                        </div>
+                    @empty
+                    @endforelse
+                </div>
+            </div>
+        </div>
+    @empty
+    @endforelse
+
+    {{-- Mobile Menu --}}
+    <div x-cloak x-show="mobile_menu" class="md:hidden absolute z-50 w-full h-screen bg-white">
+        <div class="mt-4 px-4 sm:px-6">
+            <h1 class="text-2xl font-black uppercase underline text-slate-300">Menu</h1>
+
+            @forelse (\App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get() as $submenu)
+                <div class="block w-full">
+                    <button x-on:click="active_mobile_menu = (active_mobile_menu == `{{ $submenu->uuid }}`) ? '' : `{{ $submenu->uuid }}`"
+                        :class="active_mobile_menu == `{{ $submenu->uuid }}` ? 'text-sky-500 bg-slate-100' : ''"
+                        class="w-full flex items-center justify-between font-bold text-xl py-3 px-3 mt-2 hover:bg-slate-50"
+                    >
+                        <span>{{ $submenu->label }}</span>
+                        <svg x-show="active_mobile_menu != `{{$submenu->uuid}}`" x-cloak xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd" />
+                        </svg>
+                        <svg x-show="active_mobile_menu == `{{$submenu->uuid}}`" x-cloak xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul x-show="active_mobile_menu == `{{$submenu->uuid}}`" x-cloak class="bg-slate-50 py-4 px-4">
+                        @forelse (\App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get() as $child)
+                            <a href="{{ $child->url }}" @if ($child->opens_in_new_tab) target="_blank" @endif class="flex items-center justify-between">
+                                <span>{{ $child->label }}</span>
+                                <svg x-cloak @class([
+                                        "w-6 h-6",
+                                        "hidden" => $child->opens_in_new_tab,
+                                    ]) xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                </svg>
+                                <svg x-cloak @class([
+                                        "w-6 h-6",
+                                        "hidden" => !$child->opens_in_new_tab,
+                                    ])
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                </svg>
+                            </a>
+                        @empty
+
+                        @endforelse
+                    </ul>
+                </div>
+            @empty
+
+            @endforelse
         </div>
     </div>
 </nav>

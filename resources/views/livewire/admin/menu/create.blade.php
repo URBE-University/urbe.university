@@ -33,6 +33,7 @@
                         <option value="">Select an option</option>
                         <option value="link">Link</option>
                         <option value="dropdown">Dropdown</option>
+                        <option value="megamenu">Mega menu</option>
                     </select>
                     <x-input-error for="type" />
                 </div>

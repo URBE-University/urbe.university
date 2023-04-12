@@ -17,6 +17,12 @@
                             </svg>
                         </button>
                         <span class="text-lg">{{ $item->label }}</span>
+                        @if ($item->type == 'dropdown')
+                            <span class="text-green-600 text-sm bg-green-100 px-1 py-0.5 rounded">Dropdown</span>
+                        @endif
+                        @if ($item->type == 'megamenu')
+                            <span class="text-fuchsia-500 text-sm bg-fuchsia-100 px-1 py-0.5 rounded">Megamenu</span>
+                        @endif
                     </div>
 
                     <div class="flex items-center">
@@ -26,7 +32,7 @@
                         @can('menu:delete')
                             @livewire('admin.menu.delete', ['menu' => $item], key('delete-{{$item->id}}'))
                         @endcan
-                        @if ($item->type == 'dropdown')
+                        @if ($item->type == 'dropdown' || $item->type == 'megamenu')
                             <div class="text-2xl font-light ml-3"
                             @click="open_{{$item->id}} = !open_{{$item->id}}"
                             >
@@ -41,7 +47,7 @@
                     </div>
                 </div>
 
-                @if ($item->type == 'dropdown')
+                @if ($item->type == 'dropdown' || $item->type == 'megamenu')
                     <div class="" x-show="open_{{$item->id}}" @click.outside="open_{{$item->id}} = false" x-cloak>
                         @livewire('admin.menu.children', ['selector' => 'navbar', 'parent' => $item->id], key('children-{{$item->id}}'))
                         <div @class([

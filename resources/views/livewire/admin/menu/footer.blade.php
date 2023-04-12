@@ -61,9 +61,7 @@
                     </div>
                 @empty
                     <div class="text-center p-12">
-                        <img src="{{ asset('images/undraw_adventure_map_hnin.svg') }}" alt="no posts found image"
-                            class="w-48 aspect-auto mx-auto">
-                        <h1 class="mt-12 text-2xl font-semibold">No menu items found</h1>
+                        No menu items found
                     </div>
                 @endforelse
             </div>
@@ -129,9 +127,7 @@
                     </div>
                 @empty
                     <div class="text-center p-12">
-                        <img src="{{ asset('static_assets/undraw_adventure_map_hnin.svg') }}" alt="no posts found image"
-                            class="w-48 aspect-auto mx-auto">
-                        <h1 class="mt-12 text-2xl font-semibold">No menu items found</h1>
+                        No menu items found
                     </div>
                 @endforelse
             </div>
@@ -197,9 +193,7 @@
                     </div>
                 @empty
                     <div class="text-center p-12">
-                        <img src="{{ asset('static_assets/undraw_adventure_map_hnin.svg') }}" alt="no posts found image"
-                            class="w-48 aspect-auto mx-auto">
-                        <h1 class="mt-12 text-2xl font-semibold">No menu items found</h1>
+                        No menu items found
                     </div>
                 @endforelse
             </div>
