@@ -21,15 +21,18 @@ class ParseShortcodes
         $cta = View::make('website.partials.cta');
         $posts_teaser = View::make('website.partials.posts-teaser');
         $events_teaser = View::make('website.partials.events-teaser');
+        $owner_banner = View::make('website.partials.owner-banner');
 
         $content = str_replace([
             '[cta]',
             '[posts_teaser]',
             '[events_teaser]',
+            '[owner_banner]'
             ], [
                 $cta->render(),
                 $posts_teaser->render(),
-                $events_teaser->render()
+                $events_teaser->render(),
+                $owner_banner->render()
             ],
             $response->getContent()
         );

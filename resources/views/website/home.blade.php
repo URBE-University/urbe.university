@@ -79,7 +79,9 @@
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-4xl text-urbe font-serif font-bold">Our Mission</h2>
-            <p class="mt-4 max-w-3xl mx-auto text-slate-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quam totam quos eius quasi, rem amet ab mollitia aperiam, magnam consectetur reprehenderit ex id est neque ipsa magni nemo officiis?</p>
+            <p class="mt-4 max-w-3xl mx-auto text-slate-700">
+                {{ __("URBE University provides students opportunities to become professional and competent in careers that lead towards employment in a dynamic global labor workforce.") }}
+            </p>
         </div>
         <div class="mt-6">
             <video class="rounded-lg w-full aspect-video" src="{{ asset('videos/urbe-intro-video.webm') }}" type="video/webm" controls></video>
@@ -97,9 +99,25 @@
                 <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
-                        <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Master of Science</span>
+                        <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Bachelor of Science</span>
                         <a href="#" class="mt-2 font-medium text-xl text-urbe flex items-center justify-between">
                             <span>Business Administration</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <p class="mt-4 text-slate-700">
+                            {{ __("") }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                    <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Bachelor of Science</span>
+                        <a href="#" class="mt-2 font-medium text-xl text-urbe flex items-center justify-between">
+                            <span>Mass Communications &amp; Marketing</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                 <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
                                 <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
@@ -131,23 +149,7 @@
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Master of Science</span>
                         <a href="#" class="mt-2 font-medium text-xl text-urbe flex items-center justify-between">
-                            <span>Business Administration</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                                <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
-                                <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <p class="mt-4 text-slate-700">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aperiam! Nam dolorum hic, harum iste sint, provident velit accusamus autem natus dolorem debitis inventore maiores quibusdam ipsam incidunt dolore nihil.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
-                    <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
-                    <div class="p-6">
-                        <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Master of Science</span>
-                        <a href="#" class="mt-2 font-medium text-xl text-urbe flex items-center justify-between">
-                            <span>Business Administration</span>
+                            <span>Instructional Design &amp; Technology</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                 <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
                                 <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
@@ -171,20 +173,7 @@
     <div class="py-12"></div>
 
     {{-- Owner's phrase --}}
-    <section class="w-full bg-urbe text-white">
-        <div class="py-12 md:py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="w-full grid grid-cols-6 items-center gap-8">
-                <div class="col-span-6 md:col-span-2">
-                    <img src="{{ asset('static_assets/dr-belloso-bw.webp') }}" loading="lazy" alt="Dr. Oscar Belloso Medina black and white portrait" class="mx-auto md:mx-0 border-[8px] border-white rounded-full w-2/3 md:w-full">
-                </div>
-                <div class="col-span-6 md:col-span-4">
-                    <h2 class="text-2xl lg:text-3xl font-bold text-white uppercase">We educate future alumni to become marketable, skilled, and progressive leaders who are socially responsible and uphold ethical business standards.</h2>
-                    <p class="mt-4 font-bold text-lg text-white">Dr. Oscar Belloso Medina</p>
-                    <p class="text-white"> Chancellor &amp; Founder</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('website.partials.owner-banner')
 
     <div class="py-12"></div>
 

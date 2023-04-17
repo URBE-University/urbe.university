@@ -23,6 +23,10 @@
                     <td role="row" class="font-semibold">[events_teaser]</td>
                     <td>Inserts the events teaser section. It contains the next 3 upcoming events.</td>
                 </tr>
+                <tr>
+                    <td role="row" class="font-semibold">[owner_banner]</td>
+                    <td>Inserts the owner's banner with dark blue background.</td>
+                </tr>
               </tbody>
         </table>
     </div>
