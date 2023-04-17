@@ -68,7 +68,7 @@
                             <?php $__empty_2 = true; $__currentLoopData = \App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $child): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_2 = false; ?>
                             <div class="w-1/2">
                                 <a href="<?php echo e($child->url); ?>" <?php if($child->opens_in_new_tab): ?> target="_blank" <?php endif; ?>
-                                    class="block w-full my-1 text-base text-slate-700 hover:text-sky-500 hover:underline transition-all"
+                                    class="inline-block my-1 text-base text-slate-700 hover:text-sky-500 hover:underline transition-all"
                                     ><?php echo e($child->label); ?></a>
                                 </div>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_2): ?>
