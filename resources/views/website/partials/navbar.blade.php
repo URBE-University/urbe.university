@@ -5,7 +5,7 @@
     }"
     x-on:click.outside="active_menu=''"
     class="bg-white border-b relative">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
         <div class="h-full flex items-center justify-between">
             <a href="{{ route('home') }}" class="flex items-center">
                 <img src="{{ asset('static_assets/urbe-logo.svg') }}" alt="URBE Logo" class="h-12 w-auto">
