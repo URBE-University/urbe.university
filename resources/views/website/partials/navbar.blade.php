@@ -67,7 +67,7 @@
                             @forelse (\App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get() as $child)
                             <div class="w-1/2">
                                 <a href="{{ $child->url }}" @if ($child->opens_in_new_tab) target="_blank" @endif
-                                    class="block w-full my-1 text-base text-slate-700 hover:text-sky-500 hover:underline transition-all"
+                                    class="inline-block my-1 text-base text-slate-700 hover:text-sky-500 hover:underline transition-all"
                                     >{{$child->label}}</a>
                                 </div>
                             @empty
