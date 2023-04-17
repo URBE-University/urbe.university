@@ -56,8 +56,8 @@
                 <div class="py-6 grid grid-cols-3 gap-8">
                     <div class="col-span-1 rounded-md bg-center bg-no-repeat bg-cover text-white" @if($submenu->background_image) style="background-image: url('{{ asset($submenu->background_image) }}')" @endif>
                         <div class="h-full p-4 backdrop-blur rounded-md" @if($submenu->background_color && !$submenu->background_image) style="background-color: {{ $submenu->background_color }}" @endif>
-                            <p class="text-lg font-bold">{{ $submenu->title }}</p>
-                            <p class="text-base">{{ $submenu->subtitle }}</p>
+                            <p class="text-xl font-bold">{{ $submenu->title }}</p>
+                            <p class="mt-4 text-base">{{ $submenu->subtitle }}</p>
                         </div>
                     </div>
                     <div class="col-span-2 py-4">
