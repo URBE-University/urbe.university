@@ -35,10 +35,30 @@
                     >
                         <option value="">Select an option</option>
                         <option value="link">Link</option>
-                        <option value="dropdown">Dropdown</option>
                         <option value="megamenu">Mega menu</option>
                     </select>
                     <x-input-error for="type" />
+                </div>
+            @endif
+
+            @if ($type == 'megamenu')
+                <div class="mt-4">
+                    <x-label for="title" value="Title" />
+                    <x-input type="text" wire:model="title" class="mt-1 w-full"/>
+                </div>
+                <div class="mt-4">
+                    <x-label for="subtitle" value="Subtitle"/>
+                    <textarea id="subtitle" cols="30" rows="2" wire:model="subtitle"
+                        class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 w-full"
+                    ></textarea>
+                </div>
+                <div class="mt-4">
+                    <x-label for="background_image" value="Background image (optional)" />
+                    <x-input type="file" wire:model="background_image" class="mt-1 shadow-none"/>
+                </div>
+                <div class="mt-4">
+                    <x-label for="background_color" value="Background color (optional)" />
+                    <x-input type="color" wire:model="background_color" class="mt-1"/>
                 </div>
             @endif
 

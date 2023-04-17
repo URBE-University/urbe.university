@@ -4,9 +4,8 @@
         active_mobile_menu: '',
     }"
     x-on:click.outside="active_menu=''"
-    x-on:mouseleave="active_menu=''"
     class="bg-white border-b relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
         <div class="h-full flex items-center justify-between">
             <a href="<?php echo e(route('home')); ?>" class="flex items-center">
                 <img src="<?php echo e(asset('static_assets/urbe-logo.svg')); ?>" alt="URBE Logo" class="h-12 w-auto">
@@ -24,7 +23,7 @@
 
                             </button>
                         <?php else: ?>
-
+                            <a href="<?php echo e($item->url); ?>" <?php if($item->opens_in_new_tab): ?> target="_blank" <?php endif; ?> class="h-full px-3 flex items-center hover:text-sky-500 transition-all"><?php echo e($item->label); ?></a>
                         <?php endif; ?>
                     </li>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
@@ -53,19 +52,29 @@
 
     
     <?php $__empty_1 = true; $__currentLoopData = \App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $submenu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-        <div x-show="active_menu == `<?php echo e($submenu->uuid); ?>`" x-cloak
-            class="bg-white w-full absolute z-50 border-t border-t-slate-100 shadow-md ease-in delay-300"
-        >
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="py-4 grid grid-cols-4 gap-1">
-                    <?php $__empty_2 = true; $__currentLoopData = \App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $child): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_2 = false; ?>
-                        <div class="col-span-4 md:col-span-2 lg:col-span-1">
-                            <a href="<?php echo e($child->url); ?>" <?php if($child->opens_in_new_tab): ?> target="_blank" <?php endif; ?>
-                                class="block w-full py-4 rounded-md hover:bg-slate-100 text-center text-base transition-all"
-                            ><?php echo e($child->label); ?></a>
+        <div x-show="active_menu == `<?php echo e($submenu->uuid); ?>`" x-cloak class="bg-white w-full absolute z-50 border-t border-t-slate-100 shadow-md ease-in delay-300">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="py-6 grid grid-cols-3 gap-8">
+                    <div class="col-span-1 rounded-md bg-center bg-no-repeat bg-cover text-white" <?php if($submenu->background_image): ?> style="background-image: url('<?php echo e(asset($submenu->background_image)); ?>')" <?php endif; ?>>
+                        <div class="p-4 backdrop-blur rounded-md" <?php if($submenu->background_color && !$submenu->background_image): ?> style="background-color: <?php echo e($submenu->background_color); ?>" <?php endif; ?>>
+                            <p class="text-lg font-bold"><?php echo e($submenu->title); ?></p>
+                            <p class="text-base"><?php echo e($submenu->subtitle); ?></p>
                         </div>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_2): ?>
-                    <?php endif; ?>
+                    </div>
+                    <div class="col-span-2 py-4">
+                        <h2 class="text-xl font-bold text-urbe">In this section</h2>
+                        <div class="mt-2 border-t"></div>
+                        <div class="mt-2 flex flex-wrap">
+                            <?php $__empty_2 = true; $__currentLoopData = \App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $child): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_2 = false; ?>
+                            <div class="w-1/2">
+                                <a href="<?php echo e($child->url); ?>" <?php if($child->opens_in_new_tab): ?> target="_blank" <?php endif; ?>
+                                    class="block w-full my-1 text-base text-slate-700 hover:text-sky-500 hover:underline transition-all"
+                                    ><?php echo e($child->label); ?></a>
+                                </div>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_2): ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,8 +84,6 @@
     
     <div x-cloak x-show="mobile_menu" class="md:hidden absolute z-50 w-full h-screen bg-white">
         <div class="mt-4 px-4 sm:px-6">
-            <h1 class="text-2xl font-black uppercase underline text-slate-300">Menu</h1>
-
             <?php $__empty_1 = true; $__currentLoopData = \App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $submenu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                 <div class="block w-full">
                     <button x-on:click="active_mobile_menu = (active_mobile_menu == `<?php echo e($submenu->uuid); ?>`) ? '' : `<?php echo e($submenu->uuid); ?>`"
@@ -93,7 +100,7 @@
                     </button>
                     <ul x-show="active_mobile_menu == `<?php echo e($submenu->uuid); ?>`" x-cloak class="bg-slate-50 py-4 px-4">
                         <?php $__empty_2 = true; $__currentLoopData = \App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $child): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_2 = false; ?>
-                            <a href="<?php echo e($child->url); ?>" <?php if($child->opens_in_new_tab): ?> target="_blank" <?php endif; ?> class="flex items-center justify-between">
+                            <a href="<?php echo e($child->url); ?>" <?php if($child->opens_in_new_tab): ?> target="_blank" <?php endif; ?> class="my-2 flex items-center justify-between hover:text-sky-500 hover:underline">
                                 <span><?php echo e($child->label); ?></span>
                                 <svg x-cloak class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                                         "w-6 h-6",

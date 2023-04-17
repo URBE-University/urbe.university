@@ -4,9 +4,8 @@
         active_mobile_menu: '',
     }"
     x-on:click.outside="active_menu=''"
-    x-on:mouseleave="active_menu=''"
     class="bg-white border-b relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
         <div class="h-full flex items-center justify-between">
             <a href="{{ route('home') }}" class="flex items-center">
                 <img src="{{ asset('static_assets/urbe-logo.svg') }}" alt="URBE Logo" class="h-12 w-auto">
@@ -23,7 +22,7 @@
                             >{{ $item->label }}
                             </button>
                         @else
-
+                            <a href="{{ $item->url }}" @if ($item->opens_in_new_tab) target="_blank" @endif class="h-full px-3 flex items-center hover:text-sky-500 transition-all">{{ $item->label }}</a>
                         @endif
                     </li>
                 @empty
@@ -52,19 +51,29 @@
 
     {{-- Desktop Menu Items --}}
     @forelse (\App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get() as $submenu)
-        <div x-show="active_menu == `{{$submenu->uuid}}`" x-cloak
-            class="bg-white w-full absolute z-50 border-t border-t-slate-100 shadow-md ease-in delay-300"
-        >
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="py-4 grid grid-cols-4 gap-1">
-                    @forelse (\App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get() as $child)
-                        <div class="col-span-4 md:col-span-2 lg:col-span-1">
-                            <a href="{{ $child->url }}" @if ($child->opens_in_new_tab) target="_blank" @endif
-                                class="block w-full py-4 rounded-md hover:bg-slate-100 text-center text-base transition-all"
-                            >{{$child->label}}</a>
+        <div x-show="active_menu == `{{$submenu->uuid}}`" x-cloak class="bg-white w-full absolute z-50 border-t border-t-slate-100 shadow-md ease-in delay-300">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="py-6 grid grid-cols-3 gap-8">
+                    <div class="col-span-1 rounded-md bg-center bg-no-repeat bg-cover text-white" @if($submenu->background_image) style="background-image: url('{{ asset($submenu->background_image) }}')" @endif>
+                        <div class="p-4 backdrop-blur rounded-md" @if($submenu->background_color && !$submenu->background_image) style="background-color: {{ $submenu->background_color }}" @endif>
+                            <p class="text-lg font-bold">{{ $submenu->title }}</p>
+                            <p class="text-base">{{ $submenu->subtitle }}</p>
                         </div>
-                    @empty
-                    @endforelse
+                    </div>
+                    <div class="col-span-2 py-4">
+                        <h2 class="text-xl font-bold text-urbe">In this section</h2>
+                        <div class="mt-2 border-t"></div>
+                        <div class="mt-2 flex flex-wrap">
+                            @forelse (\App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get() as $child)
+                            <div class="w-1/2">
+                                <a href="{{ $child->url }}" @if ($child->opens_in_new_tab) target="_blank" @endif
+                                    class="block w-full my-1 text-base text-slate-700 hover:text-sky-500 hover:underline transition-all"
+                                    >{{$child->label}}</a>
+                                </div>
+                            @empty
+                            @endforelse
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,8 +83,6 @@
     {{-- Mobile Menu --}}
     <div x-cloak x-show="mobile_menu" class="md:hidden absolute z-50 w-full h-screen bg-white">
         <div class="mt-4 px-4 sm:px-6">
-            <h1 class="text-2xl font-black uppercase underline text-slate-300">Menu</h1>
-
             @forelse (\App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get() as $submenu)
                 <div class="block w-full">
                     <button x-on:click="active_mobile_menu = (active_mobile_menu == `{{ $submenu->uuid }}`) ? '' : `{{ $submenu->uuid }}`"
@@ -92,7 +99,7 @@
                     </button>
                     <ul x-show="active_mobile_menu == `{{$submenu->uuid}}`" x-cloak class="bg-slate-50 py-4 px-4">
                         @forelse (\App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get() as $child)
-                            <a href="{{ $child->url }}" @if ($child->opens_in_new_tab) target="_blank" @endif class="flex items-center justify-between">
+                            <a href="{{ $child->url }}" @if ($child->opens_in_new_tab) target="_blank" @endif class="my-2 flex items-center justify-between hover:text-sky-500 hover:underline">
                                 <span>{{ $child->label }}</span>
                                 <svg x-cloak @class([
                                         "w-6 h-6",
