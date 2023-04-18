@@ -1,2 +1,15 @@
-[*] Implement footer columns feature to divide menu links per col.
-[] Implement middleware gates on Menu features.
+Create templates for the following pages:
+about/
+    [] about-us
+    [] accreditation
+    [] contact-us
+    [] history
+    [] student-consumer-information
+    [] vision-mission-values
+
+admissions/
+    [] vosts-and-aid
+
+academics/
+    [] academic-programs
+    [] advising
