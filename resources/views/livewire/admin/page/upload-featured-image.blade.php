@@ -10,7 +10,7 @@
                         <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
                     </svg>
                 </button>
-                <img src="{{ asset($page->featured_image) }}" alt="" class="block w-full aspect-video rounded-lg object-cover object-center">
+                <img src="{{ asset($page->featured_image) }}" alt="" class="block w-full aspect-video rounded-md object-cover object-center">
             </div>
         @endif
             <label for="file-upload" class="block mt-6 cursor-pointer p-2 text-center border border-gray-300 border-dashed rounded-md bg-white font-medium text-blue-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 hover:text-blue-500">
@@ -19,7 +19,7 @@
                 <input wire:model="image" id="file-upload" name="file-upload" type="file" accept=".webp" class="sr-only">
             </label>
         @if ($image)
-            <button type="button" wire:click="setFeaturedImage" class="mt-4 w-full text-center p-2 rounded-lg bg-black text-white">{{ __("Upload Now") }}</button>
+            <button type="button" wire:click="setFeaturedImage" class="mt-4 w-full text-center p-2 rounded-md bg-black text-white">{{ __("Upload Now") }}</button>
         @endif
         <x-input-error for="image"/>
 

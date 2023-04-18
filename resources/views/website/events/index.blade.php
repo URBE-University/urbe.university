@@ -25,7 +25,7 @@
                 <div class="col-span-3 md:col-span-1">
                     <div class="w-full">
                         <a href="{{ route('events.show', ['slug' => $event->slug]) }}" aria-label="Link to post">
-                            <img src="{{ asset($event->featured_image) }}" alt="{{ $event->featured_image_alt_text }}" class="w-full aspect-video object-cover object-center rounded-lg shadow">
+                            <img src="{{ asset($event->featured_image) }}" alt="{{ $event->featured_image_alt_text }}" class="w-full aspect-video object-cover object-center rounded-md shadow">
                         </a>
                         <div class="mt-2 text-left">
                             <a href="{{ route('events.show', ['slug' => $event->slug]) }}">
@@ -50,7 +50,7 @@
                 <div class="col-span-3 md:col-span-1">
                     <div class="w-full">
                         <a href="{{ route('events.show', ['slug' => $event->slug]) }}" aria-label="Link to post">
-                            <img src="{{ asset($event->featured_image) }}" alt="{{ $event->featured_image_alt_text }}" class="w-full aspect-video object-cover object-center rounded-lg shadow">
+                            <img src="{{ asset($event->featured_image) }}" alt="{{ $event->featured_image_alt_text }}" class="w-full aspect-video object-cover object-center rounded-md shadow">
                         </a>
                         <div class="mt-2 text-left">
                             <a href="{{ route('events.show', ['slug' => $event->slug]) }}">
@@ -75,7 +75,7 @@
                 <div class="col-span-3 md:col-span-1">
                     <div class="w-full">
                         <a href="{{ route('events.show', ['slug' => $event->slug]) }}" aria-label="Link to post">
-                            <img src="{{ asset($event->featured_image) }}" alt="{{ $event->featured_image_alt_text }}" class="w-full aspect-video object-cover object-center rounded-lg shadow">
+                            <img src="{{ asset($event->featured_image) }}" alt="{{ $event->featured_image_alt_text }}" class="w-full aspect-video object-cover object-center rounded-md shadow">
                         </a>
                         <div class="mt-2 text-left">
                             <a href="{{ route('events.show', ['slug' => $event->slug]) }}">

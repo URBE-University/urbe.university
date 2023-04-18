@@ -3,7 +3,7 @@
 
         <div>
             <h2 class="font-semibold">Column 1</h2>
-            <div class="mt-2 border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
+            <div class="mt-2 border bg-white shadow sm:rounded-md" wire:sortable="reorder">
                 @forelse ($items->where('column', 1) as $item)
                     <div @class([
                         'md:max-w-sm w-full bg-white',
@@ -69,7 +69,7 @@
 
         <div>
             <h2 class="font-semibold">Column 2</h2>
-            <div class="mt-2 border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
+            <div class="mt-2 border bg-white shadow sm:rounded-md" wire:sortable="reorder">
                 @forelse ($items->where('column', 2) as $item)
                     <div @class([
                         'md:max-w-sm w-full bg-white',
@@ -135,7 +135,7 @@
 
         <div>
             <h2 class="font-semibold">Column 3</h2>
-            <div class="mt-2 border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
+            <div class="mt-2 border bg-white shadow sm:rounded-md" wire:sortable="reorder">
                 @forelse ($items->where('column', 3) as $item)
                     <div @class([
                         'md:max-w-sm w-full bg-white',

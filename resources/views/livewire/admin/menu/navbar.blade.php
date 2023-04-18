@@ -1,5 +1,5 @@
 <div>
-    <div class="border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
+    <div class="border bg-white shadow sm:rounded-md" wire:sortable="reorder">
         @forelse ($items as $item)
             <div @class([
                 'max-w-7xl w-full bg-white',

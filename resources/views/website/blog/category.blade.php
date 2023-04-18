@@ -20,7 +20,7 @@
             <div class="col-span-3 md:col-span-1">
                 <div class="w-full">
                     <a href="{{ route('blog.post.show', ['slug' => $post->slug]) }}" aria-label="Link to post">
-                        <img src="{{ asset($post->featured_image) }}" alt="{{ $post->featured_image_alt_text }}" class="w-full aspect-auto rounded-lg shadow">
+                        <img src="{{ asset($post->featured_image) }}" alt="{{ $post->featured_image_alt_text }}" class="w-full aspect-auto rounded-md shadow">
                     </a>
                     <div class="mt-2">
                         <a href="{{ route('blog.post.show', ['slug' => $post->slug]) }}">

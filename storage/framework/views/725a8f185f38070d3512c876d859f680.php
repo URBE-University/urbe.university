@@ -1,5 +1,5 @@
 <div>
-    <div class="border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
+    <div class="border bg-white shadow sm:rounded-md" wire:sortable="reorder">
         <?php $__empty_1 = true; $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
             <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'max-w-7xl w-full bg-white',

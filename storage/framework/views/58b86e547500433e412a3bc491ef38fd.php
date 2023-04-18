@@ -3,7 +3,7 @@
 
         <div>
             <h2 class="font-semibold">Column 1</h2>
-            <div class="mt-2 border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
+            <div class="mt-2 border bg-white shadow sm:rounded-md" wire:sortable="reorder">
                 <?php $__empty_1 = true; $__currentLoopData = $items->where('column', 1); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                         'md:max-w-sm w-full bg-white',
@@ -125,7 +125,7 @@ echo $html;
 
         <div>
             <h2 class="font-semibold">Column 2</h2>
-            <div class="mt-2 border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
+            <div class="mt-2 border bg-white shadow sm:rounded-md" wire:sortable="reorder">
                 <?php $__empty_1 = true; $__currentLoopData = $items->where('column', 2); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                         'md:max-w-sm w-full bg-white',
@@ -247,7 +247,7 @@ echo $html;
 
         <div>
             <h2 class="font-semibold">Column 3</h2>
-            <div class="mt-2 border bg-white shadow sm:rounded-lg" wire:sortable="reorder">
+            <div class="mt-2 border bg-white shadow sm:rounded-md" wire:sortable="reorder">
                 <?php $__empty_1 = true; $__currentLoopData = $items->where('column', 3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                         'md:max-w-sm w-full bg-white',

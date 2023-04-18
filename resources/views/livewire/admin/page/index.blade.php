@@ -10,15 +10,15 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="mt-4 bg-white shadow rounded-lg">
+            <div class="mt-4 bg-white shadow rounded-md">
                 @forelse ($pages as $page)
                     <div @class([
-                        'flex items-center justify-between px-6 py-4 rounded-lg hover:bg-slate-50',
+                        'flex items-center justify-between px-6 py-4 rounded-md hover:bg-slate-50',
                         'border-t rounded-t-none' => !$loop->first
                     ])>
                         <div class="flex items-center space-x-6">
                             @if ($page->featured_image)
-                                <img src="{{ asset($page->featured_image) }}" class="w-20 h-20 aspect-square rounded-lg shadow">
+                                <img src="{{ asset($page->featured_image) }}" class="w-20 h-20 aspect-square rounded-md shadow">
                             @endif
                             <div class="">
                                 <a href="{{ route('admin.page.edit', ['page' => $page->id]) }}" title="Click to open article on a new tab.">

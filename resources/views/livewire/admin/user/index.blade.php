@@ -10,7 +10,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white shadow rounded-lg">
+            <div class="bg-white shadow rounded-md">
 
                 @forelse ($users as $user)
                     <a href="{{ (auth()->user()->id === $user->id) ? route('profile.show') : route('admin.user.edit', ['user' => $user]) }}"

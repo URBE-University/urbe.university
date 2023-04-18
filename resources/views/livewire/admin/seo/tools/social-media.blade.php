@@ -3,7 +3,7 @@
         <div class="py-6 px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">Social media</h2>
-                <a href="{{route('admin.seo.home')}}" class="bg-slate-100 p-2 -m-2 rounded-lg text-slate-600 hover:text-blue-500 hover:bg-blue-100 transition-all">
+                <a href="{{route('admin.seo.home')}}" class="bg-slate-100 p-2 -m-2 rounded-md text-slate-600 hover:text-blue-500 hover:bg-blue-100 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -14,7 +14,7 @@
 
     <div class="py-12">
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
-            <div class="w-full bg-white rounded-lg shadow">
+            <div class="w-full bg-white rounded-md shadow">
                 <div class="p-8">
                     <div class="flex items-center space-x-3 fill-slate-600">
                         <p class="text-xl font-semibold">Social media urls</p>
@@ -28,7 +28,7 @@
                                 <x-input-error for="facebook_url"/>
                             </div>
                             @if ($facebook_url)
-                                <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
+                                <div class="p-2 bg-green-100 border border-green-300 rounded-md text-green-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
@@ -45,7 +45,7 @@
                                 <x-input-error for="instagram_url"/>
                             </div>
                             @if ($instagram_url)
-                                <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
+                                <div class="p-2 bg-green-100 border border-green-300 rounded-md text-green-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
@@ -62,7 +62,7 @@
                                 <x-input-error for="twitter_url"/>
                             </div>
                             @if ($twitter_url)
-                                <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
+                                <div class="p-2 bg-green-100 border border-green-300 rounded-md text-green-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
@@ -79,7 +79,7 @@
                                 <x-input-error for="linkedin_url"/>
                             </div>
                             @if ($linkedin_url)
-                                <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
+                                <div class="p-2 bg-green-100 border border-green-300 rounded-md text-green-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
@@ -96,7 +96,7 @@
                                 <x-input-error for="tiktok_url"/>
                             </div>
                             @if ($tiktok_url)
-                                <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
+                                <div class="p-2 bg-green-100 border border-green-300 rounded-md text-green-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
@@ -113,7 +113,7 @@
                                 <x-input-error for="youtube_url"/>
                             </div>
                             @if ($youtube_url)
-                                <div class="p-2 bg-green-100 border border-green-300 rounded-lg text-green-400">
+                                <div class="p-2 bg-green-100 border border-green-300 rounded-md text-green-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
@@ -124,7 +124,7 @@
 
                 </div>
                 <div class="px-4 py-3 bg-slate-100 flex justify-end rounded-b-lg">
-                    <button type="submit" class="inline-flex items-center px-4 py-2 bg-slate-800 border border-transparent rounded-lg font-semibold text-xs text-white uppercase tracking-widest hover:bg-slate-700 active:bg-slate-900 focus:outline-none focus:border-slate-900 focus:ring focus:ring-slate-300 disabled:opacity-25 transition" wire:click="save">
+                    <button type="submit" class="inline-flex items-center px-4 py-2 bg-slate-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-slate-700 active:bg-slate-900 focus:outline-none focus:border-slate-900 focus:ring focus:ring-slate-300 disabled:opacity-25 transition" wire:click="save">
                         Save changes
                     </button>
                 </div>

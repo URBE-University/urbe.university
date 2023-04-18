@@ -7,7 +7,7 @@
             <div class="col-span-3 md:col-span-1">
                 <div class="w-full">
                     <a href="<?php echo e(route('blog.post.show', ['slug' => $post->slug])); ?>" aria-label="Link to post">
-                        <img src="<?php echo e(asset($post->featured_image)); ?>" alt="<?php echo e($post->featured_image_alt_text); ?>" class="w-full aspect-auto rounded-lg shadow">
+                        <img src="<?php echo e(asset($post->featured_image)); ?>" alt="<?php echo e($post->featured_image_alt_text); ?>" class="w-full aspect-auto rounded-md shadow">
                     </a>
                     <div class="mt-2">
                         <a href="<?php echo e(route('blog.post.show', ['slug' => $post->slug])); ?>">
@@ -30,7 +30,7 @@
     </div>
 
     <div class="mt-12">
-        <a href="<?php echo e(route('blog.post.index')); ?>" class="px-5 py-2.5 border rounded-lg text-base text-slate-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all">Read more articles</a>
+        <a href="<?php echo e(route('blog.post.index')); ?>" class="px-5 py-2.5 border rounded-md text-base text-slate-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all">Read more articles</a>
     </div>
 </section>
 <?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/website/partials/posts-teaser.blade.php ENDPATH**/ ?>

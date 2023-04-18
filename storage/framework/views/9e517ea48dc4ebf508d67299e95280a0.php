@@ -5,7 +5,7 @@
         <div class="mt-6">
             <?php $__empty_1 = true; $__currentLoopData = \App\Models\Event::whereNotNull('published_at')->where('start_date', '>=', today()->addDay())->orderBy('start_date', 'ASC')->take(3)->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                 <a href="<?php echo e(route('events.show', ['slug' => $event->slug])); ?>" class="block mt-6">
-                    <div class="w-full border-2 border-slate-200 py-6 px-4 sm:px-6 lg:px-8 rounded-lg hover:border-sky-300 group transition-all">
+                    <div class="w-full border-2 border-slate-200 py-6 px-4 sm:px-6 lg:px-8 rounded-md hover:border-sky-300 group transition-all">
                         <div class="md:flex items-center md:space-x-4">
                             <div class="flex-none pr-4 md:border-r h-full text-center text-xl text-slate-800">
                                 <p class="text-2xl font-black group-hover:text-sky-500 transition-all"><?php echo e(Carbon\Carbon::parse($event->start_date)->format('M d')); ?></p>
@@ -24,7 +24,7 @@
 
         <div class="mt-12">
             <a href="<?php echo e(route('events.index')); ?>"
-                class="px-5 py-2.5 border rounded-lg text-base text-slate-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all"
+                class="px-5 py-2.5 border rounded-md text-base text-slate-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all"
             >View all events</a>
         </div>
     </section>

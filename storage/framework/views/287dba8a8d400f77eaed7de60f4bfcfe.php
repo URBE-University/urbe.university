@@ -1,21 +1,21 @@
 <?php $__env->startSection('content'); ?>
-    
+
     <header class="relative flex items-center justify-center h-96 md:h-[calc(100vh-74px)] mb-12 overflow-hidden">
-        
+
         <div class="z-20 relative h-full w-full p-5 text-white bg-urbe bg-opacity-80 flex items-center justify-center">
             <div class="max-w-5xl">
                 <h1 class="text-5xl lg:text-7xl font-black">Welcome to URBE University</h1>
                 <p class="mt-6 text-lg md:text-xl">Explore our undergraduate and graduate programs in business, communications, education and more.</p>
                 <div class="mt-6 flex items-center sm:space-x-4">
-                    <a href="" class="inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                    <a href="" class="inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     ><?php echo e(__("Learn more about our programs")); ?></a>
                     <a href="https://admissions.urbe.university" target="_blank" dofollow
-                        class="inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                        class="inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     ><?php echo e(__("Apply now")); ?></a>
                 </div>
             </div>
         </div>
-        
+
         <video autoplay loop muted playsinline class="absolute z-10 w-auto min-w-full min-h-full max-w-full object-cover">
             <source src="<?php echo e(asset('videos/urbe-intro-video.webm')); ?>" type="video/webm"/>
             <source src="<?php echo e(asset('videos/urbe-intro-video.mp4')); ?>" type="video/mp4"/>
@@ -23,7 +23,7 @@
         </video>
     </header>
 
-    
+
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 gap-8">
             <div class="col-span-2 md:col-span-1">
@@ -41,9 +41,9 @@
             </div>
         </div>
         <div class="py-8"></div>
-        
+
         <div class="grid grid-cols-3 gap-8">
-            <div class="w-full col-span-3 md:col-span-1 rounded-lg" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
+            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
                 <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
                     <div class="h-full flex flex-col justify-center">
                         <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full col-span-3 md:col-span-1 rounded-lg" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
+            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
                 <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
                     <div class="h-full flex flex-col justify-center">
                         <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full col-span-3 md:col-span-1 rounded-lg" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
+            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
                 <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
                     <div class="h-full flex flex-col justify-center">
                         <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
@@ -68,12 +68,12 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 
     <div class="py-12"></div>
 
-    
+
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-4xl text-urbe font-serif font-bold">Our Mission</h2>
@@ -83,19 +83,19 @@
             </p>
         </div>
         <div class="mt-6">
-            <video class="rounded-lg w-full aspect-video" src="<?php echo e(asset('videos/urbe-intro-video.webm')); ?>" type="video/webm" controls></video>
+            <video class="rounded-md w-full aspect-video" src="<?php echo e(asset('videos/urbe-intro-video.webm')); ?>" type="video/webm" controls></video>
         </div>
     </section>
 
     <div class="py-12"></div>
 
-    
+
     <section class="w-full pt-16 pb-24 bg-sky-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl text-urbe font-serif font-bold capitalize"><?php echo e(__("Discover our programs")); ?></h2>
 
             <div class="mt-12 grid grid-cols-2 gap-8 text-left">
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                <div class="col-span-2 md:col-span-1 bg-white rounded-md shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Bachelor of Science</span>
@@ -112,7 +112,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                <div class="col-span-2 md:col-span-1 bg-white rounded-md shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Bachelor of Science</span>
@@ -128,7 +128,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                <div class="col-span-2 md:col-span-1 bg-white rounded-md shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Master of Science</span>
@@ -144,7 +144,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                <div class="col-span-2 md:col-span-1 bg-white rounded-md shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Master of Science</span>
@@ -164,15 +164,15 @@
         </div>
     </section>
 
-    
+
     <?php echo $__env->make('website.partials.posts-teaser', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    
+
     <?php echo $__env->make('website.partials.events-teaser', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <div class="py-12"></div>
 
-    
+
     <?php echo $__env->make('website.partials.owner-banner', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <div class="py-12"></div>

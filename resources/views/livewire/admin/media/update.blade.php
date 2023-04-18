@@ -5,7 +5,7 @@
         <x-slot name="title">
             <div class="flex items-center justify-between">
                 <p class="text-sm text-slate-700">{{ $media->file_name }}</p>
-                <button wire:click="$toggle('modal')" class="p-2 bg-slate-100 rounded-lg hover:bg-red-100 hover:text-red-500">
+                <button wire:click="$toggle('modal')" class="p-2 bg-slate-100 rounded-md hover:bg-red-100 hover:text-red-500">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -16,7 +16,7 @@
             <div class="grid grid-cols-8 gap-8">
                 <div class="col-span-8 md:col-span-3 flex items-center justify-center">
                     @if ($media->file_type != 'pdf')
-                        <img src="{{ asset($media->url) }}" alt="{{ $media->alt_text }}" class="w-full aspect-square rounded-lg object-cover object-center">
+                        <img src="{{ asset($media->url) }}" alt="{{ $media->alt_text }}" class="w-full aspect-square rounded-md object-cover object-center">
                     @else
                         <object data="{{ asset($media->url) }}" type="application/pdf" class="w-full h-[400px]"></object>
                     @endif

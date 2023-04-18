@@ -13,10 +13,10 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <button wire:click="$toggle('showTrashed')" class="text-sm hover:underline ">Trash ({{ \App\Models\Post::onlyTrashed()->count() }})</button>
-            <div class="mt-4 bg-white shadow rounded-lg">
+            <div class="mt-4 bg-white shadow rounded-md">
                 @forelse ($posts as $post)
                     <div @class([
-                        'flex items-center justify-between px-6 py-4 rounded-lg hover:bg-slate-50',
+                        'flex items-center justify-between px-6 py-4 rounded-md hover:bg-slate-50',
                         'border-t rounded-t-none' => !$loop->first
                     ])>
                         <div class="flex items-center space-x-6">

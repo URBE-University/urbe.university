@@ -1,6 +1,6 @@
 <div>
     <?php $__empty_1 = true; $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-        <div class="flex items-center justify-between text-sm py-2 hover:bg-slate-50 px-4 ml-8 rounded-lg">
+        <div class="flex items-center justify-between text-sm py-2 hover:bg-slate-50 px-4 ml-8 rounded-md">
             <div class="flex items-center space-x-3">
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">

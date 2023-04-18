@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="col-span-3 sm:col-span-1">
-            <a href="{{ $event->rsvp_url }}" target="_blank" class="block w-full text-center font-medium rounded-lg px-4 py-3 bg-sky-500 text-white hover:bg-sky-400 transition-all">{{ __("Reserve spot") }}</a>
+            <a href="{{ $event->rsvp_url }}" target="_blank" class="block w-full text-center font-medium rounded-md px-4 py-3 bg-sky-500 text-white hover:bg-sky-400 transition-all">{{ __("Reserve spot") }}</a>
         </div>
 
         <div class="mt-6 col-span-3">

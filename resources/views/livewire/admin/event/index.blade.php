@@ -11,11 +11,11 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <button wire:click="$toggle('showTrashed')" class="text-sm hover:underline ">Trash ({{ \App\Models\Event::onlyTrashed()->count() }})</button>
-            <div class="mt-4 bg-white shadow rounded-lg">
+            <div class="mt-4 bg-white shadow rounded-md">
                 @forelse ($events as $event)
-                    <div class="p-4 flex items-center justify-between rounded-lg hover:bg-slate-100">
+                    <div class="p-4 flex items-center justify-between rounded-md hover:bg-slate-100">
                         <div class="flex items-center space-x-3">
-                            <div class="w-20 h-20 aspect-square rounded-lg border flex items-center justify-center">
+                            <div class="w-20 h-20 aspect-square rounded-md border flex items-center justify-center">
                                 <div class="">
                                     <p class="text-2xl font-bold">
                                         {{ Carbon\Carbon::parse($event->start_date)->format('d') }}

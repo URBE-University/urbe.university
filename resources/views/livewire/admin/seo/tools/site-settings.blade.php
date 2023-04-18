@@ -3,7 +3,7 @@
         <div class="py-6 px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">Site Settings</h2>
-                <a href="{{route('admin.seo.home')}}" class="bg-slate-100 p-2 -m-2 rounded-lg text-slate-600 hover:text-blue-500 hover:bg-blue-100 transition-all">
+                <a href="{{route('admin.seo.home')}}" class="bg-slate-100 p-2 -m-2 rounded-md text-slate-600 hover:text-blue-500 hover:bg-blue-100 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -14,7 +14,7 @@
 
     <div class="py-12">
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
-            <div class="w-full bg-white rounded-lg shadow">
+            <div class="w-full bg-white rounded-md shadow">
                 <div class="p-8">
                     <div class="flex items-center space-x-3 fill-slate-600">
                         <p class="text-xl font-semibold">Site information</p>
@@ -73,7 +73,7 @@
                         <p class="block font-medium text-sm text-gray-700">Card image</p>
                         <div class="mt-2">
                             <div class="shrink-0">
-                                <img class="h-96 w-full object-cover rounded-lg bg-blue-50 flex items-center text-xs justify-center uppercase text-blue-500 font-bold" src="{{ $card_image ? asset($card_image->temporaryUrl()) : asset($settings?->card_image) }}" alt="Card image" />
+                                <img class="h-96 w-full object-cover rounded-md bg-blue-50 flex items-center text-xs justify-center uppercase text-blue-500 font-bold" src="{{ $card_image ? asset($card_image->temporaryUrl()) : asset($settings?->card_image) }}" alt="Card image" />
                             </div>
                             <p class="mt-1 text-xs font-medium text-slate-600">Upload only .webp images, 800x418 pixels.</p>
                             <label class="mt-4 block border:none">
@@ -94,7 +94,7 @@
 
                 </div>
                 <div class="px-4 py-3 bg-slate-100 flex justify-end rounded-b-lg">
-                    <button type="submit" class="inline-flex items-center px-4 py-2 bg-slate-800 border border-transparent rounded-lg font-semibold text-xs text-white uppercase tracking-widest hover:bg-slate-700 active:bg-slate-900 focus:outline-none focus:border-slate-900 focus:ring focus:ring-slate-300 disabled:opacity-25 transition" wire:click="save">
+                    <button type="submit" class="inline-flex items-center px-4 py-2 bg-slate-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-slate-700 active:bg-slate-900 focus:outline-none focus:border-slate-900 focus:ring focus:ring-slate-300 disabled:opacity-25 transition" wire:click="save">
                         Save changes
                     </button>
                 </div>

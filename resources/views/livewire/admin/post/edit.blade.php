@@ -7,7 +7,7 @@
                 <div class="flex items-center space-x-4">
                     @livewire('admin.post.options', ['post' => $post])
                     <select wire:model="status" @class([
-                        'border-0 rounded-lg text-sm py-1.5',
+                        'border-0 rounded-md text-sm py-1.5',
                         'bg-green-100 text-green-800' => $status == 'published',
                         'bg-yellow-100 text-yellow-800' => $status == 'draft',
                         ])>

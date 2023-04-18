@@ -9,10 +9,10 @@
                 <h1 class="text-5xl lg:text-7xl font-black">Welcome to URBE University</h1>
                 <p class="mt-6 text-lg md:text-xl">Explore our undergraduate and graduate programs in business, communications, education and more.</p>
                 <div class="mt-6 flex items-center sm:space-x-4">
-                    <a href="" class="inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                    <a href="" class="inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     >{{ __("Learn more about our programs") }}</a>
                     <a href="https://admissions.urbe.university" target="_blank" dofollow
-                        class="inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                        class="inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     >{{ __("Apply now") }}</a>
                 </div>
             </div>
@@ -45,7 +45,7 @@
         <div class="py-8"></div>
         {{-- Highlights --}}
         <div class="grid grid-cols-3 gap-8">
-            <div class="w-full col-span-3 md:col-span-1 rounded-lg" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
+            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
                 <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
                     <div class="h-full flex flex-col justify-center">
                         <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full col-span-3 md:col-span-1 rounded-lg" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
+            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
                 <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
                     <div class="h-full flex flex-col justify-center">
                         <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full col-span-3 md:col-span-1 rounded-lg" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
+            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
                 <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
                     <div class="h-full flex flex-col justify-center">
                         <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
@@ -84,7 +84,7 @@
             </p>
         </div>
         <div class="mt-6">
-            <video class="rounded-lg w-full aspect-video" src="{{ asset('videos/urbe-intro-video.webm') }}" type="video/webm" controls></video>
+            <video class="rounded-md w-full aspect-video" src="{{ asset('videos/urbe-intro-video.webm') }}" type="video/webm" controls></video>
         </div>
     </section>
 
@@ -96,7 +96,7 @@
             <h2 class="text-4xl text-urbe font-serif font-bold capitalize">{{ __("Discover our programs") }}</h2>
 
             <div class="mt-12 grid grid-cols-2 gap-8 text-left">
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                <div class="col-span-2 md:col-span-1 bg-white rounded-md shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Bachelor of Science</span>
@@ -112,7 +112,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                <div class="col-span-2 md:col-span-1 bg-white rounded-md shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Bachelor of Science</span>
@@ -128,7 +128,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                <div class="col-span-2 md:col-span-1 bg-white rounded-md shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Master of Science</span>
@@ -144,7 +144,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-span-2 md:col-span-1 bg-white rounded-lg shadow">
+                <div class="col-span-2 md:col-span-1 bg-white rounded-md shadow">
                     <img src="https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg" alt="" class="h-56 w-full object-top object-cover rounded-t-lg">
                     <div class="p-6">
                         <span class="text-sm bg-sky-100 text-urbe px-3 py-1 rounded-full">Master of Science</span>

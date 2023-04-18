@@ -9,7 +9,7 @@
   <section class="w-full pb-24 pt-16">
     <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
       <div class="mt-12 grid grid-cols-2 gap-8 text-left">
-        <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
+        <div class="col-span-2 rounded-md bg-white shadow md:col-span-1">
           <img src="https://dev.urbe.university/images/hsz2ntvXkAk4kckHk3KsCeI2CCbixKRqkCmhAFb3.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
           <div class="p-6">
             <span class="text-urbe rounded-full bg-yellow-100 px-3 py-1 text-sm">Bachelor of Science</span>
@@ -23,7 +23,7 @@
             <p class="mt-4 text-slate-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla voluptates est fuga officia minima veniam fugit eum quis aliquid quae earum maiores ipsum cum, similique in sit natus ad distinctio!</p>
           </div>
         </div>
-        <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
+        <div class="col-span-2 rounded-md bg-white shadow md:col-span-1">
           <img src="https://dev.urbe.university/images/raouJoRWOD5VjwTUiBXzZPK0vNarb9S79Yyxm3r6.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
           <div class="p-6">
             <span class="text-urbe rounded-full bg-yellow-100 px-3 py-1 text-sm">Bachelor of Science</span>
@@ -37,7 +37,7 @@
             <p class="mt-4 text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aperiam! Nam dolorum hic, harum iste sint, provident velit accusamus autem natus dolorem debitis inventore maiores quibusdam ipsam incidunt dolore nihil.</p>
           </div>
         </div>
-        <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
+        <div class="col-span-2 rounded-md bg-white shadow md:col-span-1">
           <img src="https://dev.urbe.university/images/5bjRa4SqX3Wa66rQlnGUGL3imioGnLlKxcTvcXEo.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
           <div class="p-6">
             <span class="text-urbe rounded-full bg-sky-100 px-3 py-1 text-sm">Master of Science</span>
@@ -51,7 +51,7 @@
             <p class="mt-4 text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aperiam! Nam dolorum hic, harum iste sint, provident velit accusamus autem natus dolorem debitis inventore maiores quibusdam ipsam incidunt dolore nihil.</p>
           </div>
         </div>
-        <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
+        <div class="col-span-2 rounded-md bg-white shadow md:col-span-1">
           <img src="https://dev.urbe.university/images/gEc92yZLbGeATKc6pRdjMgddeTJ9dORmBbPsbeA9.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
           <div class="p-6">
             <span class="text-urbe rounded-full bg-sky-100 px-3 py-1 text-sm">Master of Science</span>

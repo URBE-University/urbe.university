@@ -78,10 +78,10 @@ echo $html;
 <?php endif; ?>
                                     </div>
 
-                                    
+
                                     <p class="mt-8 text-sm font-medium text-slate-600"><?php echo e(__("Keywords")); ?></p>
                                     <textarea id="keywords" cols="30" rows="6" wire:model.defer="keywords" placeholder="Enter each keyword separated by a space."
-                                        class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-lg shadow-sm mt-1 block w-full"
+                                        class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full"
                                     ></textarea>
                                     <div class="mt-2 flex justify-end">
                                         <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>

@@ -10,15 +10,15 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="mt-4 bg-white shadow rounded-lg">
+            <div class="mt-4 bg-white shadow rounded-md">
                 <?php $__empty_1 = true; $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
-                        'flex items-center justify-between px-6 py-4 rounded-lg hover:bg-slate-50',
+                        'flex items-center justify-between px-6 py-4 rounded-md hover:bg-slate-50',
                         'border-t rounded-t-none' => !$loop->first
                     ]) ?>">
                         <div class="flex items-center space-x-6">
                             <?php if($page->featured_image): ?>
-                                <img src="<?php echo e(asset($page->featured_image)); ?>" class="w-20 h-20 aspect-square rounded-lg shadow">
+                                <img src="<?php echo e(asset($page->featured_image)); ?>" class="w-20 h-20 aspect-square rounded-md shadow">
                             <?php endif; ?>
                             <div class="">
                                 <a href="<?php echo e(route('admin.page.edit', ['page' => $page->id])); ?>" title="Click to open article on a new tab.">

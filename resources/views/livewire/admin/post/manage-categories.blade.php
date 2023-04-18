@@ -1,8 +1,8 @@
 <div>
     <p class="mt-8 text-sm font-medium text-slate-600">{{ __("Categories") }}</p>
-    <ul class="mt-2 h-44 bg-gray-100 rounded-lg overflow-y-auto">
+    <ul class="mt-2 h-44 bg-gray-100 rounded-md overflow-y-auto">
         @forelse ($categories as $category => $item)
-            <li class="px-2 py-2 w-full flex items-center justify-between hover:bg-white rounded-lg">
+            <li class="px-2 py-2 w-full flex items-center justify-between hover:bg-white rounded-md">
                 <label for="{{ $item->slug . $item->id }}" class="flex items-center space-x-3">
                     <input type="checkbox"
                         wire:click="syncCategories({{ $item->id }})"
@@ -20,8 +20,8 @@
         <button type="button" @click="show_new_category_dialog = ! show_new_category_dialog" class="text-sm text-blue-600 hover:text-blue-500">{{ __("Add a new category") }}</button>
         <div x-show="show_new_category_dialog" class="mt-2">
             <div class="relative">
-                <input type="text" wire:keydown.enter="addCategory" wire:model="newCategory" class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="" required>
-                <button type="button" wire:click="addCategory" class="text-white absolute right-2.5 bottom-2.5 bg-gray-900 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2">Save</button>
+                <input type="text" wire:keydown.enter="addCategory" wire:model="newCategory" class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-md bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="" required>
+                <button type="button" wire:click="addCategory" class="text-white absolute right-2.5 bottom-2.5 bg-gray-900 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-md text-sm px-4 py-2">Save</button>
             </div>
         </div>
     </div>
