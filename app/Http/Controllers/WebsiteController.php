@@ -6,6 +6,7 @@ use App\Models\Page;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Blade;
 
 class WebsiteController extends Controller
 {
@@ -34,6 +35,7 @@ class WebsiteController extends Controller
 
         return view('website.page', [
             'page' => $page,
+            'page_content' => Blade::compileString($page->content),
             'settings' => $this->settings,
         ]);
     }

@@ -56,7 +56,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="py-6 grid grid-cols-3 gap-8">
                     <div class="col-span-1 rounded-md bg-center bg-no-repeat bg-cover text-white" <?php if($submenu->background_image): ?> style="background-image: url('<?php echo e(asset($submenu->background_image)); ?>')" <?php endif; ?>>
-                        <div class="h-full p-4 backdrop-blur rounded-md" <?php if($submenu->background_color && !$submenu->background_image): ?> style="background-color: <?php echo e($submenu->background_color); ?>" <?php endif; ?>>
+                        <div class="h-full p-4 bg-urbe/70 rounded-md" <?php if($submenu->background_color && !$submenu->background_image): ?> style="background-color: <?php echo e($submenu->background_color); ?>" <?php endif; ?>>
                             <p class="text-xl font-bold"><?php echo e($submenu->title); ?></p>
                             <p class="mt-4 text-base"><?php echo e($submenu->subtitle); ?></p>
                         </div>

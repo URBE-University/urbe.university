@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<?php echo $page->content; ?>
+<?php echo eval("?>$page_content"); ?>
 
 <?php $__env->stopSection(); ?>
 

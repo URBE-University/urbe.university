@@ -1,5 +1,5 @@
 @extends('layouts.website', ['settings' => $settings, 'page' => $page])
 
 @section('content')
-{!! $page->content !!}
+{!! eval("?>$page_content") !!}
 @endsection
