@@ -23,7 +23,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans bg-slate-50 text-slate-800 antialiased text-lg">
+    <body class="font-sans bg-white text-slate-800 antialiased text-lg">
         @include('website.partials.subnavbar')
         @include('website.partials.navbar')
         @yield('content')
