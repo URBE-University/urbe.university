@@ -58,7 +58,7 @@ class SiteSettings extends Component
             if ($this->settings->card_image) {
                 Storage::delete($this->settings->card_image);
             }
-            $favIcon = $this->card_image->store('images');
+            $cardImage = $this->card_image->store('images');
         }
 
         try {

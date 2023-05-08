@@ -9,34 +9,39 @@
   <section class="w-full pb-24 pt-16">
     <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
       <div class="grid grid-cols-6 items-start gap-8">
-        <div class="col-span-6 min-h-screen text-left md:col-span-4">
-          <h2 class="text-urbe text-3xl font-bold">Contact Us</h2>
-        </div>
-        <div class="col-span-6 hidden justify-end text-base md:col-span-2 md:flex">
+        <main class="col-span-6 min-h-screen text-left md:col-span-4">
+          <h2 class="text-urbe text-3xl font-bold">{!!__('Contact Us')!!}</h2>
+          <div class="mt-6">
+            <p>Content missing</p>
+          </div>
+        </main>
+
+        <!-- Sidenav -->
+        <aside class="col-span-6 hidden justify-end text-base md:col-span-2 md:flex">
           <ul class="text-left">
             <li class="mt-2">
               <p class="border-l-urbe text-urbe border-l-4 pl-2 text-xl font-semibold">In this section</p>
             </li>
             <li class="mt-4">
-              <a href="" class="transition-all hover:text-sky-500 hover:underline">About Us</a>
+              <a href="/about-us" class="transition-all hover:text-sky-500 hover:underline">About Us</a>
             </li>
             <li class="mt-2">
-              <a href="" class="transition-all hover:text-sky-500 hover:underline">History</a>
+              <a href="/about-us/history" class="transition-all hover:text-sky-500 hover:underline">History</a>
             </li>
             <li class="mt-2">
-              <a href="" class="transition-all hover:text-sky-500 hover:underline">Vision and Mission</a>
+              <a href="/about-us/vision-and-mission" class="transition-all hover:text-sky-500 hover:underline">Vision and Mission</a>
             </li>
             <li class="mt-2">
-              <a href="" class="transition-all hover:text-sky-500 hover:underline">Student Consumer Information</a>
+              <a href="/about-us/student-consumer-information" class="transition-all hover:text-sky-500 hover:underline">Student Consumer Information</a>
             </li>
             <li class="mt-2">
-              <a href="" class="transition-all hover:text-sky-500 hover:underline">Accreditation</a>
+              <a href="/about-us/accreditation" class="transition-all hover:text-sky-500 hover:underline">Accreditation</a>
             </li>
             <li class="mt-2">
-              <a href="" class="transition-all hover:text-sky-500 hover:underline">Contact Us</a>
+              <a href="/contact-us" class="transition-all hover:text-sky-500 hover:underline">Contact Us</a>
             </li>
           </ul>
-        </div>
+        </aside>
       </div>
     </div>
   </section>
