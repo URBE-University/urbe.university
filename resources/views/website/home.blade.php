@@ -91,7 +91,7 @@
     <div class="py-12"></div>
 
     {{-- Discover our programs --}}
-    <section class="w-full pt-16 pb-24 bg-sky-50">
+    <section class="w-full pt-16 pb-24 bg-gradient-to-t from-sky-50 to-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl text-urbe font-serif font-bold capitalize">{{ __("Discover our programs") }}</h2>
 
