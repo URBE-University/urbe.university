@@ -23,7 +23,7 @@
         <!-- Scripts -->
         <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
     </head>
-    <body class="font-sans bg-slate-50 text-slate-800 antialiased text-lg">
+    <body class="font-sans bg-white text-slate-800 antialiased text-lg">
         <?php echo $__env->make('website.partials.subnavbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->make('website.partials.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->yieldContent('content'); ?>

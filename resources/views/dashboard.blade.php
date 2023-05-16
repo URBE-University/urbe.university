@@ -5,11 +5,5 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-md">
-                <x-welcome />
-            </div>
-        </div>
-    </div>
+    <embed src="https://app.usefathom.com/share/fhskfcyk/main+website" type="" class="w-full h-full">
 </x-app-layout>
