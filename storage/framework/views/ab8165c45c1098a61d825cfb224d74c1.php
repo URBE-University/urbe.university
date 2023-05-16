@@ -17,13 +17,13 @@
                         <?php if($item->type == 'dropdown' || $item->type == 'megamenu'): ?>
                             <button
                                 x-on:click="active_menu = (active_menu == `<?php echo e($item->uuid); ?>`) ? '' : `<?php echo e($item->uuid); ?>`"
-                                :class="active_menu == `<?php echo e($item->uuid); ?>` ? 'text-sky-500' : ''"
-                                class="h-full px-3 flex items-center hover:text-sky-500 transition-all"
+                                :class="active_menu == `<?php echo e($item->uuid); ?>` ? 'text-white bg-urbe' : ''"
+                                class="h-full px-3 flex items-center hover:text-white hover:bg-urbe transition-all"
                             ><?php echo e($item->label); ?>
 
                             </button>
                         <?php else: ?>
-                            <a href="<?php echo e($item->url); ?>" <?php if($item->opens_in_new_tab): ?> target="_blank" <?php endif; ?> class="h-full px-3 flex items-center hover:text-sky-500 transition-all"><?php echo e($item->label); ?></a>
+                            <a href="<?php echo e($item->url); ?>" <?php if($item->opens_in_new_tab): ?> target="_blank" <?php endif; ?> class="h-full px-3 flex items-center hover:text-white hover:bg-urbe transition-all"><?php echo e($item->label); ?></a>
                         <?php endif; ?>
                     </li>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
