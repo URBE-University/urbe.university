@@ -22,17 +22,23 @@ class ParseShortcodes
         $posts_teaser = View::make('website.partials.posts-teaser');
         $events_teaser = View::make('website.partials.events-teaser');
         $owner_banner = View::make('website.partials.owner-banner');
+        $start_date_banner_mini = View::make('livewire.website.start-date-banner.mini');
+        $start_date_banner_regular = View::make('livewire.website.start-date-banner.regular');
 
         $content = str_replace([
             '[cta]',
             '[posts_teaser]',
             '[events_teaser]',
-            '[owner_banner]'
+            '[owner_banner]',
+            '[start_date_banner_mini]',
+            '[start_date_banner_regular]'
             ], [
                 $cta->render(),
                 $posts_teaser->render(),
                 $events_teaser->render(),
-                $owner_banner->render()
+                $owner_banner->render(),
+                $start_date_banner_mini->render(),
+                $start_date_banner_regular->render()
             ],
             $response->getContent()
         );

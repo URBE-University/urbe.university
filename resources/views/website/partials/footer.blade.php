@@ -43,7 +43,7 @@
             <div class="col-span-4 md:col-span-2 lg:col-span-1">
                 <p class="text-lg font-semibold">Our University</p>
                 <div class="mt-4">
-                    @forelse (\App\Models\Menu::where('location', 'footer')->where('column', 1)->get() as $menuItem)
+                    @forelse (\App\Models\Menu::where('location', 'footer')->where('column', 1)->orderBy('order')->get() as $menuItem)
                         <a href="{{ $menuItem->url }}" class="mt-1 block text-base hover:underline transition-all">{{$menuItem->label}}</a>
                     @empty
                     @endforelse
@@ -53,7 +53,7 @@
             <div class="col-span-4 md:col-span-2 lg:col-span-1">
                 <p class="text-lg font-semibold">Useful Links</p>
                 <div class="mt-4">
-                    @forelse (\App\Models\Menu::where('location', 'footer')->where('column', 2)->get() as $menuItem)
+                    @forelse (\App\Models\Menu::where('location', 'footer')->where('column', 2)->orderBy('order')->get() as $menuItem)
                         <a href="{{ $menuItem->url }}" class="mt-1 block text-base hover:underline transition-all">{{$menuItem->label}}</a>
                     @empty
                     @endforelse
@@ -63,7 +63,7 @@
             <div class="col-span-4 md:col-span-2 lg:col-span-1">
                 <p class="text-lg font-semibold">Policies</p>
                 <div class="mt-4">
-                    @forelse (\App\Models\Menu::where('location', 'footer')->where('column', 3)->get() as $menuItem)
+                    @forelse (\App\Models\Menu::where('location', 'footer')->where('column', 3)->orderBy('order')->get() as $menuItem)
                         <a href="{{ $menuItem->url }}" class="mt-1 block text-base hover:underline transition-all">{{$menuItem->label}}</a>
                     @empty
                     @endforelse

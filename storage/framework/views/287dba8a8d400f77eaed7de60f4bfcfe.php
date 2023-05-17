@@ -6,6 +6,7 @@
             <div class="max-w-5xl">
                 <h1 class="text-5xl lg:text-7xl font-black">Welcome to URBE University</h1>
                 <p class="mt-6 text-lg md:text-xl">Explore our undergraduate and graduate programs in business, communications, education and more.</p>
+
                 <div class="mt-6 flex items-center sm:space-x-4">
                     <a href="" class="inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     ><?php echo e(__("Learn more about our programs")); ?></a>
