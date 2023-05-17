@@ -22,8 +22,8 @@ class ParseShortcodes
         $posts_teaser = View::make('website.partials.posts-teaser');
         $events_teaser = View::make('website.partials.events-teaser');
         $owner_banner = View::make('website.partials.owner-banner');
-        $start_date_banner_mini = View::make('livewire.website.start-date-banner.mini');
-        $start_date_banner_regular = View::make('livewire.website.start-date-banner.regular');
+        $start_date_banner_mini = View::make('website.partials.start-date-banner.mini');
+        $start_date_banner_regular = View::make('website.partials.start-date-banner.regular');
 
         $content = str_replace([
             '[cta]',

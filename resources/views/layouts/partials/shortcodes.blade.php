@@ -27,6 +27,15 @@
                     <td role="row" class="font-semibold">[owner_banner]</td>
                     <td>Inserts the owner's banner with dark blue background.</td>
                 </tr>
+
+                <tr>
+                    <td role="row" class="font-semibold">[start_date_banner_mini]</td>
+                    <td>Nice tiny start date baner. Perfect for smaller site sections.</td>
+                </tr>
+                <tr>
+                    <td role="row" class="font-semibold">[start_date_banner_regular]</td>
+                    <td>The start date banner you want to use throughout all your pages and articles.</td>
+                </tr>
               </tbody>
         </table>
     </div>

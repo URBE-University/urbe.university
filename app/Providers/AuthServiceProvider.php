@@ -124,5 +124,10 @@ class AuthServiceProvider extends ServiceProvider
             return auth()->user()->is_active && in_array('user:delete', auth()->user()->permissions);
         });
 
+        // Manage school information
+        Gate::define('school-information:manage', function() {
+            return auth()->user()->is_active && in_array('school-information:manage', auth()->user()->permissions);
+        });
+
     }
 }

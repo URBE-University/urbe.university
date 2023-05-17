@@ -102,6 +102,16 @@
             </a>
         <?php endif; ?>
 
+        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('school-information:manage')): ?>
+            <a href="<?php echo e(route('admin.school.start-dates')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
+                'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
+                'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.school.start-dates'),
+            ]) ?>">
+                <?php echo e(__('Start dates')); ?>
+
+            </a>
+        <?php endif; ?>
+
         <div class="my-6 md:mt-48"></div>
 
         <div class="text-xs font-medium tracking-wide text-gray-400 uppercase pl-2">
@@ -138,8 +148,8 @@
 
             </a>
         </form>
-
-
+        
+        
     </nav>
 </div>
 <?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/layouts/partials/nav.blade.php ENDPATH**/ ?>

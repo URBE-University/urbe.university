@@ -243,6 +243,7 @@ return [
         'user:create',
         'user:update',
         'user:delete',
+        'school-information:manage'
     ],
 
 ];

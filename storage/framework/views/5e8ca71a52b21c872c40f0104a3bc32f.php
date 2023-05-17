@@ -25,7 +25,7 @@
         <div class="md:flex flex-col md:flex-row min-h-screen w-full">
             <?php echo $__env->make('layouts.partials.nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             
-            <main class="w-full sm:overflow-y-auto sm:min-h-screen relative bg-slate-50">
+            <main class="w-full sm:overflow-y-auto sm:min-h-screen relative bg-gray-50">
                 <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.banner','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('banner'); ?>
