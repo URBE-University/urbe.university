@@ -8,8 +8,8 @@
                     </svg>
                 </div>
                 <div class="">
-                    <p class="text-sm font-medium text-slate-500 uppercase">Register by</p>
-                    <h2 class="text-2xl font-bold"><?php echo e(Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->apply_by_date)->format('F jS')); ?></h2>
+                    <p class="text-xs font-medium text-slate-500 uppercase">Register by</p>
+                    <h2 class="text-xl font-bold"><?php echo e(Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->apply_by_date)->format('F jS')); ?></h2>
                 </div>
             </div>
 
@@ -20,12 +20,12 @@
                     </svg>
                 </div>
                 <div class="">
-                    <p class="text-sm font-medium text-slate-500 uppercase">To start on</p>
-                    <h2 class="text-2xl font-bold"><?php echo e(Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS')); ?></h2>
+                    <p class="text-xs font-medium text-slate-500 uppercase">To start on</p>
+                    <h2 class="text-xl font-bold"><?php echo e(Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS')); ?></h2>
                 </div>
             </div>
             <div class="col-span-3 col-start-10">
-                <a href="" class="block w-full py-4 bg-sky-500 rounded-full text-white text-center">Apply Now</a>
+                <a href="https://admissions.urbe.university" target="_blank" class="block w-full py-4 bg-sky-500 rounded-full text-white text-center">Apply Now</a>
             </div>
         </div>
     </div>

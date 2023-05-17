@@ -176,4 +176,4 @@
     <div class="py-12"></div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.website', ['settings' => $settings, 'title' => 'Welcome'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/website/home.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.website', ['settings' => $settings, 'title' => 'URBE University'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/website/home.blade.php ENDPATH**/ ?>

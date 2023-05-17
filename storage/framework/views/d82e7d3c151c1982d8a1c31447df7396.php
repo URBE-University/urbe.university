@@ -7,6 +7,14 @@
         <link rel="icon" type="image/svg" href="<?php echo e(asset('static_assets/u-logo.svg')); ?>">
         <title><?php echo e($page->title ?? $title . ' | ' . config('app.name', 'URBE University')); ?></title>
 
+        <?php if(request()->routeIs('home')): ?>
+            <meta property="og:url"         content="<?php echo e(request()->url()); ?>" />
+            <meta property="og:type"        content="page" />
+            <meta property="og:title"       content="<?php echo e($settings->title); ?>" />
+            <meta property="og:description" content="<?php echo e(Str::of($settings->description)->limit(120)); ?>" />
+            <meta property="og:image"       content="<?php echo e(asset($settings->card_image) ?? ''); ?>" />
+        <?php endif; ?>
+
         <?php if(request()->routeIs('blog.post.show')): ?>
             <meta property="og:url"         content="<?php echo e(request()->url()); ?>" />
             <meta property="og:type"        content="article" />

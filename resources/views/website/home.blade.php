@@ -1,4 +1,4 @@
-@extends('layouts.website', ['settings' => $settings, 'title' => 'Welcome'])
+@extends('layouts.website', ['settings' => $settings, 'title' => 'URBE University'])
 
 @section('content')
     {{-- Header --}}

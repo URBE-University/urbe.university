@@ -7,6 +7,14 @@
         <link rel="icon" type="image/svg" href="{{ asset('static_assets/u-logo.svg') }}">
         <title>{{ $page->title ?? $title . ' | ' . config('app.name', 'URBE University') }}</title>
 
+        @if (request()->routeIs('home'))
+            <meta property="og:url"         content="{{ request()->url() }}" />
+            <meta property="og:type"        content="page" />
+            <meta property="og:title"       content="{{ $settings->title }}" />
+            <meta property="og:description" content="{{ Str::of($settings->description)->limit(120) }}" />
+            <meta property="og:image"       content="{{ asset($settings->card_image) ?? '' }}" />
+        @endif
+
         @if (request()->routeIs('blog.post.show'))
             <meta property="og:url"         content="{{ request()->url() }}" />
             <meta property="og:type"        content="article" />
