@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="col-span-3 col-start-10">
-                <a href="" class="block w-full py-4 bg-sky-500 rounded-full text-white text-center">Apply Now</a>
+                <a href="https://admissions.urbe.university" target="_blank" class="block w-full py-4 bg-sky-500 rounded-full text-white text-center">Apply Now</a>
             </div>
         </div>
     </div>
