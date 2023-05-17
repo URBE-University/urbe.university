@@ -4,7 +4,7 @@
         active_mobile_menu: '',
     }"
     x-on:click.outside="active_menu=''"
-    class="bg-white border-b relative">
+    class="bg-white relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
         <div class="h-full flex items-center justify-between">
             <a href="{{ route('home') }}" class="flex items-center">
