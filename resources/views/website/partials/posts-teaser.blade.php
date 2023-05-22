@@ -15,10 +15,10 @@
                         </a>
                         <p class="mt-2 text-base">{{ strip_tags(str($post->content)->markdown()->limit(92)) }}</p>
                         <div class="mt-4 flex items-center space-x-3">
-                            <img src="{{ asset($post->user->profile_photo_url ?? asset('static_assets/urbe-logo.svg')) }}" alt="{{ $post->user->name }}"
+                            <img src="{{ asset($post->user->profile_photo_url ?? asset('static_assets/urbe-logo.svg')) }}" alt="{{ $post->user->name ?? 'URBE University' }}"
                                 class="flex-none w-10 h-10 object-cover object-center rounded-full">
                             <div class="text-sm font-mono">
-                                <p class="text-sky-500 font-medium">{{ __("Written by") }} <a class="underline" href="{{ route('blog.author.show', ['author' => str($post->user->name)->slug()]) }}">{{ $post->user->name }}</a></p>
+                                <p class="text-sky-500 font-medium">{{ __("Written by") }} <a class="underline" href="{{ route('blog.author.show', ['author' => str($post->user->name ?? 'URBE University')->slug()]) }}">{{ $post->user->name }}</a></p>
                                 <p>{{ Carbon\Carbon::parse($post->published_at)->format('F d, Y') }} &middot; <a class="underline" href="{{ route('blog.post.show', ['slug' => $post->slug]) }}">{{ __("Read article") }}</a></p>
                             </div>
                         </div>
