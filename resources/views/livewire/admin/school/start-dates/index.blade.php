@@ -39,7 +39,7 @@
                                     {{ $semester->semester }}
                                 </td>
                                 <td class="px-6 py-4 text-right">
-
+                                    @livewire('admin.school.start-dates.delete', ['startDate' => $semester], key('delete'.$semester->id))
                                 </td>
                             </tr>
                         @empty

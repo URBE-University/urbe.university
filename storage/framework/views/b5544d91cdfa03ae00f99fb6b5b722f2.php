@@ -56,7 +56,21 @@ echo $html;
 
                                 </td>
                                 <td class="px-6 py-4 text-right">
-
+                                    <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('admin.school.start-dates.delete', ['startDate' => $semester])->html();
+} elseif ($_instance->childHasBeenRendered('delete'.$semester->id)) {
+    $componentId = $_instance->getRenderedChildComponentId('delete'.$semester->id);
+    $componentTag = $_instance->getRenderedChildComponentTagName('delete'.$semester->id);
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('delete'.$semester->id);
+} else {
+    $response = \Livewire\Livewire::mount('admin.school.start-dates.delete', ['startDate' => $semester]);
+    $html = $response->html();
+    $_instance->logRenderedChild('delete'.$semester->id, $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?>
                                 </td>
                             </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
