@@ -1,5 +1,5 @@
 <?php if(\App\Models\StartDate::where('start_date', '>', today())->count() > 0): ?>
-    <a href="https://admissions.urbe.university" target="_blank" class="bg-white/20 px-3 py-1 rounded-full flex items-center">
+    <a href="https://admissions.urbe.university?utm_campaign='website_traffic'&utm_source='<?php echo e(url()->current()); ?>'&utm_medium='start_date_banner'" target="_blank" class="bg-white/20 px-3 py-1 rounded-full flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
         class="w-6 h-6 animate-pulse text-yellow-400">
         <path fill-rule="evenodd"

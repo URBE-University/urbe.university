@@ -15,10 +15,10 @@
                         </a>
                         <p class="mt-2 text-base"><?php echo e(strip_tags(str($post->content)->markdown()->limit(92))); ?></p>
                         <div class="mt-4 flex items-center space-x-3">
-                            <img src="<?php echo e(asset($post->user->profile_photo_url)); ?>" alt="<?php echo e($post->user->name); ?>"
+                            <img src="<?php echo e(asset($post->user->profile_photo_url ?? asset('static_assets/urbe-logo.svg'))); ?>" alt="<?php echo e($post->user->name ?? 'URBE University'); ?>"
                                 class="flex-none w-10 h-10 object-cover object-center rounded-full">
                             <div class="text-sm font-mono">
-                                <p class="text-sky-500 font-medium"><?php echo e(__("Written by")); ?> <a class="underline" href="<?php echo e(route('blog.author.show', ['author' => str($post->user->name)->slug()])); ?>"><?php echo e($post->user->name); ?></a></p>
+                                <p class="text-sky-500 font-medium"><?php echo e(__("Written by")); ?> <a class="underline" href="<?php echo e(route('blog.author.show', ['author' => str($post->user->name ?? 'URBE University')->slug()])); ?>"><?php echo e($post->user->name); ?></a></p>
                                 <p><?php echo e(Carbon\Carbon::parse($post->published_at)->format('F d, Y')); ?> &middot; <a class="underline" href="<?php echo e(route('blog.post.show', ['slug' => $post->slug])); ?>"><?php echo e(__("Read article")); ?></a></p>
                             </div>
                         </div>
