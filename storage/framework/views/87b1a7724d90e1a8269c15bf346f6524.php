@@ -5,7 +5,7 @@
                 <a href="<?php echo e(route('home')); ?>">
                     <img src="<?php echo e(asset('static_assets/urbe-logo-white.svg')); ?>" alt="URBE University logo" class="block w-1/3 md:w-2/3 h-auto">
                 </a>
-                <p class="mt-4">URBE University is an educational institution organized under the laws of the Independent Education Commision of Florida, with annual license <a href="https://web02.fldoe.org/CIE/SearchSchools/SchoolSearchDetail.aspx?schoolID=5594" target="_blank" class="underline font-medium">5594</a>.</p>
+                <p class="mt-4">URBE University is accredited by the Accrediting Commission for Career Schools and Colleges (ACCSC), and is licensed by the Commission for Independent Education (CIE), Florida Department of Education, license <a href="https://web02.fldoe.org/CIE/SearchSchools/SchoolSearchDetail.aspx?schoolID=5594" target="_blank" class="underline font-medium">5594</a>.</p>
                 <div class="mt-4 flex items-center justify-center space-x-3 bg-white p-2">
                     <?php if($settings->facebook_url): ?>
                         <a href="<?php echo e($settings->facebook_url); ?>" target="_blank">

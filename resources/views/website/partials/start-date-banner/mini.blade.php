@@ -7,7 +7,7 @@
         clip-rule="evenodd" />
     </svg>
 
-    <span class="ml-2">Next class session starts on
+    <span class="ml-2">{{__("Classes start")}}
         {{ Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS') }}</span>
     </a>
 @endif
