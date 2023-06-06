@@ -21,7 +21,7 @@
         {{-- End | Header Content --}}
         <video autoplay loop muted playsinline class="absolute z-10 w-auto min-w-full min-h-full max-w-full object-cover">
             <source src="{{ asset('videos/urbe-intro-video.webm') }}" type="video/webm"/>
-            <source src="{{ asset('videos/urbe-intro-video.mp4') }}" type="video/mp4"/>
+            <source src="{{ asset('videos/video.mp4') }}" type="video/mp4"/>
             <img src="{{ asset('static_assets/page-header-bg.webp') }}" title="Your browser does not support the <video> tag">
         </video>
     </header>
@@ -85,7 +85,10 @@
             </p>
         </div>
         <div class="mt-6">
-            <video class="rounded-md w-full aspect-video" src="{{ asset('videos/urbe-intro-video.webm') }}" type="video/webm" controls></video>
+            <video class="rounded-md w-full aspect-video" controls>
+                <source src="{{ asset('videos/video.webm') }}" type="video/webm"/>
+                <source src="{{ asset('videos/video.mp4') }}" type="video/mp4"/>
+            </video>
         </div>
     </section>
 
