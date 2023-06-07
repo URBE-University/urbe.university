@@ -11,7 +11,7 @@
             <meta property="og:url"         content="{{ request()->url() }}" />
             <meta property="og:type"        content="page" />
             <meta property="og:title"       content="{{ $settings->title }}" />
-            <meta property="og:description" content="{{ Str::of($settings->description)->limit(120) }}" />
+            <meta property="og:description" content="{{ $settings->description }}" />
             <meta property="og:image"       content="{{ asset($settings->card_image) ?? '' }}" />
         @endif
 
