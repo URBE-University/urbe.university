@@ -20,6 +20,7 @@
             <meta property="og:url"         content="{{ request()->url() }}" />
             <meta property="og:type"        content="article" />
             <meta property="og:title"       content="{{ $page->title ?? $title }}" />
+            <meta name="description" content="{{ Str::of($page->content)->limit(165) }}">
             <meta property="og:description" content="{{ Str::of($page->content)->limit(120) }}" />
             <meta property="og:image"       content="{{ asset($page->featured_image) ?? '' }}" />
         @endif
