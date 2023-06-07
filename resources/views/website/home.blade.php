@@ -31,7 +31,7 @@
         <div class="grid grid-cols-2 gap-8">
             <div class="col-span-2 md:col-span-1">
                 <h2 class="text-4xl text-urbe font-serif font-bold">{{ __("Why learn with URBE?") }}</h2>
-                <a href="" class="inline-flex mt-4 space-x-3 px-3 py-1 rounded text-sm items-center group bg-[#ffd308] transition-all">
+                <a href="/about-us" class="inline-flex mt-4 space-x-3 px-3 py-1 rounded text-sm items-center group bg-[#ffd308] transition-all">
                     <span>{{ __("Take the tour") }}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-all">
                         <title>Take the tour</title>
