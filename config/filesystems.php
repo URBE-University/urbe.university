@@ -75,6 +75,7 @@ return [
         public_path('event_assets') => storage_path('app/event_assets'),
         public_path('page_assets') => storage_path('app/page_assets'),
         public_path('images') => storage_path('app/images'),
+        public_path('catalog') => storage_path('app/catalog'),
     ],
 
 ];

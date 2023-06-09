@@ -11,7 +11,8 @@
             <meta property="og:url"         content="<?php echo e(request()->url()); ?>" />
             <meta property="og:type"        content="page" />
             <meta property="og:title"       content="<?php echo e($settings->title); ?>" />
-            <meta property="og:description" content="<?php echo e(Str::of($settings->description)->limit(120)); ?>" />
+            <meta name="description" content="<?php echo e($settings->description); ?>">
+            <meta property="og:description" content="<?php echo e($settings->description); ?>" />
             <meta property="og:image"       content="<?php echo e(asset($settings->card_image) ?? ''); ?>" />
         <?php endif; ?>
 
@@ -19,6 +20,7 @@
             <meta property="og:url"         content="<?php echo e(request()->url()); ?>" />
             <meta property="og:type"        content="article" />
             <meta property="og:title"       content="<?php echo e($page->title ?? $title); ?>" />
+            <meta name="description" content="<?php echo e(Str::of($page->content)->limit(165)); ?>">
             <meta property="og:description" content="<?php echo e(Str::of($page->content)->limit(120)); ?>" />
             <meta property="og:image"       content="<?php echo e(asset($page->featured_image) ?? ''); ?>" />
         <?php endif; ?>
@@ -31,7 +33,7 @@
         <!-- Scripts -->
         <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
     </head>
-    <body class="font-sans bg-white text-slate-800 antialiased text-lg">
+    <body class="font-sans bg-white text-slate-800 antialiased">
         <?php echo $__env->make('website.partials.subnavbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->make('website.partials.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->yieldContent('content'); ?>

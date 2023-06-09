@@ -19,7 +19,7 @@
         
         <video autoplay loop muted playsinline class="absolute z-10 w-auto min-w-full min-h-full max-w-full object-cover">
             <source src="<?php echo e(asset('videos/urbe-intro-video.webm')); ?>" type="video/webm"/>
-            <source src="<?php echo e(asset('videos/urbe-intro-video.mp4')); ?>" type="video/mp4"/>
+            <source src="<?php echo e(asset('videos/video.mp4')); ?>" type="video/mp4"/>
             <img src="<?php echo e(asset('static_assets/page-header-bg.webp')); ?>" title="Your browser does not support the <video> tag">
         </video>
     </header>
@@ -29,7 +29,7 @@
         <div class="grid grid-cols-2 gap-8">
             <div class="col-span-2 md:col-span-1">
                 <h2 class="text-4xl text-urbe font-serif font-bold"><?php echo e(__("Why learn with URBE?")); ?></h2>
-                <a href="" class="inline-flex mt-4 space-x-3 px-3 py-1 rounded text-sm items-center group bg-[#ffd308] transition-all">
+                <a href="/about-us" class="inline-flex mt-4 space-x-3 px-3 py-1 rounded text-sm items-center group bg-[#ffd308] transition-all">
                     <span><?php echo e(__("Take the tour")); ?></span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-all">
                         <title>Take the tour</title>
@@ -84,7 +84,10 @@
             </p>
         </div>
         <div class="mt-6">
-            <video class="rounded-md w-full aspect-video" src="<?php echo e(asset('videos/urbe-intro-video.webm')); ?>" type="video/webm" controls></video>
+            <video class="rounded-md w-full aspect-video" controls>
+                <source src="<?php echo e(asset('videos/video.webm')); ?>" type="video/webm"/>
+                <source src="<?php echo e(asset('videos/video.mp4')); ?>" type="video/mp4"/>
+            </video>
         </div>
     </section>
 
@@ -92,69 +95,65 @@
 
     
     <section class="w-full pt-16 pb-24 bg-gradient-to-t from-sky-50 to-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl text-urbe font-serif font-bold capitalize"><?php echo e(__("Discover our programs")); ?></h2>
-
-            
+        <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
             <div class="mt-12 grid grid-cols-2 gap-8 text-left">
-                <div class="col-span-2 rounded-md bg-white shadow md:col-span-1">
-                    <img src="https://dev.urbe.university/images/hsz2ntvXkAk4kckHk3KsCeI2CCbixKRqkCmhAFb3.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
-                    <div class="p-6">
-                        <span class="text-urbe rounded-full bg-yellow-100 px-3 py-1 text-sm">Bachelor of Science</span>
-                        <a href="#" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
-                        <span>Business Administration</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                            <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
-                            <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
-                        </svg>
-                        </a>
-                        <p class="mt-4 text-slate-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla voluptates est fuga officia minima veniam fugit eum quis aliquid quae earum maiores ipsum cum, similique in sit natus ad distinctio!</p>
-                    </div>
-                    </div>
-                    <div class="col-span-2 rounded-md bg-white shadow md:col-span-1">
-                    <img src="https://dev.urbe.university/images/raouJoRWOD5VjwTUiBXzZPK0vNarb9S79Yyxm3r6.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
-                    <div class="p-6">
-                        <span class="text-urbe rounded-full bg-yellow-100 px-3 py-1 text-sm">Bachelor of Science</span>
-                        <a href="#" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
-                        <span>Mass Communications &amp; Marketing</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                            <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
-                            <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
-                        </svg>
-                        </a>
-                        <p class="mt-4 text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aperiam! Nam dolorum hic, harum iste sint, provident velit accusamus autem natus dolorem debitis inventore maiores quibusdam ipsam incidunt dolore nihil.</p>
-                    </div>
-                    </div>
-                    <div class="col-span-2 rounded-md bg-white shadow md:col-span-1">
-                    <img src="https://dev.urbe.university/images/5bjRa4SqX3Wa66rQlnGUGL3imioGnLlKxcTvcXEo.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
-                    <div class="p-6">
-                        <span class="text-urbe rounded-full bg-sky-100 px-3 py-1 text-sm">Master of Science</span>
-                        <a href="#" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
-                        <span>Business Administration</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                            <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
-                            <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
-                        </svg>
-                        </a>
-                        <p class="mt-4 text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aperiam! Nam dolorum hic, harum iste sint, provident velit accusamus autem natus dolorem debitis inventore maiores quibusdam ipsam incidunt dolore nihil.</p>
-                    </div>
-                    </div>
-                    <div class="col-span-2 rounded-md bg-white shadow md:col-span-1">
-                    <img src="https://dev.urbe.university/images/gEc92yZLbGeATKc6pRdjMgddeTJ9dORmBbPsbeA9.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
-                    <div class="p-6">
-                        <span class="text-urbe rounded-full bg-sky-100 px-3 py-1 text-sm">Master of Science</span>
-                        <a href="#" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
-                        <span>Instructional Design &amp; Technology</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                            <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
-                            <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
-                        </svg>
-                        </a>
-                        <p class="mt-4 text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aperiam! Nam dolorum hic, harum iste sint, provident velit accusamus autem natus dolorem debitis inventore maiores quibusdam ipsam incidunt dolore nihil.</p>
-                    </div>
+                <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
+                <img src="https://dev.urbe.university/images/hsz2ntvXkAk4kckHk3KsCeI2CCbixKRqkCmhAFb3.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
+                <div class="p-6">
+                    <span class="text-urbe rounded-full bg-yellow-100 px-3 py-1 text-sm"><?php echo e(__("Bachelor of Science")); ?></span>
+                    <a href="/academics/bachelor-of-science-in-business-administration" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
+                    <span><?php echo e(__("Business Administration")); ?></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
+                    <p class="mt-4 text-slate-700"><?php echo e(__("Launch your career in business with our Bachelor of Science in Business Administration. Gain vital skills in ethics, resource management, and personnel development. Click now for more info and unlock a world of exciting management opportunities.")); ?></p>
+                </div>
+                </div>
+                <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
+                <img src="https://dev.urbe.university/images/raouJoRWOD5VjwTUiBXzZPK0vNarb9S79Yyxm3r6.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
+                <div class="p-6">
+                    <span class="text-urbe rounded-full bg-yellow-100 px-3 py-1 text-sm"><?php echo e(__("Bachelor of Science")); ?></span>
+                    <a href="/academics/bachelor-of-science-in-mass-communication-and-marketing" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
+                    <span><?php echo e(__("Mass Communications and Marketing")); ?></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
+                    <p class="mt-4 text-slate-700"><?php echo e(__("Ignite your media career with our Mass Communication program. Gain practical and theoretical insights into the power of mass media. Prepare for exciting opportunities or advance your studies. Click for more information.")); ?></p>
+                </div>
+                </div>
+                <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
+                <img src="https://dev.urbe.university/images/5bjRa4SqX3Wa66rQlnGUGL3imioGnLlKxcTvcXEo.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
+                <div class="p-6">
+                    <span class="text-urbe rounded-full bg-sky-100 px-3 py-1 text-sm"><?php echo e(__("Master of Science")); ?></span>
+                    <a href="/academics/master-of-science-in-business-administration" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
+                    <span><?php echo e(__("Business Administration")); ?></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
+                    <p class="mt-4 text-slate-700"><?php echo e(__("Elevate your career with URBE University's comprehensive MBA program. Customize your learning with concentrations in Accounting, Finance, Healthcare Admin, HR Management, Info Security, Management, or Supply Chain. Click for more info on our 45-credit hour program and unlock your leadership potential.")); ?></p>
+                </div>
+                </div>
+                <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
+                <img src="https://dev.urbe.university/images/gEc92yZLbGeATKc6pRdjMgddeTJ9dORmBbPsbeA9.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
+                <div class="p-6">
+                    <span class="text-urbe rounded-full bg-sky-100 px-3 py-1 text-sm"><?php echo e(__("Master of Science")); ?></span>
+                    <a href="/academics/master-of-science-in-instructional-design-and-technology" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
+                    <span><?php echo e(__("Instructional Design and Technology")); ?></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
+                    <p class="mt-4 text-slate-700"><?php echo e(__("Gain expertise in utilizing instructional resources to enhance technology-based learning. Create, implement, and evaluate modern educational experiences. With concentrations in Virtual Learning, Learning Design and Technology, and Instructional Design and Development, our program prepares you to excel in diverse educational contexts.")); ?></p>
+                </div>
                 </div>
             </div>
-            
         </div>
     </section>
 

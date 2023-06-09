@@ -27,7 +27,7 @@
         <a href="<?php echo e(route('dashboard')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
             'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
             'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('dashboard'),
-        ]) ?>">
+        ]); ?>">
             <?php echo e(__('Dashboard')); ?>
 
         </a>
@@ -36,7 +36,7 @@
             <a href="<?php echo e(route('admin.posts')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.posts'),
-            ]) ?>">
+            ]); ?>">
                 <?php echo e(__('Posts')); ?>
 
             </a>
@@ -46,7 +46,7 @@
             <a href="<?php echo e(route('admin.categories')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.categories'),
-            ]) ?>">
+            ]); ?>">
                 <?php echo e(__('Categories')); ?>
 
             </a>
@@ -56,7 +56,7 @@
             <a href="<?php echo e(route('admin.events')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.events'),
-            ]) ?>">
+            ]); ?>">
                 <?php echo e(__('Events')); ?>
 
             </a>
@@ -66,7 +66,7 @@
             <a href="<?php echo e(route('admin.media')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.media'),
-            ]) ?>">
+            ]); ?>">
                 <?php echo e(__('Media')); ?>
 
             </a>
@@ -76,7 +76,7 @@
             <a href="<?php echo e(route('admin.pages')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.pages'),
-            ]) ?>">
+            ]); ?>">
                 <?php echo e(__('Pages')); ?>
 
             </a>
@@ -86,7 +86,7 @@
             <a href="<?php echo e(route('admin.menus', ['selector' => 'navbar'])); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.menus'),
-            ]) ?>">
+            ]); ?>">
                 <?php echo e(__('Menu')); ?>
 
             </a>
@@ -96,18 +96,18 @@
             <a href="<?php echo e(route('admin.seo.home')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.seo.home'),
-            ]) ?>">
+            ]); ?>">
                 <?php echo e(__('SEO')); ?>
 
             </a>
         <?php endif; ?>
 
         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('school-information:manage')): ?>
-            <a href="<?php echo e(route('admin.school.start-dates')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
+            <a href="<?php echo e(route('admin.school.home')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.school.start-dates'),
-            ]) ?>">
-                <?php echo e(__('Start dates')); ?>
+            ]); ?>">
+                <?php echo e(__('School')); ?>
 
             </a>
         <?php endif; ?>
@@ -123,7 +123,7 @@
             <a href="<?php echo e(route('admin.users')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('users'),
-            ]) ?>">
+            ]); ?>">
                 <?php echo e(__('Users')); ?>
 
             </a>
@@ -133,7 +133,7 @@
             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('profile-show'),
-            ]) ?>">
+            ]); ?>">
             <?php echo e(__("Profile")); ?>
 
         </a>
@@ -143,7 +143,7 @@
             <a href="<?php echo e(route('logout')); ?>" class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('Logout'),
-            ]) ?>" onclick="event.preventDefault(); this.closest('form').submit();">
+            ]); ?>" onclick="event.preventDefault(); this.closest('form').submit();">
                 <?php echo e(__('Log Out')); ?>
 
             </a>

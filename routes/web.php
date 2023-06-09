@@ -12,7 +12,9 @@ use App\Http\Livewire\Admin\User\Index as Users;
 use App\Http\Livewire\Admin\Seo\Index as SeoHome;
 use App\Http\Livewire\Admin\Event\Index as Events;
 use App\Http\Livewire\Admin\Media\Index as Media;
+use App\Http\Livewire\Admin\School\Index as SchoolHome;
 use App\Http\Livewire\Admin\School\StartDates\Index as StartDates;
+use App\Http\Livewire\Admin\School\Catalog\Index as ShowCatalogs;
 use App\Http\Livewire\Admin\Seo\Tools\SocialMedia;
 use App\Http\Livewire\Admin\Seo\Tools\InstantIndex\Index as InstantIndex;
 use App\Http\Livewire\Admin\Seo\Tools\SiteSettings;
@@ -79,7 +81,9 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
     Route::middleware('can:seo:view')->get('/seo/redirects', RedirectsIndex::class)->name('admin.seo.redirects');
 
     // School tools routes
+    Route::middleware('can:school-information:manage')->get('/school', SchoolHome::class)->name('admin.school.home');
     Route::middleware('can:school-information:manage')->get('/school/start-dates', StartDates::class)->name('admin.school.start-dates');
+    Route::middleware('can:school-information:manage')->get('/school/catalog', ShowCatalogs::class)->name('admin.school.catalog');
 
     // Media routes
     Route::middleware('can:media:view')->get('/media', Media::class)->name('admin.media');

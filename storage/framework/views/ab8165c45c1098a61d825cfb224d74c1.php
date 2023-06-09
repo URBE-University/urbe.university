@@ -37,7 +37,7 @@
 
                 
                 <div class="flex items-center md:hidden">
-                    <button x-on:click="mobile_menu = !mobile_menu" class="p-2 bg-slate-100 rounded-md">
+                    <button x-on:click="mobile_menu = !mobile_menu" class="p-2 bg-slate-100 rounded-md" aria-label="Menu">
                         <svg x-show="!mobile_menu" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
@@ -105,13 +105,13 @@
                                 <svg x-cloak class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                                         "w-6 h-6",
                                         "hidden" => $child->opens_in_new_tab,
-                                    ]) ?>" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    ]); ?>" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                                 </svg>
                                 <svg x-cloak class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                                         "w-6 h-6",
                                         "hidden" => !$child->opens_in_new_tab,
-                                    ]) ?>"
+                                    ]); ?>"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                 </svg>

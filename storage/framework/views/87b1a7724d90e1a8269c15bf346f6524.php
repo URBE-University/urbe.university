@@ -44,7 +44,7 @@
                 <p class="text-lg font-semibold">Our University</p>
                 <div class="mt-4">
                     <?php $__empty_1 = true; $__currentLoopData = \App\Models\Menu::where('location', 'footer')->where('column', 1)->orderBy('order')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menuItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-                        <a href="<?php echo e($menuItem->url); ?>" class="mt-1 block text-base hover:underline transition-all"><?php echo e($menuItem->label); ?></a>
+                        <a href="<?php echo e($menuItem->url); ?>" class="mt-1 block py-2 md:py-0 text-base hover:underline transition-all"><?php echo e($menuItem->label); ?></a>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                     <?php endif; ?>
                 </div>
@@ -54,7 +54,7 @@
                 <p class="text-lg font-semibold">Useful Links</p>
                 <div class="mt-4">
                     <?php $__empty_1 = true; $__currentLoopData = \App\Models\Menu::where('location', 'footer')->where('column', 2)->orderBy('order')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menuItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-                        <a href="<?php echo e($menuItem->url); ?>" class="mt-1 block text-base hover:underline transition-all"><?php echo e($menuItem->label); ?></a>
+                        <a href="<?php echo e($menuItem->url); ?>" class="mt-1 block py-2 md:py-0 text-base hover:underline transition-all"><?php echo e($menuItem->label); ?></a>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                     <?php endif; ?>
                 </div>
@@ -64,7 +64,7 @@
                 <p class="text-lg font-semibold">Policies</p>
                 <div class="mt-4">
                     <?php $__empty_1 = true; $__currentLoopData = \App\Models\Menu::where('location', 'footer')->where('column', 3)->orderBy('order')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menuItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-                        <a href="<?php echo e($menuItem->url); ?>" class="mt-1 block text-base hover:underline transition-all"><?php echo e($menuItem->label); ?></a>
+                        <a href="<?php echo e($menuItem->url); ?>" class="mt-1 block py-2 md:py-0 text-base hover:underline transition-all"><?php echo e($menuItem->label); ?></a>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                     <?php endif; ?>
                 </div>
