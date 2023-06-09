@@ -35,7 +35,5 @@
             >Apply Now</a>
         </div>
     </div>
-
-    
 <?php endif; ?>
 <?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/website/partials/start-date-banner/regular.blade.php ENDPATH**/ ?>

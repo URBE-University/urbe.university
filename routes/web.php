@@ -37,6 +37,9 @@ Route::middleware(['web', 'parse_shortcodes'])->group(function () {
     Route::get('/events', [EventController::class, 'index'])->name('events.index');
     Route::get('/events/{slug}', [EventController::class, 'show'])->name('events.show');
 
+    // Catalog Route
+    Route::get('/school-catalog/{year}', [WebsiteController::class, 'showCatalog'])->name('catalog.show');
+
     // Redirects route
     Route::get('/go-to/{uri}', [WebsiteController::class, 'redirect'])->name('redirects');
 });

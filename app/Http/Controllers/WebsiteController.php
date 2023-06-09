@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Page;
+use App\Models\Catalog;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -51,5 +52,18 @@ class WebsiteController extends Controller
         } else {
             abort(404, "The page you are trying to access does not exist or is no longer accessible.");
         }
+    }
+
+    /**
+     * Display catalog based on year
+     */
+    public function showCatalog(Request $request)
+    {
+        $catalog = Catalog::where('year', $request->year)->firstorfail();
+
+        return view('website.catalog', [
+            'catalog' => $catalog,
+            'settings' => $this->settings,
+        ]);
     }
 }
