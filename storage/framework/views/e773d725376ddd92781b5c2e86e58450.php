@@ -5,7 +5,13 @@
         </div>
     </div>
     <div class="py-12 max-w-5xl mx-auto">
-        <object data="<?php echo e(asset($catalog->path)); ?>#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="700px" contextmenu="">
+        <h2 class="text-2xl font-semibold">Course catalog for the year <?php echo e($catalog->year); ?></h2>
+        <object data="<?php echo e(asset($catalog->path)); ?>#toolbar=0&navpanes=0&scrollbar=0"
+            type="application/pdf"
+            width="100%"
+            height="700px"
+            class="mt-6"
+        >
     </div>
 <?php $__env->stopSection(); ?>
 
