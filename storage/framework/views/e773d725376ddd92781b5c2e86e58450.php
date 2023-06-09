@@ -6,10 +6,10 @@
     </div>
     <div class="py-12 max-w-5xl mx-auto">
         <h2 class="text-2xl font-semibold">Course catalog for the year <?php echo e($catalog->year); ?></h2>
-        <object data="<?php echo e(asset($catalog->path)); ?>#toolbar=0&navpanes=0&scrollbar=0"
+        <embed src="<?php echo e(asset($catalog->path)); ?>#toolbar=0&navpanes=0&scrollbar=0"
             type="application/pdf"
             width="100%"
-            height="700px"
+            height="800px"
             class="mt-6"
         >
     </div>

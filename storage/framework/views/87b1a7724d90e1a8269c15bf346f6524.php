@@ -1,4 +1,4 @@
-<div class="w-full bg-urbe text-white text-base font-light">
+<footer class="w-full bg-urbe text-white text-base font-light">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-4 gap-8">
             <div class="col-span-4 md:col-span-2 lg:col-span-1">
@@ -71,5 +71,5 @@
             </div>
         </div>
     </div>
-</div>
+</footer>
 <?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/website/partials/footer.blade.php ENDPATH**/ ?>
