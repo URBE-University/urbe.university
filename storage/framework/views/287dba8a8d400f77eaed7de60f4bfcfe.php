@@ -3,8 +3,8 @@
     <header class="relative flex items-center justify-center h-96 md:h-[calc(100vh-74px)] mb-12 overflow-hidden">
         
         <div class="z-20 relative h-full w-full p-5 text-white bg-urbe bg-opacity-80 flex items-center justify-center">
-            <div class="max-w-5xl">
-                <h1 class="text-5xl lg:text-7xl font-black">Welcome to URBE University</h1>
+            <div class="max-w-5xl px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl lg:text-6xl font-black">Welcome to URBE University</h1>
                 <p class="mt-6 text-lg md:text-xl">Explore our undergraduate and graduate programs in business, communications, education and more.</p>
 
                 <div class="mt-6 flex items-center sm:space-x-4">
@@ -84,7 +84,7 @@
             </p>
         </div>
         <div class="mt-6">
-            <video class="rounded-md w-full aspect-video" controls>
+            <video class="rounded-md w-full h-auto overflow-hidden" controls controlslist="play">
                 <source src="<?php echo e(asset('videos/video.webm')); ?>" type="video/webm"/>
                 <source src="<?php echo e(asset('videos/video.mp4')); ?>" type="video/mp4"/>
             </video>

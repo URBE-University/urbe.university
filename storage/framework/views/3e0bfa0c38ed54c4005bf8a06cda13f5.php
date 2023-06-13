@@ -1,5 +1,5 @@
 <div class="w-full bg-urbe text-white text-sm">
-    <div class="max-w-7xl mx-auto h-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto h-12 px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-full">
             <div class="flex items-center">
                 [start_date_banner_mini]

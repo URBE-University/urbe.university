@@ -4,7 +4,7 @@
     $start_date = Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS');
 ?>
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:h-24 sm:flex items-center justify-between bg-white shadow dark:bg-slate-700 sm:rounded-full">
-        <div class="h-full sm:flex items-center space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-12">
+        <div class="h-full flex items-center justify-evenly space-x-6 lg:space-x-12">
             <div class="h-full flex items-center gap-2">
                 <div class="w-12 h-12 flex items-center justify-center bg-sky-100 text-sky-600 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <div class="h-full sm:flex items-center">
+        <div class="h-full mt-6 sm:mt-0 sm:flex items-center">
             <a href="https://admissions.urbe.university?utm_campaign='website_traffic'&utm_source='<?php echo e(url()->current()); ?>'&utm_medium='start_date_banner'"
                 target="_blank"
                 class="w-full h-12 px-5 flex items-center justify-center bg-sky-500 rounded-full text-white font-medium"
