@@ -85,7 +85,7 @@
             </p>
         </div>
         <div class="mt-6">
-            <video class="rounded-md w-full aspect-video" controls>
+            <video class="rounded-md w-full aspect-video overflow-hidden" controls>
                 <source src="{{ asset('videos/video.webm') }}" type="video/webm"/>
                 <source src="{{ asset('videos/video.mp4') }}" type="video/mp4"/>
             </video>
