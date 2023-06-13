@@ -62,7 +62,7 @@
                     </div>
                     <div class="col-span-2 py-4">
                         <h2 class="text-xl font-bold text-urbe">In this section</h2>
-                        <div class="mt-2 border-t"></div>
+                        <div class="mt-2 border-t border-t-slate-100"></div>
                         <div class="mt-2 flex flex-wrap">
                             @forelse (\App\Models\Menu::where('location', 'navbar')->whereNotNull('parent')->where('parent', $submenu->id)->orderBy('order', 'ASC')->get() as $child)
                             <div class="w-1/2">
