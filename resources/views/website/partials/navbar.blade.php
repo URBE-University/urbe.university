@@ -52,7 +52,7 @@
     {{-- Desktop Menu Items --}}
     @forelse (\App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get() as $submenu)
         <div x-show="active_menu == `{{$submenu->uuid}}`" x-cloak class="bg-white w-full absolute z-50 border-t border-t-slate-100 shadow-md ease-in delay-300">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="py-6 grid grid-cols-3 gap-8">
                     <div class="col-span-1 rounded-md bg-center bg-no-repeat bg-cover text-white" @if($submenu->background_image) style="background-image: url('{{ asset($submenu->background_image) }}')" @endif>
                         <div class="h-full p-4 bg-urbe/70 rounded-md" @if($submenu->background_color && !$submenu->background_image) style="background-color: {{ $submenu->background_color }}" @endif>
