@@ -16,7 +16,7 @@
                                 <path d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                             </svg>
                         </button>
-                        <span class="text-lg">{{ $item->label }}</span>
+                        <span class="">{{ $item->label }}</span>
                         @if ($item->type == 'dropdown')
                             <span class="text-green-600 text-sm bg-green-100 px-1 py-0.5 rounded">Dropdown</span>
                         @endif
