@@ -12,7 +12,7 @@
 
     <div class="py-12">
         <div class="max-w-full mx-auto sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-8">
                 @forelse ($media as $item)
                     <div class="col-span-1 bg-slate-100 hover:bg-slate-200 rounded-md p-4 w-full aspect-square">
                         <div class="h-full w-full flex items-center justify-center">

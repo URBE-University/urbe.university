@@ -1,5 +1,8 @@
 <?php if(\App\Models\StartDate::where('start_date', '>', today())->count() > 0): ?>
-
+<?php
+    $apply_by_date = Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->apply_by_date)->format('F jS');
+    $start_date = Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS');
+?>
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:h-24 sm:flex items-center justify-between bg-white shadow dark:bg-slate-700 sm:rounded-full">
         <div class="h-full sm:flex items-center space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-12">
             <div class="h-full flex items-center gap-2">
@@ -10,7 +13,7 @@
                 </div>
                 <div>
                     <div class="text-xs font-medium text-slate-500 uppercase">Register by</div>
-                    <div class="text-xl font-bold"><?php echo e(Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->apply_by_date)->format('F jS')); ?></div>
+                    <div class="text-xl font-bold text-urbe"><?php echo Str::substr($apply_by_date, 0, -2) . "<sup class='font-light text-xs ml-0.5'>" . Str::substr($apply_by_date, -2) . "</sup>"; ?></div>
                 </div>
             </div>
 
@@ -23,7 +26,7 @@
 
                 <div class="">
                     <div class="text-xs font-medium text-slate-500 uppercase">To start on</div>
-                    <div class="text-xl font-bold"><?php echo e(Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS')); ?></div>
+                    <div class="text-xl font-bold text-urbe"><?php echo Str::substr($start_date, 0, -2) . "<sup class='font-light text-xs ml-0.5'>" . Str::substr($start_date, -2) . "</sup>"; ?></div>
                 </div>
             </div>
         </div>
