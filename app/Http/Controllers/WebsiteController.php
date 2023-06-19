@@ -59,7 +59,11 @@ class WebsiteController extends Controller
      */
     public function showCatalog(Request $request)
     {
-        $catalog = Catalog::where('year', $request->year)->firstorfail();
+        $catalog = NULL;
+
+        $catalog = (!is_null($request->year))
+            ? Catalog::where('year', $request->year)->firstorfail()
+            : Catalog::latest()->first();
 
         return view('website.catalog', [
             'catalog' => $catalog,
