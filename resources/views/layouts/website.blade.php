@@ -15,6 +15,7 @@
             <meta property="og:description" content="{{ $settings->description }}" />
             <meta property="og:image"       content="{{ asset($settings->card_image) ?? '' }}" />
             <meta name="google-site-verification" content="{{ $settings->google_search_id }}" />
+            <meta name="msvalidate.01" content="{{ $settings->bing_webmaster_id }}" />
         @endif
 
         @if (request()->routeIs('blog.post.show'))
