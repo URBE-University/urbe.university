@@ -27,7 +27,7 @@
     </header>
 
     {{-- Why learn with URBE --}}
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{-- <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 gap-8">
             <div class="col-span-2 md:col-span-1">
                 <h2 class="text-4xl text-urbe font-serif font-bold">{{ __("Why learn with URBE?") }}</h2>
@@ -44,7 +44,6 @@
             </div>
         </div>
         <div class="py-8"></div>
-        {{-- Highlights --}}
         <div class="grid grid-cols-3 gap-8">
             <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
                 <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
@@ -71,8 +70,7 @@
                 </div>
             </div>
         </div>
-        {{-- End | Highlights --}}
-    </section>
+    </section> --}}
 
     <div class="py-12"></div>
 

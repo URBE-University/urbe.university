@@ -25,52 +25,7 @@
     </header>
 
     
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 gap-8">
-            <div class="col-span-2 md:col-span-1">
-                <h2 class="text-4xl text-urbe font-serif font-bold"><?php echo e(__("Why learn with URBE?")); ?></h2>
-                <a href="/about-us" class="inline-flex mt-4 space-x-3 px-3 py-1 rounded text-sm items-center group bg-[#ffd308] transition-all">
-                    <span><?php echo e(__("Take the tour")); ?></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-all">
-                        <title>Take the tour</title>
-                        <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta non aliquid aut ipsum, ullam optio odit quo tempore dolor, necessitatibus, et facere iste? Dolores atque placeat temporibus unde cum maxime?</p>
-            </div>
-        </div>
-        <div class="py-8"></div>
-        
-        <div class="grid grid-cols-3 gap-8">
-            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
-                <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
-                    <div class="h-full flex flex-col justify-center">
-                        <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
-                        <p class="mt-4 text-slate-800 text-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut doloribus saepe excepturi tenetur quaerat dicta odit voluptatum similique voluptatibus perspiciatis quam consequuntur officia quis, modi nulla nesciunt molestias praesentium magni?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
-                <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
-                    <div class="h-full flex flex-col justify-center">
-                        <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
-                        <p class="mt-4 text-slate-800 text-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut doloribus saepe excepturi tenetur quaerat dicta odit voluptatum similique voluptatibus perspiciatis quam consequuntur officia quis, modi nulla nesciunt molestias praesentium magni?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full col-span-3 md:col-span-1 rounded-md" style="background-image: url(https://urbe.university/wp-content/uploads/2019/02/MBA-Student.jpg)">
-                <div class="h-full w-full bg-white/90 p-4 sm:p-6 lg:p-8 overflow-hidden">
-                    <div class="h-full flex flex-col justify-center">
-                        <p class="text-xl text-urbe font-medium">Lorem ipsum dolor</p>
-                        <p class="mt-4 text-slate-800 text-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut doloribus saepe excepturi tenetur quaerat dicta odit voluptatum similique voluptatibus perspiciatis quam consequuntur officia quis, modi nulla nesciunt molestias praesentium magni?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </section>
+    
 
     <div class="py-12"></div>
 
