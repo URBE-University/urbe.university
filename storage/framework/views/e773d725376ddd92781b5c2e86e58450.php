@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<div class="w-full" style="background-image: url(https://dev.urbe.university/static_assets/page-header-bg.webp)">
+<div class="w-full" style="background-image: url(https://urbeuniversity.edu/static_assets/page-header-bg.webp)">
     <div class="mx-auto h-full max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="py-12 text-white sm:py-24">
         <h1 class="text-5xl font-extrabold"><?php echo e(__("URBE Catalogs")); ?></h1>
