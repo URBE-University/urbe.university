@@ -27,7 +27,7 @@ class Edit extends Component
     public function save()
     {
         $this->validate([
-            'source_url' => 'required|starts_with:/',
+            'source_url' => 'required',
             'destination_url' => 'required|active_url|starts_with:https://',
             'code' => 'required|min:301|max:302|numeric',
         ]);
