@@ -53,7 +53,7 @@
         <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
             <div class="mt-12 grid grid-cols-2 gap-8 text-left">
                 <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
-                <img src="https://dev.urbe.university/images/hsz2ntvXkAk4kckHk3KsCeI2CCbixKRqkCmhAFb3.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
+                <img src="/images/hsz2ntvXkAk4kckHk3KsCeI2CCbixKRqkCmhAFb3.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
                 <div class="p-6">
                     <span class="text-urbe rounded-full bg-yellow-100 px-3 py-1 text-sm"><?php echo e(__("Bachelor of Science")); ?></span>
                     <a href="/academics/bachelor-of-science-in-business-administration" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
@@ -67,7 +67,7 @@
                 </div>
                 </div>
                 <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
-                <img src="https://dev.urbe.university/images/raouJoRWOD5VjwTUiBXzZPK0vNarb9S79Yyxm3r6.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
+                <img src="/images/raouJoRWOD5VjwTUiBXzZPK0vNarb9S79Yyxm3r6.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
                 <div class="p-6">
                     <span class="text-urbe rounded-full bg-yellow-100 px-3 py-1 text-sm"><?php echo e(__("Bachelor of Science")); ?></span>
                     <a href="/academics/bachelor-of-science-in-mass-communication-and-marketing" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
@@ -81,7 +81,7 @@
                 </div>
                 </div>
                 <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
-                <img src="https://dev.urbe.university/images/5bjRa4SqX3Wa66rQlnGUGL3imioGnLlKxcTvcXEo.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
+                <img src="/images/5bjRa4SqX3Wa66rQlnGUGL3imioGnLlKxcTvcXEo.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
                 <div class="p-6">
                     <span class="text-urbe rounded-full bg-sky-100 px-3 py-1 text-sm"><?php echo e(__("Master of Science")); ?></span>
                     <a href="/academics/master-of-science-in-business-administration" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
@@ -95,7 +95,7 @@
                 </div>
                 </div>
                 <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
-                <img src="https://dev.urbe.university/images/gEc92yZLbGeATKc6pRdjMgddeTJ9dORmBbPsbeA9.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
+                <img src="/images/gEc92yZLbGeATKc6pRdjMgddeTJ9dORmBbPsbeA9.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />
                 <div class="p-6">
                     <span class="text-urbe rounded-full bg-sky-100 px-3 py-1 text-sm"><?php echo e(__("Master of Science")); ?></span>
                     <a href="/academics/master-of-science-in-instructional-design-and-technology" class="text-urbe mt-2 flex items-center justify-between text-xl font-medium">
