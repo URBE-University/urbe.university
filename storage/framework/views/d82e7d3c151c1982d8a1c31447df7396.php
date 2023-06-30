@@ -14,6 +14,8 @@
             <meta name="description" content="<?php echo e($settings->description); ?>">
             <meta property="og:description" content="<?php echo e($settings->description); ?>" />
             <meta property="og:image"       content="<?php echo e(asset($settings->card_image) ?? ''); ?>" />
+            <meta name="google-site-verification" content="<?php echo e($settings->google_search_id); ?>" />
+            <meta name="msvalidate.01" content="<?php echo e($settings->bing_webmaster_id); ?>" />
         <?php endif; ?>
 
         <?php if(request()->routeIs('blog.post.show')): ?>

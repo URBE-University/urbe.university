@@ -47,7 +47,7 @@
                                     {{ $item->destination_url }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $item->code }}
+                                    <span class="truncate">{{ $item->code }}</span>
                                 </td>
                                 <td class="px-6 py-4 flex items-center justify-end space-x-3">
                                     @livewire('admin.seo.tools.redirects.edit', ['redirect' => $item], key('edit-'.$item->id))

@@ -32,7 +32,11 @@ class WebsiteController extends Controller
      */
     public function page($url)
     {
-        $page = Page::where('url', $url)->firstorfail();
+        $page = Page::where('url', $url)->first();
+
+        if (is_null($page)) {
+            return $this->redirect($url);
+        }
 
         return view('website.page', [
             'page' => $page,
@@ -44,9 +48,9 @@ class WebsiteController extends Controller
     /**
      * Elegantly manage website redirects
      */
-    public function redirect(Request $request)
+    public function redirect($url)
     {
-        $dbUrl = DB::table('redirects')->where('source_url', '/' . $request['uri'])->first();
+        $dbUrl = DB::table('redirects')->where('source_url', $url)->first();
         if ($dbUrl) {
             return redirect()->away($dbUrl->destination_url, $dbUrl->code);
         } else {

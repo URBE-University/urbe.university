@@ -6,7 +6,7 @@
         <x-slot name="content">
             <div>
                 <x-label for="source_url" value="Source URL" />
-                <x-input id="source_url" type="text" class="mt-1 w-full" wire:model="source_url" placeholder="/your-unique-endpoint-here" />
+                <x-input id="source_url" type="text" class="mt-1 w-full" wire:model="source_url" placeholder="your-unique-endpoint-here" />
                 <p class="mt-1 text-xs font-medium tracking-wide text-slate-600">Make sure this endpoint is unique, or it will override any existing urls.</p>
                 <x-input-error for="source_url"/>
             </div>

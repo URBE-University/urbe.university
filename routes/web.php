@@ -41,7 +41,7 @@ Route::middleware(['web', 'parse_shortcodes'])->group(function () {
     Route::get('/school-catalog/{year?}', [WebsiteController::class, 'showCatalog'])->name('catalog.show');
 
     // Redirects route
-    Route::get('/go-to/{uri}', [WebsiteController::class, 'redirect'])->name('redirects');
+    // Route::get('/go-to/{uri}', [WebsiteController::class, 'redirect'])->name('redirects');
 });
 
 /**
