@@ -4,7 +4,7 @@
         
         <div class="z-20 relative h-full w-full p-5 py-12 md:py-0 text-white bg-urbe bg-opacity-80 flex items-center justify-center">
             <div class="max-w-5xl sm:px-6 lg:px-8">
-                <h1 class="text-5xl lg:text-6xl font-black">Welcome to URBE University</h1>
+                <h1 class="text-6xl font-black">Welcome to URBE University</h1>
                 <p class="mt-6 text-lg md:text-xl">Explore our undergraduate and graduate programs in business, communications, education and more.</p>
 
                 <div class="mt-6 sm:flex items-center space-y-4 sm:space-y-0 text-center sm:space-x-4">
