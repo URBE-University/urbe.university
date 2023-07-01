@@ -34,6 +34,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        {{-- Fathom Analytics --}}
+        <script src="https://cdn.usefathom.com/script.js" data-site="FHSKFCYK" defer></script>
     </head>
     <body class="font-sans bg-white text-slate-800 antialiased">
         @include('website.partials.subnavbar')
