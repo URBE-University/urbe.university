@@ -44,7 +44,7 @@
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
                                 >{{ config('app.url') . '/' . $item->source_url }}</th>
                                 <td class="px-6 py-4 truncate">
-                                    {{ str($item->destination_url)->limit(100) }}
+                                    {{ str($item->destination_url)->limit(64) }}
                                 </td>
                                 <td class="px-6 py-4">
                                     <span class="truncate">{{ $item->code }}</span>
