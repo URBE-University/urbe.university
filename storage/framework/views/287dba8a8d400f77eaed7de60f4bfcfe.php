@@ -7,11 +7,11 @@
                 <h1 class="text-5xl lg:text-6xl font-black">Welcome to URBE University</h1>
                 <p class="mt-6 text-lg md:text-xl">Explore our undergraduate and graduate programs in business, communications, education and more.</p>
 
-                <div class="mt-6 flex items-center sm:space-x-4">
-                    <a href="/academics" class="inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                <div class="mt-6 sm:flex items-center sm:space-x-4">
+                    <a href="/academics" class="block sm:inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     ><?php echo e(__("Learn more about our programs")); ?></a>
                     <a href="https://admissions.urbe.university" target="_blank" rel="dofollow"
-                        class="inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
+                        class="block sm:inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     ><?php echo e(__("Apply now")); ?></a>
                 </div>
             </div>

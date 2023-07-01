@@ -34,6 +34,9 @@
 
         <!-- Scripts -->
         <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
+
+        
+        <script src="https://cdn.usefathom.com/script.js" data-site="FHSKFCYK" defer></script>
     </head>
     <body class="font-sans bg-white text-slate-800 antialiased">
         <?php echo $__env->make('website.partials.subnavbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
