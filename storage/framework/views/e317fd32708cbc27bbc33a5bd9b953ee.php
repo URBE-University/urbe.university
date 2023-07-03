@@ -32,7 +32,7 @@
         </div>
 
         <div class="h-full mt-6 sm:mt-0 sm:flex items-center">
-            <a href="https://admissions.urbe.university?utm_campaign='website_traffic'&utm_source='<?php echo e(url()->current()); ?>'&utm_medium='start_date_banner'"
+            <a href="https://admissions.urbeuniversity.edu?utm_campaign='website_traffic'&utm_source='<?php echo e(url()->current()); ?>'&utm_medium='start_date_banner'"
                 target="_blank"
                 class="w-full h-12 px-5 flex items-center justify-center bg-sky-500 rounded-full text-white font-medium"
             >Apply Now</a>

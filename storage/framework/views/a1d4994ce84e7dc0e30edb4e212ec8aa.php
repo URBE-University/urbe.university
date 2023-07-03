@@ -3,7 +3,7 @@
     $start_date = Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS');
 ?>
 
-    <a href="https://admissions.urbe.university?utm_campaign='website_traffic'&utm_source='<?php echo e(url()->current()); ?>'&utm_medium='start_date_banner'" target="_blank" class="bg-yellow-300 hover:bg-[#ffd308] text-urbe px-3 py-1 rounded-full flex items-center transition-all">
+    <a href="https://admissions.urbeuniversity.edu?utm_campaign='website_traffic'&utm_source='<?php echo e(url()->current()); ?>'&utm_medium='start_date_banner'" target="_blank" class="bg-yellow-300 hover:bg-[#ffd308] text-urbe px-3 py-1 rounded-full flex items-center transition-all">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
             class="w-4 h-4 animate-pulse">
             <path fill-rule="evenodd"

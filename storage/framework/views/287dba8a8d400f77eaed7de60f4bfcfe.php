@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
-    
+
     <header class="relative flex items-center justify-center md:h-[calc(100vh-74px)] mb-12 overflow-hidden">
-        
+
         <div class="z-20 relative h-full w-full p-5 py-24 md:py-0 text-white bg-urbe bg-opacity-80 flex items-center justify-center">
             <div class="max-w-5xl sm:px-6 lg:px-8">
                 <h1 class="text-6xl font-black">Welcome to URBE University</h1>
@@ -10,13 +10,13 @@
                 <div class="mt-6 sm:flex items-center space-y-4 sm:space-y-0 text-center sm:space-x-4">
                     <a href="/academics" class="block sm:inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-base px-5 py-3 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     ><?php echo e(__("Learn more about our programs")); ?></a>
-                    <a href="https://admissions.urbe.university" target="_blank" rel="dofollow"
+                    <a href="https://admissions.urbeuniversity.edu" target="_blank" rel="dofollow"
                         class="block sm:inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-base px-5 py-3 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     ><?php echo e(__("Apply now")); ?></a>
                 </div>
             </div>
         </div>
-        
+
         <video autoplay loop muted playsinline class="absolute z-10 w-auto min-w-full min-h-full max-w-full object-cover">
             <source src="<?php echo e(asset('videos/urbe-intro-video.webm')); ?>" type="video/webm"/>
             <source src="<?php echo e(asset('videos/video.mp4')); ?>" type="video/mp4"/>
@@ -24,12 +24,12 @@
         </video>
     </header>
 
-    
-    
+
+
 
     <div class="py-12"></div>
 
-    
+
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-4xl text-urbe font-serif font-bold"><?php echo e(__("Our Mission")); ?></h2>
@@ -48,7 +48,7 @@
 
     <div class="py-12"></div>
 
-    
+
     <section class="w-full pt-16 pb-24 bg-gradient-to-t from-sky-50 to-white">
         <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
             <div class="mt-12 grid grid-cols-2 gap-8 text-left">
@@ -112,15 +112,15 @@
         </div>
     </section>
 
-    
+
     <?php echo $__env->make('website.partials.posts-teaser', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    
+
     <?php echo $__env->make('website.partials.events-teaser', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <div class="py-12"></div>
 
-    
+
     <?php echo $__env->make('website.partials.owner-banner', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <div class="py-12"></div>

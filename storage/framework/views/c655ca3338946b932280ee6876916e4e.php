@@ -4,7 +4,7 @@
     <div class="mt-6 flex items-center justify-center sm:space-x-4">
         <a href="/academics" class="inline-block text-slate-600 bg-slate-100 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
         ><?php echo e(__("Learn more about our programs")); ?></a>
-        <a href="https://admissions.urbe.university" target="_blank" dofollow
+        <a href="https://admissions.urbeuniversity.edu" target="_blank" dofollow
             class="inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-sm sm:text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
         ><?php echo e(__("Apply now")); ?></a>
     </div>

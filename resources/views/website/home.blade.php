@@ -12,7 +12,7 @@
                 <div class="mt-6 sm:flex items-center space-y-4 sm:space-y-0 text-center sm:space-x-4">
                     <a href="/academics" class="block sm:inline-block text-slate-600 bg-white focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-base px-5 py-3 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     >{{ __("Learn more about our programs") }}</a>
-                    <a href="https://admissions.urbe.university" target="_blank" rel="dofollow"
+                    <a href="https://admissions.urbeuniversity.edu" target="_blank" rel="dofollow"
                         class="block sm:inline-block text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-base px-5 py-3 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                     >{{ __("Apply now") }}</a>
                 </div>

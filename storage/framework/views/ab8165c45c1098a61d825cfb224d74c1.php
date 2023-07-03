@@ -31,11 +31,11 @@
             </ul>
 
             <div class="flex items-center space-x-4" x-on:mouseover="active_menu = ''">
-                <a href="https://admissions.urbe.university"
+                <a href="https://admissions.urbeuniversity.edu"
                     class="text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                 ><?php echo e(__('Apply Now')); ?></a>
 
-                
+
                 <div class="flex items-center md:hidden">
                     <button x-on:click="mobile_menu = !mobile_menu" class="p-2 bg-slate-100 rounded-md" aria-label="Menu">
                         <svg x-show="!mobile_menu" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    
+
     <?php $__empty_1 = true; $__currentLoopData = \App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $submenu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
         <div x-show="active_menu == `<?php echo e($submenu->uuid); ?>`" x-cloak class="bg-white w-full absolute z-50 border-t border-t-slate-100 shadow-md ease-in delay-300">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,7 +81,7 @@
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
     <?php endif; ?>
 
-    
+
     <div x-cloak x-show="mobile_menu" class="md:hidden absolute z-50 w-full h-screen bg-white">
         <div class="mt-4 px-4 sm:px-6">
             <?php $__empty_1 = true; $__currentLoopData = \App\Models\Menu::whereNull('parent')->where('location', 'navbar')->where('type', 'dropdown')->orWhere('type', 'megamenu')->orderBy('order', 'asc')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $submenu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>

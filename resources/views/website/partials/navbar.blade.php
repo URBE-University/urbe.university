@@ -30,7 +30,7 @@
             </ul>
 
             <div class="flex items-center space-x-4" x-on:mouseover="active_menu = ''">
-                <a href="https://admissions.urbe.university"
+                <a href="https://admissions.urbeuniversity.edu"
                     class="text-white bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:ring-sky-300 font-medium rounded-md text-base px-5 py-2 md:px-6 md:py-3 mr-1 md:mr-0 focus:outline-none"
                 >{{ __('Apply Now') }}</a>
 
