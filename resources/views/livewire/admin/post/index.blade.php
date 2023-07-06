@@ -24,7 +24,7 @@
                     ])>
                         <div class="flex items-center space-x-6">
                             @if ($post->featured_image)
-                                <img src="{{ asset($post->featured_image) }}" class="w-16 h-16 aspect-square rounded object-center object-cover shadow">
+                                <img src="{{ asset($post->featured_image) }}" class="w-12 h-12 aspect-square rounded object-center object-cover shadow">
                             @endif
                             <div class="">
                                 <p class="text-slate-600 text-sm font-semibold">{{ $post->user->name }}</p>
