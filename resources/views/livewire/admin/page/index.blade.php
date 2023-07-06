@@ -22,7 +22,7 @@
                             @endif
                             <div class="">
                                 <a href="{{ route('admin.page.edit', ['page' => $page->id]) }}" title="Click to open article on a new tab.">
-                                    <h1 class="text-2xl font-bold">{{ $page->title }}</h1>
+                                    <h1 class="text-base font-bold">{{ $page->title }}</h1>
                                 </a>
                                 <span class="flex items-center space-x-1">
                                     @if ($page->published_at)
