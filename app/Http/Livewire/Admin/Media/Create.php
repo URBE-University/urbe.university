@@ -21,7 +21,7 @@ class Create extends Component
     public function save()
     {
         $this->validate([
-            'files.*' => 'file|max:2048|mimes:webp,pdf'
+            'files.*' => 'file|max:10240|mimes:webp,pdf'
         ]);
 
         foreach ($this->files as $file) {
