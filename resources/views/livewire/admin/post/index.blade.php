@@ -24,12 +24,12 @@
                     ])>
                         <div class="flex items-center space-x-6">
                             @if ($post->featured_image)
-                                <img src="{{ asset($post->featured_image) }}" class="w-20 h-20 aspect-square rounded-full object-center object-cover shadow">
+                                <img src="{{ asset($post->featured_image) }}" class="w-16 h-16 aspect-square rounded object-center object-cover shadow">
                             @endif
                             <div class="">
                                 <p class="text-slate-600 text-sm font-semibold">{{ $post->user->name }}</p>
                                 <a href="" target="_blank" title="Click to open article on a new tab.">
-                                    <h1 class="text-2xl font-bold">{{ $post->title }}</h1>
+                                    <h1 class="text-base font-bold">{{ $post->title }}</h1>
                                 </a>
                                 <span class="flex items-center space-x-1">
                                     @if ($post->published_at)
