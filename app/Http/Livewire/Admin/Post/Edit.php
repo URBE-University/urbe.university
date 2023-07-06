@@ -44,7 +44,7 @@ class Edit extends Component
                 'title' => $this->title,
                 'slug' => str($this->title)->slug(),
                 'content' => $this->content,
-                'published_at' => ($this->status == 'draft') ? null : now(),
+                'published_at' => ($this->status == 'published' && is_null($this->post->published_at)) ? now() : null,
             ]);
             session()->flash('flash.banner', 'Post was successfully updated!');
             session()->flash('flash.bannerStyle', 'success');
