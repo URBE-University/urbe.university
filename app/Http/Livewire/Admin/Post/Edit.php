@@ -19,7 +19,6 @@ class Edit extends Component
         $this->post = $post;
         $this->title = $post->title;
         $this->content = $post->content;
-        $this->status = (is_null($post->published_at)) ? 'draft' : 'published';
     }
 
     public function updateBody($value)
@@ -44,7 +43,22 @@ class Edit extends Component
                 'title' => $this->title,
                 'slug' => str($this->title)->slug(),
                 'content' => $this->content,
-                'published_at' => ($this->status == 'published' && is_null($this->post->published_at)) ? now() : null,
+            ]);
+            session()->flash('flash.banner', 'Post was successfully updated!');
+            session()->flash('flash.bannerStyle', 'success');
+        } catch (\Throwable $th) {
+            Log::error($th);
+            session()->flash('flash.banner', $th->getMessage());
+            session()->flash('flash.bannerStyle', 'danger');
+        }
+        return redirect()->route('admin.post.edit', ['post' => $this->post->id]);
+    }
+
+    public function publish()
+    {
+        try {
+            $this->post->update([
+                'published_at' => ($this->post->published_at) ? null : now(),
             ]);
             session()->flash('flash.banner', 'Post was successfully updated!');
             session()->flash('flash.bannerStyle', 'success');

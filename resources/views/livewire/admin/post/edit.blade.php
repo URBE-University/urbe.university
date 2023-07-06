@@ -6,14 +6,13 @@
             @can('post:update')
                 <div class="flex items-center space-x-4">
                     @livewire('admin.post.options', ['post' => $post])
-                    <select wire:model="status" @class([
-                        'border-0 rounded-md text-sm py-1.5',
-                        'bg-green-100 text-green-800' => $status == 'published',
-                        'bg-yellow-100 text-yellow-800' => $status == 'draft',
-                        ])>
-                        <option value="draft">Draft</option>
-                        <option value="published">Published</option>
-                    </select>
+                    <div @class([
+                        'border-0 rounded-md text-sm font-medium tracking-wider px-2 py-0.5',
+                        'bg-green-200 text-green-800' => !is_null($post->published_at),
+                        'bg-gray-200 text-gray-800' => is_null($post->published_at),
+                        ])>{{ !is_null($post->published_at) ? 'Published' : 'Draft'   }}</div>
+
+                    <x-secondary-button wire:click="publish">{{ !is_null($post->published_at) ? 'Unpublish' : 'Publish' }}</x-secondary-button>
                     <x-button wire:click="save">Save changes</x-button>
                 </div>
             @endcan
