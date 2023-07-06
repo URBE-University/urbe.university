@@ -12,6 +12,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <x-input type="search" wire:model="query" placeholder="Search by title..."/>
             <button wire:click="$toggle('showTrashed')" class="text-sm hover:underline ">Trash ({{ \App\Models\Post::onlyTrashed()->count() }})</button>
             <div class="mt-4 bg-white shadow rounded-md">
                 @forelse ($posts as $post)

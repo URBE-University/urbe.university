@@ -10,7 +10,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <x-input type="search" wire:model="query"/>
+            <x-input type="search" wire:model="query" placeholder="Search by title..."/>
             <div class="mt-4 bg-white shadow rounded-md">
                 @forelse ($pages as $page)
                     <div @class([

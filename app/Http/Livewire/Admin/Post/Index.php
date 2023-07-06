@@ -11,11 +11,12 @@ class Index extends Component
     use WithPagination;
 
     public $showTrashed;
+    public $query = '';
 
     public function render()
     {
         return view('livewire.admin.post.index', [
-            'posts' => (!$this->showTrashed) ? Post::paginate(10) : Post::onlyTrashed()->paginate(10)
+            'posts' => (!$this->showTrashed) ? Post::where('title', 'like', '%' . $this->query . '%')->paginate(10) : Post::onlyTrashed()->where('title', 'like', '%' . $this->query . '%')->paginate(10)
         ]);
     }
 
