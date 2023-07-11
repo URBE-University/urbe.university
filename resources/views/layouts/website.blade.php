@@ -35,6 +35,17 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        {{-- Google Ads Tag --}}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-700340760"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'AW-700340760');
+        </script>
+
         {{-- Fathom Analytics --}}
         <script src="https://cdn.usefathom.com/script.js" data-site="FHSKFCYK" defer></script>
     </head>
