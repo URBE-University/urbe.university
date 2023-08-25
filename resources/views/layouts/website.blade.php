@@ -76,6 +76,8 @@
         @yield('content')
         @include('website.partials.footer')
 
+        @include('website.partials.chat')
+
         @stack('modals')
 
         @livewireScripts
