@@ -37,6 +37,6 @@ class Create extends Component
             session()->flash('flash.banner', $th->getMessage());
             session()->flash('flash.bannerStyle', 'danger');
         }
-        return redirect()->route('admin.seo.redirects');
+        return redirect()->route('admin.tools.redirects');
     }
 }

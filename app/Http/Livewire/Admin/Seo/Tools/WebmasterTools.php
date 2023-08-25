@@ -42,6 +42,6 @@ class WebmasterTools extends Component
             session()->flash('flash.banner', $th->getMessage());
             session()->flash('flash.bannerStyle', 'danger');
         }
-        return redirect()->route('admin.seo.webmaster.tools');
+        return redirect()->route('admin.tools.webmaster.tools');
     }
 }

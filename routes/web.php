@@ -20,6 +20,7 @@ use App\Http\Livewire\Admin\Seo\Tools\InstantIndex\Index as InstantIndex;
 use App\Http\Livewire\Admin\Seo\Tools\SiteSettings;
 use App\Http\Livewire\Admin\Seo\Tools\WebmasterTools;
 use App\Http\Livewire\Admin\Seo\Tools\Redirects\Index as RedirectsIndex;
+use App\Http\Livewire\Admin\Banner\Index as BannersIndex;
 
 /**
  * Public routes
@@ -74,11 +75,12 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
     Route::middleware('can:seo:view')->get('/seo', SeoHome::class)->name('admin.seo.home');
 
     // SEO tools routes
-    Route::middleware('can:seo:view')->get('/seo/site-settings', SiteSettings::class)->name('admin.seo.site.settings');
-    Route::middleware('can:seo:view')->get('/seo/socialmedia', SocialMedia::class)->name('admin.seo.socialmedia');
-    Route::middleware('can:seo:view')->get('/seo/instant-index', InstantIndex::class)->name('admin.seo.instant.index');
-    Route::middleware('can:seo:view')->get('/seo/webmaster-tools', WebmasterTools::class)->name('admin.seo.webmaster.tools');
-    Route::middleware('can:seo:view')->get('/seo/redirects', RedirectsIndex::class)->name('admin.seo.redirects');
+    Route::middleware('can:seo:view')->get('/tools/site-settings', SiteSettings::class)->name('admin.tools.site.settings');
+    Route::middleware('can:seo:view')->get('/tools/socialmedia', SocialMedia::class)->name('admin.tools.socialmedia');
+    Route::middleware('can:seo:view')->get('/tools/instant-index', InstantIndex::class)->name('admin.tools.instant.index');
+    Route::middleware('can:seo:view')->get('/tools/webmaster-tools', WebmasterTools::class)->name('admin.tools.webmaster.tools');
+    Route::middleware('can:seo:view')->get('/tools/redirects', RedirectsIndex::class)->name('admin.tools.redirects');
+    Route::middleware('can:seo:view')->get('/tools/banners', BannersIndex::class)->name('admin.tools.banners');
 
     // School tools routes
     Route::middleware('can:school-information:manage')->get('/school', SchoolHome::class)->name('admin.school.home');

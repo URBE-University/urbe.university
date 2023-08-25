@@ -20,7 +20,7 @@
                         <p class="mt-2 text-sm text-slate-600">Maintain essential website settings, such as title, description, favicon, and canonical link.</p>
                     </div>
                     <div class="px-6 py-2 w-full bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.seo.site.settings') }}" class="secondary-btn">Manage</a>
+                        <a href="{{ route('admin.tools.site.settings') }}" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -35,24 +35,24 @@
                         <p class="mt-2 text-sm text-slate-600">Manage your social media urls and icons here. The system will insert your new urls as soon as they are saved.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.seo.socialmedia') }}" class="secondary-btn">Manage</a>
+                        <a href="{{ route('admin.tools.socialmedia') }}" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
-                {{-- <div class="col-span-4 sm:col-span-2 lg:col-span-1 rounded-md shadow bg-white text-center flex flex-col justify-between">
+                <div class="col-span-4 sm:col-span-2 lg:col-span-1 rounded-md shadow bg-white text-center flex flex-col justify-between">
                     <div class="p-6">
                         <div class="text-pink-600 p-3 bg-pink-100 inline-flex rounded-md">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
                             </svg>
                         </div>
-                        <h2 class="mt-4 text-lg font-medium">Link Checker</h2>
-                        <p class="mt-2 text-sm text-slate-600">Makes sure all your urls are working, and that there are no 404 errors displayed to your visitors.</p>
+                        <h2 class="mt-4 text-lg font-medium">Banners</h2>
+                        <p class="mt-2 text-sm text-slate-600">Display short announcements on the top of every page with banners.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.seo.monitor404') }}" class="secondary-btn">Manage</a>
+                        <a href="{{ route('admin.tools.banners') }}" class="secondary-btn">Manage</a>
                     </div>
-                </div> --}}
+                </div>
 
                 <div class="col-span-4 sm:col-span-2 lg:col-span-1 rounded-md shadow bg-white text-center flex flex-col justify-between">
                     <div class="p-6">
@@ -65,7 +65,7 @@
                         <p class="mt-2 text-sm text-slate-600">Enter and store the verification codes for multiple search engine consoles such as the Google Search Console, and others.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.seo.webmaster.tools') }}" class="secondary-btn">Manage</a>
+                        <a href="{{ route('admin.tools.webmaster.tools') }}" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@
                         <p class="mt-2 text-sm text-slate-600">Notify search engines using the IndexNow API when pages are added, updated and removed, or submit URLs manually.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.seo.instant.index') }}" class="secondary-btn">Manage</a>
+                        <a href="{{ route('admin.tools.instant.index') }}" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@
                         <p class="mt-2 text-sm text-slate-600">Redirect non-existent content easily with 301 and 302 status code. This can help improve site ranking.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.seo.redirects') }}" class="secondary-btn">Manage</a>
+                        <a href="{{ route('admin.tools.redirects') }}" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 

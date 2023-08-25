@@ -77,6 +77,6 @@ class SiteSettings extends Component
             session()->flash('flash.banner', $th->getMessage());
             session()->flash('flash.bannerStyle', 'danger');
         }
-        return redirect()->route('admin.seo.site.settings');
+        return redirect()->route('admin.tools.site.settings');
     }
 }

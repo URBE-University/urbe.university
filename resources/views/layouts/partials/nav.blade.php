@@ -90,7 +90,7 @@
                 'rounded focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-2 block w-full text-base font-medium rounded-md focus:ring-inset focus:ring-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900',
                 'bg-slate-200 hover:bg-slate-200 text-slate-900' => request()->routeIs('admin.seo.home'),
             ])>
-                {{ __('SEO') }}
+                {{ __('Tools') }}
             </a>
         @endcan
 

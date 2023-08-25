@@ -10,19 +10,34 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.input','data' => ['type' => 'search','wire:model' => 'query','placeholder' => 'Search by title...']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('input'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['type' => 'search','wire:model' => 'query','placeholder' => 'Search by title...']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
+<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
+<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php endif; ?>
             <div class="mt-4 bg-white shadow rounded-md">
                 <?php $__empty_1 = true; $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                         'flex items-center justify-between px-6 py-4 rounded-md hover:bg-slate-50',
                         'border-t rounded-t-none' => !$loop->first
-                    ]) ?>">
+                    ]); ?>">
                         <div class="flex items-center space-x-6">
                             <?php if($page->featured_image): ?>
                                 <img src="<?php echo e(asset($page->featured_image)); ?>" class="w-20 h-20 aspect-square rounded-md shadow">
                             <?php endif; ?>
                             <div class="">
                                 <a href="<?php echo e(route('admin.page.edit', ['page' => $page->id])); ?>" title="Click to open article on a new tab.">
-                                    <h1 class="text-2xl font-bold"><?php echo e($page->title); ?></h1>
+                                    <h1 class="text-base font-bold"><?php echo e($page->title); ?></h1>
                                 </a>
                                 <span class="flex items-center space-x-1">
                                     <?php if($page->published_at): ?>
