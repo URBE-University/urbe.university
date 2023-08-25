@@ -56,7 +56,11 @@
             </div>
 
             <div class="mt-6">
+<<<<<<< HEAD
                 <x-label for="rsvp_url" value="Reservation url (optional)"/>
+=======
+                <x-label for="address" value="Reservation url (optional)"/>
+>>>>>>> 13e88f4 (..)
                 <x-input type="text" id="address" wire:model="rsvp_url" class="mt-1 w-full" />
                 <small class="text-slate-600">{{ __("If you have a link to a reservation page, add it here. When someone views this event, they will be shown the option to RSVP through your link.") }}</small>
                 <x-input-error for="rsvp_url" />
