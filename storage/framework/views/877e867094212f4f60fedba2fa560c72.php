@@ -26,6 +26,7 @@ echo $html;
                 <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr>
+                            <th scope="col" class="px-6 py-3">Running</th>
                             <th scope="col" class="px-6 py-3">
                                 Start | End
                             </th>
@@ -40,13 +41,14 @@ echo $html;
                     <tbody>
                         <?php $__empty_1 = true; $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                             <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
+                                        'inline-block',
+                                        'bg-green-500 h-5 w-5 rounded-full' => Carbon\Carbon::now()->between(Carbon\Carbon::parse($banner->starts_at)->startOfDay(), Carbon\Carbon::parse($banner->ends_at)->endOfDay()),
+                                        'bg-slate-500 w-5 h-2 rounded' => !Carbon\Carbon::now()->between(Carbon\Carbon::parse($banner->starts_at)->startOfDay(), Carbon\Carbon::parse($banner->ends_at)->endOfDay())
+                                    ]); ?>"></div>
+                                </td>
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 text-xs whitespace-nowrap flex items-center">
-
-                                    <span class="<?php echo \Illuminate\Support\Arr::toCssClasses([
-                                        'inline-block h-5 w-5 rounded-full animate-pulse mr-3',
-                                        'bg-green-500' => Carbon\Carbon::now()->between(Carbon\Carbon::parse($banner->starts_at)->startOfDay(), Carbon\Carbon::parse($banner->ends_at)->endOfDay()),
-                                    ]); ?>"></span>
-
                                     <span class="inline-flex items-center space-x-1 px-1.5 py-0.5 bg-sky-100 text-sky-700 border  rounded-full border-sky-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                                             <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
@@ -64,7 +66,7 @@ echo $html;
                                     <?php echo e($banner->title); ?>
 
                                 </td>
-                                <td class="px-6 py-4 text-right flex items-center">
+                                <td class="px-6 py-4 text-right flex items-center space-x-3 justify-end">
                                     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('admin.banner.edit', ['banner' => $banner])->html();
