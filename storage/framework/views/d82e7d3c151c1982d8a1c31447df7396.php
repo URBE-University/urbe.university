@@ -48,7 +48,7 @@
 
         
         <script src="https://cdn.usefathom.com/script.js" data-site="FHSKFCYK" defer></script>
-        
+
         <script type="text/javascript">
 	    (function(c,l,a,r,i,t,y){
 		c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -58,6 +58,20 @@
 	</script>
     </head>
     <body class="font-sans bg-white text-slate-800 antialiased">
+        
+        <?php $__empty_1 = true; $__currentLoopData = \App\Models\Banner::where('starts_at', '<=', today())->where('ends_at', '>=', today())->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+            <div class="w-full bg-yellow-400 text-black text-base">
+                <div class="max-w-5xl mx-auto h-12 px-4 sm:px-6 lg:px-8">
+                    <div class="h-full flex items-center prose">
+                        <?php echo e(Illuminate\Mail\Markdown::parse($banner->content)); ?>
+
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+        <?php endif; ?>
+        
+
         <?php echo $__env->make('website.partials.subnavbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->make('website.partials.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->yieldContent('content'); ?>

@@ -48,7 +48,7 @@
 
         {{-- Fathom Analytics --}}
         <script src="https://cdn.usefathom.com/script.js" data-site="FHSKFCYK" defer></script>
-        
+
         <script type="text/javascript">
 	    (function(c,l,a,r,i,t,y){
 		c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -58,6 +58,19 @@
 	</script>
     </head>
     <body class="font-sans bg-white text-slate-800 antialiased">
+        {{-- Banners --}}
+        @forelse (\App\Models\Banner::where('starts_at', '<=', today())->where('ends_at', '>=', today())->get() as $banner)
+            <div class="w-full bg-yellow-400 text-black text-base">
+                <div class="max-w-5xl mx-auto h-12 px-4 sm:px-6 lg:px-8">
+                    <div class="h-full flex items-center prose">
+                        {{ Illuminate\Mail\Markdown::parse($banner->content) }}
+                    </div>
+                </div>
+            </div>
+        @empty
+        @endforelse
+        {{-- Banners | End --}}
+
         @include('website.partials.subnavbar')
         @include('website.partials.navbar')
         @yield('content')
