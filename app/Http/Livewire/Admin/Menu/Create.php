@@ -17,7 +17,7 @@ class Create extends Component
     public function mount($selector)
     {
         $this->selector = $selector;
-        if($this->selector == 'footer')
+        if($this->selector == 'footer' || $this->selector == 'sidenav')
         {
             $this->type = 'link';
         }
@@ -36,7 +36,7 @@ class Create extends Component
             'background_image' => 'nullable|image|mimes:webp|dimensions:max-width=250px'
         ]);
 
-        if($this->type == 'link')
+        if($this->type == 'link' && $this->selector != 'sidenav')
         {
             $this->validate(['url' => 'required']);
         }

@@ -26,12 +26,14 @@
                     </div>
 
                     <div class="flex items-center">
-                        @can('menu:update')
-                            @livewire('admin.menu.edit', ['selector' => 'navbar', 'menu' => $item], key('edit-{{$item->id}}'))
-                        @endcan
-                        @can('menu:delete')
-                            @livewire('admin.menu.delete', ['menu' => $item], key('delete-{{$item->id}}'))
-                        @endcan
+                        <div class="flex items-center bg-slate-100 px-2 py-1 rounded">
+                            @can('menu:update')
+                                @livewire('admin.menu.edit', ['selector' => 'navbar', 'menu' => $item], key('edit-{{$item->id}}'))
+                            @endcan
+                            @can('menu:delete')
+                                @livewire('admin.menu.delete', ['menu' => $item], key('delete-{{$item->id}}'))
+                            @endcan
+                        </div>
                         @if ($item->type == 'dropdown' || $item->type == 'megamenu')
                             <div class="text-2xl font-light ml-3"
                             @click="open_{{$item->id}} = !open_{{$item->id}}"

@@ -6,6 +6,7 @@
                 <select wire:model="selector" id="selector" wire:on.change="changeMenu"
                     class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm -my-1">
                     <option value="navbar">Navbar</option>
+                    <option value="sidenav">Page Menus</option>
                     <option value="footer">Footer</option>
                 </select>
             </div>
@@ -30,19 +31,35 @@ if (! isset($_instance)) {
 }
 echo $html;
 ?>
-            <?php elseif($selector === 'footer'): ?>
+            <?php elseif($selector === 'sidenav'): ?>
                 <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('admin.menu.footer')->html();
+    $html = \Livewire\Livewire::mount('admin.menu.sidenav.index')->html();
 } elseif ($_instance->childHasBeenRendered('l2150918480-1')) {
     $componentId = $_instance->getRenderedChildComponentId('l2150918480-1');
     $componentTag = $_instance->getRenderedChildComponentTagName('l2150918480-1');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
     $_instance->preserveRenderedChild('l2150918480-1');
 } else {
-    $response = \Livewire\Livewire::mount('admin.menu.footer');
+    $response = \Livewire\Livewire::mount('admin.menu.sidenav.index');
     $html = $response->html();
     $_instance->logRenderedChild('l2150918480-1', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?>
+            <?php elseif($selector === 'footer'): ?>
+                <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('admin.menu.footer')->html();
+} elseif ($_instance->childHasBeenRendered('l2150918480-2')) {
+    $componentId = $_instance->getRenderedChildComponentId('l2150918480-2');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l2150918480-2');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l2150918480-2');
+} else {
+    $response = \Livewire\Livewire::mount('admin.menu.footer');
+    $html = $response->html();
+    $_instance->logRenderedChild('l2150918480-2', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

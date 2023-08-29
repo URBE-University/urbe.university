@@ -30,14 +30,14 @@
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('menu:update')): ?>
                                 <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('admin.menu.edit', ['selector' => 'navbar', 'menu' => $item])->html();
+    $html = \Livewire\Livewire::mount('admin.menu.edit', ['selector' => 'sidenav', 'menu' => $item])->html();
 } elseif ($_instance->childHasBeenRendered('edit-<?php echo e($item->id); ?>')) {
     $componentId = $_instance->getRenderedChildComponentId('edit-<?php echo e($item->id); ?>');
     $componentTag = $_instance->getRenderedChildComponentTagName('edit-<?php echo e($item->id); ?>');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
     $_instance->preserveRenderedChild('edit-<?php echo e($item->id); ?>');
 } else {
-    $response = \Livewire\Livewire::mount('admin.menu.edit', ['selector' => 'navbar', 'menu' => $item]);
+    $response = \Livewire\Livewire::mount('admin.menu.edit', ['selector' => 'sidenav', 'menu' => $item]);
     $html = $response->html();
     $_instance->logRenderedChild('edit-<?php echo e($item->id); ?>', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
@@ -81,14 +81,14 @@ echo $html;
                     <div class="" x-show="open_<?php echo e($item->id); ?>" @click.outside="open_<?php echo e($item->id); ?> = false" x-cloak>
                         <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('admin.menu.children', ['selector' => 'navbar', 'parent' => $item->id])->html();
+    $html = \Livewire\Livewire::mount('admin.menu.children', ['selector' => 'sidenav', 'parent' => $item->id])->html();
 } elseif ($_instance->childHasBeenRendered('children-<?php echo e($item->id); ?>')) {
     $componentId = $_instance->getRenderedChildComponentId('children-<?php echo e($item->id); ?>');
     $componentTag = $_instance->getRenderedChildComponentTagName('children-<?php echo e($item->id); ?>');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
     $_instance->preserveRenderedChild('children-<?php echo e($item->id); ?>');
 } else {
-    $response = \Livewire\Livewire::mount('admin.menu.children', ['selector' => 'navbar', 'parent' => $item->id]);
+    $response = \Livewire\Livewire::mount('admin.menu.children', ['selector' => 'sidenav', 'parent' => $item->id]);
     $html = $response->html();
     $_instance->logRenderedChild('children-<?php echo e($item->id); ?>', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
@@ -101,16 +101,16 @@ echo $html;
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('menu:create')): ?>
                                 <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('admin.menu.create', ['selector' => 'navbar', 'parent' => $item->id])->html();
-} elseif ($_instance->childHasBeenRendered('l2212301028-3')) {
-    $componentId = $_instance->getRenderedChildComponentId('l2212301028-3');
-    $componentTag = $_instance->getRenderedChildComponentTagName('l2212301028-3');
+    $html = \Livewire\Livewire::mount('admin.menu.create', ['selector' => 'sidenav', 'parent' => $item->id])->html();
+} elseif ($_instance->childHasBeenRendered('l2655468681-3')) {
+    $componentId = $_instance->getRenderedChildComponentId('l2655468681-3');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l2655468681-3');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('l2212301028-3');
+    $_instance->preserveRenderedChild('l2655468681-3');
 } else {
-    $response = \Livewire\Livewire::mount('admin.menu.create', ['selector' => 'navbar', 'parent' => $item->id]);
+    $response = \Livewire\Livewire::mount('admin.menu.create', ['selector' => 'sidenav', 'parent' => $item->id]);
     $html = $response->html();
-    $_instance->logRenderedChild('l2212301028-3', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('l2655468681-3', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -132,19 +132,19 @@ echo $html;
     <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('menu:create')): ?>
         <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('admin.menu.create', ['selector' => 'navbar'])->html();
-} elseif ($_instance->childHasBeenRendered('l2212301028-4')) {
-    $componentId = $_instance->getRenderedChildComponentId('l2212301028-4');
-    $componentTag = $_instance->getRenderedChildComponentTagName('l2212301028-4');
+    $html = \Livewire\Livewire::mount('admin.menu.create', ['selector' => 'sidenav'])->html();
+} elseif ($_instance->childHasBeenRendered('l2655468681-4')) {
+    $componentId = $_instance->getRenderedChildComponentId('l2655468681-4');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l2655468681-4');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('l2212301028-4');
+    $_instance->preserveRenderedChild('l2655468681-4');
 } else {
-    $response = \Livewire\Livewire::mount('admin.menu.create', ['selector' => 'navbar']);
+    $response = \Livewire\Livewire::mount('admin.menu.create', ['selector' => 'sidenav']);
     $html = $response->html();
-    $_instance->logRenderedChild('l2212301028-4', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('l2655468681-4', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
     <?php endif; ?>
 </div>
-<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/livewire/admin/menu/navbar.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/livewire/admin/menu/sidenav.blade.php ENDPATH**/ ?>

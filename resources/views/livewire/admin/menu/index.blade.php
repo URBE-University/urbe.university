@@ -6,6 +6,7 @@
                 <select wire:model="selector" id="selector" wire:on.change="changeMenu"
                     class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm -my-1">
                     <option value="navbar">Navbar</option>
+                    <option value="sidenav">Page Menus</option>
                     <option value="footer">Footer</option>
                 </select>
             </div>
@@ -16,6 +17,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @if($selector === 'navbar')
                 @livewire('admin.menu.navbar')
+            @elseif ($selector === 'sidenav')
+                @livewire('admin.menu.sidenav.index')
             @elseif ($selector === 'footer')
                 @livewire('admin.menu.footer')
             @endif

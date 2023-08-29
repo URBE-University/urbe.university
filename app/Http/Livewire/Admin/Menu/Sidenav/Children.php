@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Admin\Menu;
+namespace App\Http\Livewire\Admin\Menu\Sidenav;
 
 use App\Models\Menu;
 use Livewire\Component;
@@ -17,7 +17,7 @@ class Children extends Component
 
     public function render()
     {
-        return view('livewire.admin.menu.children', [
+        return view('livewire.admin.menu.sidenav.children', [
             'items' => Menu::where('location', $this->selector)
                 ->where('parent', $this->parent)
                 ->orderBy('order', 'ASC')

@@ -10,7 +10,7 @@
                         'border-b' => !$loop->last,
                         'rounded-t-lg' => $loop->first,
                         'rounded-b-lg' => $loop->last
-                    ]) ?>" x-data="{ open_<?php echo e($item->id); ?>: false }" x-cloak
+                    ]); ?>" x-data="{ open_<?php echo e($item->id); ?>: false }" x-cloak
                     wire:sortable.item="<?php echo e($item->id); ?>" wire:key="link-<?php echo e($item->id); ?>"
                     >
                         <div class="flex items-center justify-between p-4">
@@ -20,7 +20,7 @@
                                         <path d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                                     </svg>
                                 </button>
-                                <span class="text-lg"><?php echo e($item->label); ?></span>
+                                <span class=""><?php echo e($item->label); ?></span>
                             </div>
 
                             <div class="flex items-center">
@@ -93,7 +93,7 @@ echo $html;
                                 <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                                     'mt-2 py-2 bg-slate-50',
                                     'rounded-b-lg' => $loop->last
-                                ]) ?>">
+                                ]); ?>">
                                     <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('menu:create')): ?>
                                         <?php
 if (! isset($_instance)) {
@@ -132,7 +132,7 @@ echo $html;
                         'border-b' => !$loop->last,
                         'rounded-t-lg' => $loop->first,
                         'rounded-b-lg' => $loop->last
-                    ]) ?>" x-data="{ open_<?php echo e($item->id); ?>: false }" x-cloak
+                    ]); ?>" x-data="{ open_<?php echo e($item->id); ?>: false }" x-cloak
                     wire:sortable.item="<?php echo e($item->id); ?>" wire:key="link-<?php echo e($item->id); ?>"
                     >
                         <div class="flex items-center justify-between p-4">
@@ -142,7 +142,7 @@ echo $html;
                                         <path d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                                     </svg>
                                 </button>
-                                <span class="text-lg"><?php echo e($item->label); ?></span>
+                                <span class=""><?php echo e($item->label); ?></span>
                             </div>
 
                             <div class="flex items-center">
@@ -215,7 +215,7 @@ echo $html;
                                 <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                                     'mt-2 py-2 bg-slate-50',
                                     'rounded-b-lg' => $loop->last
-                                ]) ?>">
+                                ]); ?>">
                                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('menu:create')): ?>
                                     <?php
 if (! isset($_instance)) {
@@ -254,7 +254,7 @@ echo $html;
                         'border-b' => !$loop->last,
                         'rounded-t-lg' => $loop->first,
                         'rounded-b-lg' => $loop->last
-                    ]) ?>" x-data="{ open_<?php echo e($item->id); ?>: false }" x-cloak
+                    ]); ?>" x-data="{ open_<?php echo e($item->id); ?>: false }" x-cloak
                     wire:sortable.item="<?php echo e($item->id); ?>" wire:key="link-<?php echo e($item->id); ?>"
                     >
                         <div class="flex items-center justify-between p-4">
@@ -264,7 +264,7 @@ echo $html;
                                         <path d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                                     </svg>
                                 </button>
-                                <span class="text-lg"><?php echo e($item->label); ?></span>
+                                <span class=""><?php echo e($item->label); ?></span>
                             </div>
 
                             <div class="flex items-center">
@@ -337,7 +337,7 @@ echo $html;
                                 <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                                     'mt-2 py-2 bg-slate-50',
                                     'rounded-b-lg' => $loop->last
-                                ]) ?>">
+                                ]); ?>">
                                     <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('menu:create')): ?>
                                         <?php
 if (! isset($_instance)) {

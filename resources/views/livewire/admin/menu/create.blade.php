@@ -24,7 +24,7 @@
                     </select>
                     <x-input-error for="column" />
                 </div>
-            @else
+            @elseif ($selector == 'navbar')
                 <div class="mt-4">
                     <x-label for="type" value="Type"/>
                     <select wire:model="type" id="type"
@@ -60,7 +60,7 @@
                 </div>
             @endif
 
-            @if ($type == 'link')
+            @if ($type == 'link' && $this->selector != 'sidenav')
                 <div class="mt-4">
                     <x-label for="url" value="Url" />
                     <x-input id="url" type="text" wire:model="url" class="mt-1 w-full" />
