@@ -37,6 +37,21 @@
                         <a href="<?php echo e(route('admin.school.start-dates')); ?>" class="secondary-btn">Manage</a>
                     </div>
                 </div>
+
+                <div class="col-span-4 sm:col-span-2 lg:col-span-1 rounded-md shadow bg-white text-center flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="text-green-600 p-3 bg-green-100 inline-flex rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h2 class="mt-4 text-lg font-medium">Tuition Calculator</h2>
+                        <p class="mt-2 text-sm text-slate-600">Maintain your tuition information per academic year.</p>
+                    </div>
+                    <div class="px-6 py-2 w-full bg-slate-100 rounded-b-lg">
+                        <a href="<?php echo e(route('admin.school.start-dates')); ?>" class="secondary-btn">Manage</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
