@@ -9,6 +9,7 @@ class Create extends Component
 {
     public $code = '', $status = 'draft';
     public $title;
+    public $subtitle;
     public $slug;
     public $featured_image;
     public $content;
@@ -17,12 +18,12 @@ class Create extends Component
     protected $published_at;
 
     protected $listeners = [
-        'codeUpdated'
+        'markdown-x:update' => 'codeUpdated',
     ];
 
-    public function codeUpdated($code)
+    public function codeUpdated($value)
     {
-        $this->content = $code;
+        $this->content = $value;
     }
 
     public function render()
@@ -40,6 +41,7 @@ class Create extends Component
         try {
             Page::create([
                 'title' => $this->title,
+                'subtitle' => $this->subtitle,
                 'slug' => str($this->title)->slug(),
                 'url' => str($this->title)->slug(),
                 'content' => $this->content,

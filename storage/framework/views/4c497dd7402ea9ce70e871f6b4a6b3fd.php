@@ -45,7 +45,7 @@ if (! isset($_instance)) {
 echo $html;
 ?>
 
-                                    <p class="mt-8 text-sm font-medium text-slate-600"><?php echo e(__("Page URL endpoint")); ?></p>
+                                    <p class="mt-6 text-sm font-medium text-slate-600"><?php echo e(__("Page URL endpoint")); ?></p>
                                     <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.input','data' => ['type' => 'text','id' => 'url','wire:model' => 'url','class' => 'w-full mt-1']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('input'); ?>
@@ -79,7 +79,7 @@ echo $html;
                                     </div>
 
                                     
-                                    <p class="mt-8 text-sm font-medium text-slate-600"><?php echo e(__("Keywords")); ?></p>
+                                    <p class="mt-6 text-sm font-medium text-slate-600"><?php echo e(__("Keywords")); ?></p>
                                     <textarea id="keywords" cols="30" rows="6" wire:model.defer="keywords" placeholder="Enter each keyword separated by a space."
                                         class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full"
                                     ></textarea>
@@ -99,6 +99,18 @@ echo $html;
 <?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
 <?php endif; ?>
                                     </div>
+
+                                    
+                                    <p class="mt-6 text-sm font-medium text-slate-600"><?php echo e(__("Sidenav Menu")); ?></p>
+                                    <select name="menu" wire:model="menu" wire:change="attachMenu"
+                                        class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm w-full mt-1">
+                                        <option value="">Select an option</option>
+
+                                        <?php $__empty_1 = true; $__currentLoopData = $availableMenus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $availableMenu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                            <option value="<?php echo e($availableMenu->id); ?>"><?php echo e($availableMenu->label); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                                        <?php endif; ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-<div class="py-12 max-w-full prose">
+<div class="max-w-full prose">
     <h3>{{ __("Shortcodes Cheat Sheet") }}</h3>
     <p>Shortcodes are code snippets that you can add to virtually any page, and we will automatically render the corresponsing piece of code for you.</p>
 

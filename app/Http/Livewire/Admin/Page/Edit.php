@@ -11,6 +11,7 @@ class Edit extends Component
     public Page $page;
     public $code = '', $status = 'draft';
     public $title;
+    public $subtitle;
     public $slug;
     public $featured_image;
     public $content;
@@ -19,17 +20,18 @@ class Edit extends Component
     protected $published_at;
 
     protected $listeners = [
-        'codeUpdated'
+        'markdown-x:update' => 'codeUpdated',
     ];
 
-    public function codeUpdated($code)
+    public function codeUpdated($value)
     {
-        $this->content = $code;
+        $this->content = $value;
     }
 
     public function mount()
     {
         $this->title = $this->page->title;
+        $this->subtitle = $this->page->subtitle;
         $this->content = $this->page->content;
         $this->status = ($this->page->published_at < now()) ? 'published' : 'draft';
         session()->put('code', $this->content);

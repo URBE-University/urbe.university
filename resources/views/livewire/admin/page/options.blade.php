@@ -31,20 +31,32 @@
                                 <div class="absolute inset-0 px-4 sm:px-6">
                                     @livewire('admin.page.upload-featured-image', ['page' => $page])
 
-                                    <p class="mt-8 text-sm font-medium text-slate-600">{{ __("Page URL endpoint") }}</p>
+                                    <p class="mt-6 text-sm font-medium text-slate-600">{{ __("Page URL endpoint") }}</p>
                                     <x-input type="text" id="url" wire:model="url" class="w-full mt-1" />
                                     <div class="mt-2 flex justify-end">
                                         <x-button wire:click="saveUrl">Save</x-button>
                                     </div>
 
                                     {{-- Keywords --}}
-                                    <p class="mt-8 text-sm font-medium text-slate-600">{{ __("Keywords") }}</p>
+                                    <p class="mt-6 text-sm font-medium text-slate-600">{{ __("Keywords") }}</p>
                                     <textarea id="keywords" cols="30" rows="6" wire:model.defer="keywords" placeholder="Enter each keyword separated by a space."
                                         class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full"
                                     ></textarea>
                                     <div class="mt-2 flex justify-end">
                                         <x-button wire:click="saveKeys">Save</x-button>
                                     </div>
+
+                                    {{-- Manu assignments --}}
+                                    <p class="mt-6 text-sm font-medium text-slate-600">{{ __("Sidenav Menu") }}</p>
+                                    <select name="menu" wire:model="menu" wire:change="attachMenu"
+                                        class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm w-full mt-1">
+                                        <option value="">Select an option</option>
+
+                                        @forelse ($availableMenus as $availableMenu)
+                                            <option value="{{ $availableMenu->id }}">{{ $availableMenu->label }}</option>
+                                        @empty
+                                        @endforelse
+                                    </select>
                                 </div>
                             </div>
                         </div>
