@@ -52,6 +52,7 @@ class Edit extends Component
         try {
             $this->page->update([
                 'title' => $this->title,
+                'subtitle' => $this->subtitle,
                 'slug' => str($this->title)->slug(),
                 'content' => $this->content,
                 'published_at' => ($this->status == 'published') ? now() : null,

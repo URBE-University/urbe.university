@@ -2,7 +2,7 @@
 
 <div class="">
     @section('content')
-        <div class="w-full" style="background-image: url(https://urbeuniversity.edu/static_assets/page-header-bg.webp)">
+        <div class="w-full bg-center bg-no-repeat bg-cover" style="background-image: url({{ $page->featured_image ? asset($page->featured_image) : "https://urbeuniversity.edu/static_assets/page-header-bg.webp" }})">
             <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                 <div class="text-white py-12 sm:py-24">
                 <h1 class="border-l-8 border-l-white pl-4 text-5xl font-extrabold">{!! eval("?>$page->title") !!}</h1>

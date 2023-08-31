@@ -22,11 +22,5 @@
             <button type="button" wire:click="setFeaturedImage" class="mt-4 w-full text-center p-2 rounded-md bg-black text-white">{{ __("Upload Now") }}</button>
         @endif
         <x-input-error for="image"/>
-
-        <p class="mt-8 text-sm font-medium text-slate-600">{{ __("Image alternative text") }}</p>
-        <x-input type="text" id="image_alt" wire:model="image_alt" placeholder="featured image alt text" class="mt-1 w-full"/>
-        <div class="mt-2 flex justify-end">
-            <x-button wire:click="saveAltText">Save</x-button>
-        </div>
     </div>
 </div>

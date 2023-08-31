@@ -34,7 +34,6 @@ class UploadFeaturedImage extends Component
             $featured_image = $this->image->store('page_assets');
             $this->page->update([
                 'featured_image' => $featured_image,
-                'featured_image_alt_text' => $this->image_alt,
             ]);
         } catch (\Throwable $th) {
             Log::error($th);
@@ -42,19 +41,11 @@ class UploadFeaturedImage extends Component
         $this->reset('image');
     }
 
-    public function saveAltText()
-    {
-        $this->page->update([
-            'featured_image_alt_text' => $this->image_alt,
-        ]);
-    }
-
     public function deleteFeaturedImage()
     {
         try {
             Storage::delete($this->page->featured_image);
             $this->page->featured_image = null;
-            $this->page->featured_image_alt_text = null;
             $this->page->update();
         } catch (\Throwable $th) {
             Log::error($th);
