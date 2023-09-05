@@ -2,6 +2,11 @@
 /public/build
 /public/hot
 /public/storage
+/public/catalog
+/public/event_assets
+/public/images
+/public/page_assets
+/public/post_assets
 /storage/*.key
 /storage/logs/laravel.log
 /vendor
