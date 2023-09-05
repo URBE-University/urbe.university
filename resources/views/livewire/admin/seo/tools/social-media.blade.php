@@ -13,7 +13,7 @@
     </header>
 
     <div class="py-12">
-        <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="w-full bg-white rounded-md shadow">
                 <div class="p-8">
                     <div class="flex items-center space-x-3 fill-slate-600">

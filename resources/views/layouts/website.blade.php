@@ -61,7 +61,7 @@
         {{-- Banners --}}
         @forelse (\App\Models\Banner::where('starts_at', '<=', today())->where('ends_at', '>=', today())->get() as $banner)
             <div class="w-full bg-yellow-400 text-black text-base">
-                <div class="max-w-5xl mx-auto h-12 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto h-12 px-4 sm:px-6 lg:px-8">
                     <div class="h-full flex items-center prose">
                         {{ Illuminate\Mail\Markdown::parse($banner->content) }}
                     </div>

@@ -19,7 +19,7 @@
     </header>
 
     <div class="py-12">
-        <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <input type="text" wire:model="name"
                 class="bg-transparent border-0 w-full text-2xl text-gray-900 font-extrabold outline-none border-transparent focus:border-transparent focus:ring-0 px-0"
                 placeholder="{{ __('Event name') }}">

@@ -4,7 +4,7 @@
 @section('content')
 <div class="w-full h-56 bg-center bg-cover" style="background-image: url({{ asset($event->featured_image) }})">
     <div class="h-full w-full backdrop-blur-lg">
-        <div class="max-w-5xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center">
+        <div class="max-w-6xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center">
             <h1 class="text-5xl font-extrabold text-white">{{ $event->name }}</h1>
         </div>
     </div>
@@ -16,7 +16,7 @@
 </div>
 
 <div class="py-12"></div>
-<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-3 gap-8">
         <div class="col-span-3">
             <img src="{{ asset($event->featured_image) }}" alt="{{ $event->name }}" class="w-full aspect-video rounded-xl object-cover object-center">

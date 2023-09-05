@@ -5,7 +5,7 @@
     <header class="relative flex items-center justify-center md:h-[calc(100vh-74px)] mb-12 overflow-hidden">
         {{-- Header Content --}}
         <div class="z-20 relative h-full w-full p-5 py-24 md:py-0 text-white bg-urbe bg-opacity-80 flex items-center justify-center">
-            <div class="max-w-5xl sm:px-6 lg:px-8">
+            <div class="max-w-6xl sm:px-6 lg:px-8">
                 <h1 class="text-6xl font-black">Welcome to URBE University</h1>
                 <p class="mt-6 text-lg md:text-xl">Explore our undergraduate and graduate programs in business, communications, education and more.</p>
 
@@ -27,7 +27,7 @@
     </header>
 
     {{-- Why learn with URBE --}}
-    {{-- <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{-- <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 gap-8">
             <div class="col-span-2 md:col-span-1">
                 <h2 class="text-4xl text-urbe font-serif font-bold">{{ __("Why learn with URBE?") }}</h2>
@@ -75,7 +75,7 @@
     <div class="py-12"></div>
 
     {{-- Mission --}}
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-4xl text-urbe font-serif font-bold">{{__("Our Mission")}}</h2>
             <p class="mt-4 max-w-3xl mx-auto text-slate-700">
@@ -94,7 +94,7 @@
 
     {{-- Discover our programs --}}
     <section class="w-full pt-16 pb-24 bg-gradient-to-t from-sky-50 to-white">
-        <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
             <div class="mt-12 grid grid-cols-2 gap-8 text-left">
                 <div class="col-span-2 rounded-lg bg-white shadow md:col-span-1">
                 <img src="/images/hsz2ntvXkAk4kckHk3KsCeI2CCbixKRqkCmhAFb3.webp" alt="" class="h-56 md:h-64 w-full rounded-t-lg object-cover object-center" />

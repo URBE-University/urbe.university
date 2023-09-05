@@ -6,7 +6,7 @@
     </header>
 
     <div class="py-12">
-        <div class="max-w-5xl mx-auto bg-white rounded-md shadow">
+        <div class="max-w-6xl mx-auto bg-white rounded-md shadow">
             <div class="pt-6 px-4 sm:px-6 lg:px-8 rounded-t-lg">
                 <img src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}" class="rounded-full h-20 w-20 object-cover">
                 <h1 class="mt-6 text-4xl font-bold">{{ $user->name }}</h1>

@@ -1,4 +1,4 @@
-<section class="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<section class="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-4xl text-urbe font-serif font-bold capitalize">{{ __("Latest News") }}</h2>
     <p class="mt-4 text-slate-500">From our blog</p>
 

@@ -1,5 +1,5 @@
 <div class="w-full" style="background-image: url(https://urbeuniversity.edu/static_assets/page-header-bg.webp)">
-    <div class="mx-auto h-full max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto h-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="py-12 text-white sm:py-24">
         <h1 class="text-5xl font-extrabold">{{ __("Credit Transfer Guide") }}</h1>
         <p class="text-lgmt-6 mt-6 text-lg md:text-xl">{{__("Get the tools and guidance you need to start your application process.")}}</p>
@@ -7,7 +7,7 @@
     </div>
   </div>
   <section class="w-full pb-24 pt-16">
-    <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
       <div class="grid grid-cols-6 items-start gap-8">
         <main class="col-span-6 min-h-screen text-left md:col-span-4">
           <p class="text-lg font-medium italic">{{__("We understand that you may have previously completed coursework at other institutions and are interested in transferring credits to our university. This guide will provide you with important information regarding our transfer credit policy, evaluation process, and the criteria for credit acceptance.")}}</p>

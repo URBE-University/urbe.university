@@ -1,5 +1,5 @@
 @if (\App\Models\Event::whereNotNull('published_at')->where( 'start_date', '>=', today()->addDay() )->count() > 0)
-    <section class="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-4xl text-urbe font-serif font-bold capitalize">{{ __("Upcoming Events") }}</h2>
 
         <div class="mt-6">

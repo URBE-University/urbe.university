@@ -1,7 +1,7 @@
 <div class="">
     <?php $__env->startSection('content'); ?>
         <div class="w-full bg-center bg-no-repeat bg-cover" style="background-image: url(<?php echo e($page->featured_image ? asset($page->featured_image) : "https://urbeuniversity.edu/static_assets/page-header-bg.webp"); ?>)">
-            <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                 <div class="text-white py-12 sm:py-24">
                 <h1 class="border-l-8 border-l-white pl-4 text-5xl font-extrabold"><?php echo eval("?>$page->title"); ?></h1>
                 <p class="mt-6 text-lg md:text-xl"><?php echo eval("?>$page->subtitle"); ?></p>
@@ -10,20 +10,20 @@
         </div>
 
         <div class="w-full py-12 sm:py-24">
-            <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
 
-                <div class="grid grid-cols-6 items-start gap-8">
+                <div class="grid grid-cols-12 items-start gap-6">
                     <main class="<?php echo \Illuminate\Support\Arr::toCssClasses([
-                        'col-span-6 text-left prose max-w-full',
-                        'md:col-span-4' => $page->menu_id
+                        'col-span-12 text-left prose prose-headings:text-urbe max-w-full',
+                        'md:col-span-9' => $page->menu_id
                     ]); ?>">
-                        
-                        <?php echo str($page_content)->markdown(); ?>
+                        <?php echo eval("?>" . str($page_content)->markdown()); ?>
 
+                        
                     </main>
 
                     <?php if($page->menu_id): ?>
-                        <aside class="col-span-6 hidden justify-end text-base md:col-span-2 md:flex">
+                        <aside class="col-span-12 hidden justify-end text-base md:col-span-3 md:flex">
                             <ul class="text-left">
                                 <li class="mt-2">
                                     <p class="border-l-urbe text-urbe border-l-4 pl-2 text-xl font-semibold"><?php echo e(__("In this section")); ?></p>

@@ -1,5 +1,5 @@
 <div class="w-full" style="background-image: url(https://urbeuniversity.edu/static_assets/page-header-bg.webp)">
-    <div class="mx-auto h-full max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto h-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="py-12 text-center text-white sm:py-24">
         <h1 class="text-5xl font-extrabold">About URBE University</h1>
         <p class="mt-6 text-lg md:text-xl">Get to know who we are, what we do, and why we do it.</p>
@@ -7,7 +7,7 @@
     </div>
   </div>
   <section class="w-full pb-24 pt-16">
-    <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
       <div class="grid grid-cols-6 items-start gap-8">
         <main class="col-span-6 text-left md:col-span-4">
           <h2 class="text-urbe text-3xl font-bold">{!!__('Contact Us')!!}</h2>
