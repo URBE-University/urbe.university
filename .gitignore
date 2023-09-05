@@ -6,6 +6,7 @@
 /public/event_assets
 /public/images
 /public/page_assets
+/public/static_assets
 /public/post_assets
 /storage/*.key
 /storage/logs/laravel.log
