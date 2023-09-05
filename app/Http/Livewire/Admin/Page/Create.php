@@ -18,12 +18,12 @@ class Create extends Component
     protected $published_at;
 
     protected $listeners = [
-        'markdown-x:update' => 'codeUpdated',
+        'codeUpdated'
     ];
 
-    public function codeUpdated($value)
+    public function codeUpdated($code)
     {
-        $this->content = $value;
+        $this->content = $code;
     }
 
     public function render()
