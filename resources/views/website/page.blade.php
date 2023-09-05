@@ -16,11 +16,10 @@
 
                 <div class="grid grid-cols-12 items-start gap-6">
                     <main @class([
-                        'col-span-12 text-left prose prose-headings:text-urbe max-w-full',
+                        'col-span-12 text-left w-full',
                         'md:col-span-9' => $page->menu_id
                     ])>
-                        {!! eval("?>" . str($page_content)->markdown()) !!}
-                        {{-- {!! str($page_content)->markdown() !!} --}}
+                        {!! eval("?>" . $page_content) !!}
                     </main>
 
                     @if ($page->menu_id)

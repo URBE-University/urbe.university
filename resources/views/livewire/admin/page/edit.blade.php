@@ -5,7 +5,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js" integrity="sha512-NSbvq6xPdfFIa2wwSh8vtsPL7AyYAYRAUWRDCqFH34kYIjQ4M7H2POiULf3CH11TRcq3Ww6FZDdLZ8msYhMxjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ext-language_tools.min.js" integrity="sha512-jwHjfXzlZZWm/JrYIjGauBO9fNDoxtrl5uVEh8SVu5nZGO38FCFiHx7N5NfLQWsi+cjT4vQcZl9UNLc3oCm+TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/theme-one_dark.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/theme-tomorrow_night_eighties.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <header class="bg-white border-b border-b-slate-100">
         <div class="py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Editing page</h2>
@@ -49,7 +49,7 @@
                                 let contentInput = document.getElementById('content');
                                 let editor = ace.edit('editor');
                                 editor.setValue(this.content);
-                                editor.setTheme('ace/theme/one_dark');
+                                editor.setTheme('ace/theme/tomorrow_night_eighties');
                                 editor.session.setMode('ace/mode/html');
                                 editor.container.style.lineHeight = 2.5;
                                 editor.setShowPrintMargin(false);
