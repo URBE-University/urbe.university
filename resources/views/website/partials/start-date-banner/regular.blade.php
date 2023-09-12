@@ -3,7 +3,7 @@
     $apply_by_date = Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->apply_by_date)->format('F jS');
     $start_date = Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS');
 @endphp
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:h-24 sm:flex items-center justify-between bg-white shadow dark:bg-slate-700 sm:rounded-full">
+    <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:h-24 sm:flex items-center justify-between bg-white shadow sm:rounded-xl">
         <div class="h-full flex items-center justify-evenly space-x-6 lg:space-x-12">
             <div class="h-full flex items-center gap-2">
                 <div class="w-12 h-12 flex items-center justify-center bg-sky-100 text-sky-600 rounded-full">
