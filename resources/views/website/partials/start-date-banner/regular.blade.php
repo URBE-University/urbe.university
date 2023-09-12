@@ -34,7 +34,7 @@
         <div class="h-full mt-6 sm:mt-0 sm:flex items-center">
             <a href="https://admissions.urbeuniversity.edu?utm_campaign='website_traffic'&utm_source='{{url()->current()}}'&utm_medium='start_date_banner'"
                 target="_blank"
-                class="w-full h-12 px-5 flex shadow-lg shadow-sky-200 items-center justify-center bg-sky-500 hover:bg-sky-600 rounded-full text-white font-medium"
+                class="w-full h-12 px-5 flex drop-shadow-lg shadow-sky-200 items-center justify-center bg-sky-500 hover:bg-sky-600 rounded-full text-white font-medium"
             >{{__("Apply Now")}}</a>
         </div>
     </div>
