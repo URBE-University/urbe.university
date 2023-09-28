@@ -40,5 +40,12 @@
                 </div>
             </div>
         </div>
+        <div class="pb-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-sm text-slate-600">
+                    {{ __("This page was last updated on ") . \Carbon\Carbon::parse($page->updated_at)->format('M d, Y') }}. {{__("You can refer to our")}} <a href="{{ route('catalog.show') }}" target="_blank" class="underline text-sky-500">Catalog</a> {{__("to find the latest information on this topic")}}.
+                </p>
+            </div>
+        </div>
     @endsection
 </div>

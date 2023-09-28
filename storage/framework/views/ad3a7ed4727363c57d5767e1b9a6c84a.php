@@ -39,6 +39,13 @@
                 </div>
             </div>
         </div>
+        <div class="pb-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-sm text-slate-600">
+                    <?php echo e(__("This page was last updated on ") . \Carbon\Carbon::parse($page->updated_at)->format('M d, Y')); ?>. <?php echo e(__("You can refer to our")); ?> <a href="<?php echo e(route('catalog.show')); ?>" target="_blank" class="underline text-sky-500">Catalog</a> <?php echo e(__("to find the latest information on this topic")); ?>.
+                </p>
+            </div>
+        </div>
     <?php $__env->stopSection(); ?>
 </div>
 

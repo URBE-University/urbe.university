@@ -3,7 +3,7 @@
     $apply_by_date = Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->apply_by_date)->format('F jS');
     $start_date = Carbon\Carbon::parse(\App\Models\StartDate::where('start_date', '>', today())->orderBy('start_date', 'ASC')->first()->start_date)->format('F jS');
 ?>
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:h-24 sm:flex items-center justify-between bg-white shadow dark:bg-slate-700 sm:rounded-full">
+    <div class="max-w-full mx-auto px-4 sm:px-6 py-4 sm:h-24 sm:flex items-center justify-between bg-white shadow-lg shadow-sky-100 sm:rounded-2xl">
         <div class="h-full flex items-center justify-evenly space-x-6 lg:space-x-12">
             <div class="h-full flex items-center gap-2">
                 <div class="w-12 h-12 flex items-center justify-center bg-sky-100 text-sky-600 rounded-full">
@@ -12,7 +12,7 @@
                     </svg>
                 </div>
                 <div>
-                    <div class="text-xs font-medium text-slate-500 uppercase">Register by</div>
+                    <div class="text-xs font-medium text-slate-500 uppercase"><?php echo e(__("Register by")); ?></div>
                     <div class="text-xl font-bold text-urbe"><?php echo Str::substr($apply_by_date, 0, -2) . "<sup class='font-light text-xs ml-0.5'>" . Str::substr($apply_by_date, -2) . "</sup>"; ?></div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="">
-                    <div class="text-xs font-medium text-slate-500 uppercase">To start on</div>
+                    <div class="text-xs font-medium text-slate-500 uppercase"><?php echo e(__("To start on")); ?></div>
                     <div class="text-xl font-bold text-urbe"><?php echo Str::substr($start_date, 0, -2) . "<sup class='font-light text-xs ml-0.5'>" . Str::substr($start_date, -2) . "</sup>"; ?></div>
                 </div>
             </div>
@@ -34,8 +34,8 @@
         <div class="h-full mt-6 sm:mt-0 sm:flex items-center">
             <a href="https://admissions.urbeuniversity.edu?utm_campaign='website_traffic'&utm_source='<?php echo e(url()->current()); ?>'&utm_medium='start_date_banner'"
                 target="_blank"
-                class="w-full h-12 px-5 flex items-center justify-center bg-sky-500 rounded-full text-white font-medium"
-            >Apply Now</a>
+                class="w-full h-12 px-5 flex shadow-lg shadow-sky-200 items-center justify-center bg-sky-500 hover:bg-sky-600 transition-all rounded-full text-white font-medium"
+            ><?php echo e(__("Apply Now")); ?></a>
         </div>
     </div>
 <?php endif; ?>
