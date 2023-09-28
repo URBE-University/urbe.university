@@ -25,7 +25,7 @@ class Children extends Component
         ]);
     }
 
-    public function reorder($orderedIds)
+    public function reorderChildren($orderedIds)
     {
         foreach ($orderedIds as $item) {
             Menu::findOrFail($item['value'])->update(['order' => $item['order']]);
