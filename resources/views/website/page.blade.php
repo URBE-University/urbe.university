@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="w-full py-12 sm:py-24 text-justify">
+        <div class="w-full py-12 sm:py-24">
             <div class="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
 
                 <div class="grid grid-cols-12 items-start gap-6">
