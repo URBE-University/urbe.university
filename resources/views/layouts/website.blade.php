@@ -61,6 +61,9 @@
 
     </head>
     <body class="font-sans bg-white text-slate-800 antialiased">
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZXH6TF2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
         {{-- Banners --}}
         @forelse (\App\Models\Banner::where('starts_at', '<=', today())->where('ends_at', '>=', today())->get() as $banner)
             <div class="w-full bg-yellow-400 text-black text-base">
