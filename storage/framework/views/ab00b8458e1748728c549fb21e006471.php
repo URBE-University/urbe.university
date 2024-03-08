@@ -20,7 +20,7 @@
                         <p class="mt-2 text-sm text-slate-600">Maintain essential website settings, such as title, description, favicon, and canonical link.</p>
                     </div>
                     <div class="px-6 py-2 w-full bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.tools.site.settings') }}" class="secondary-btn">Manage</a>
+                        <a href="<?php echo e(route('admin.tools.site.settings')); ?>" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@
                         <p class="mt-2 text-sm text-slate-600">Manage your social media urls and icons here. The system will insert your new urls as soon as they are saved.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.tools.socialmedia') }}" class="secondary-btn">Manage</a>
+                        <a href="<?php echo e(route('admin.tools.socialmedia')); ?>" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@
                         <p class="mt-2 text-sm text-slate-600">Display short announcements on the top of every page with banners.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.tools.banners') }}" class="secondary-btn">Manage</a>
+                        <a href="<?php echo e(route('admin.tools.banners')); ?>" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@
                         <p class="mt-2 text-sm text-slate-600">Enter and store the verification codes for multiple search engine consoles such as the Google Search Console, and others.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.tools.webmaster.tools') }}" class="secondary-btn">Manage</a>
+                        <a href="<?php echo e(route('admin.tools.webmaster.tools')); ?>" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@
                         <p class="mt-2 text-sm text-slate-600">Embed code to the header of the website. You can add verification scripts, and additional css styles as needed.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.tools.header.code') }}" class="secondary-btn">Manage</a>
+                        <a href="<?php echo e(route('admin.tools.header.code')); ?>" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@
                         <p class="mt-2 text-sm text-slate-600">Notify search engines using the IndexNow API when pages are added, updated and removed, or submit URLs manually.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.tools.instant.index') }}" class="secondary-btn">Manage</a>
+                        <a href="<?php echo e(route('admin.tools.instant.index')); ?>" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -110,7 +110,7 @@
                         <p class="mt-2 text-sm text-slate-600">Redirect non-existent content easily with 301 and 302 status code. This can help improve site ranking.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        <a href="{{ route('admin.tools.redirects') }}" class="secondary-btn">Manage</a>
+                        <a href="<?php echo e(route('admin.tools.redirects')); ?>" class="secondary-btn">Manage</a>
                     </div>
                 </div>
 
@@ -125,7 +125,21 @@
                         <p class="mt-2 text-sm text-slate-600">Enable the sitemap feature, which helps search engines intelligently crawl your website's content. It also supports hreflang tag.</p>
                     </div>
                     <div class="px-6 py-2 bg-slate-100 rounded-b-lg">
-                        @livewire('admin.seo.tools.generate-sitemap')
+                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('admin.seo.tools.generate-sitemap')->html();
+} elseif ($_instance->childHasBeenRendered('l90163450-0')) {
+    $componentId = $_instance->getRenderedChildComponentId('l90163450-0');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l90163450-0');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l90163450-0');
+} else {
+    $response = \Livewire\Livewire::mount('admin.seo.tools.generate-sitemap');
+    $html = $response->html();
+    $_instance->logRenderedChild('l90163450-0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?>
                     </div>
                 </div>
 
@@ -133,3 +147,4 @@
         </div>
     </div>
 </div>
+<?php /**PATH /home/elvis/Projects/CUSTOMERS/URBE/urbe.university/resources/views/livewire/admin/seo/index.blade.php ENDPATH**/ ?>

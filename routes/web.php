@@ -21,6 +21,7 @@ use App\Http\Livewire\Admin\Seo\Tools\SiteSettings;
 use App\Http\Livewire\Admin\Seo\Tools\WebmasterTools;
 use App\Http\Livewire\Admin\Seo\Tools\Redirects\Index as RedirectsIndex;
 use App\Http\Livewire\Admin\Banner\Index as BannersIndex;
+use App\Http\Livewire\Admin\Seo\Tools\HeadContent;
 
 /**
  * Public routes
@@ -81,6 +82,7 @@ Route::middleware([ 'auth:sanctum', config('jetstream.auth_session'), 'verified'
     Route::middleware('can:seo:view')->get('/tools/webmaster-tools', WebmasterTools::class)->name('admin.tools.webmaster.tools');
     Route::middleware('can:seo:view')->get('/tools/redirects', RedirectsIndex::class)->name('admin.tools.redirects');
     Route::middleware('can:seo:view')->get('/tools/banners', BannersIndex::class)->name('admin.tools.banners');
+    Route::middleware('can:seo:view')->get('/tools/header-code', HeadContent::class)->name('admin.tools.header.code');
 
     // School tools routes
     Route::middleware('can:school-information:manage')->get('/school', SchoolHome::class)->name('admin.school.home');
